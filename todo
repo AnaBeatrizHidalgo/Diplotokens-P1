@@ -1,0 +1,6 @@
+1. Quais são os dados interessantes para serem extraídos e como:
+    - entidades: sintomas, doenças, exames, tratamentos, medicamentos, regiões anatômicas, etc.;
+    - valores associados a resultados de exames e dosagem de medicamentos, bem como suas unidades de medida;
+
+2. Como é interessante organizar estes dados em um grafo de conhecimento.
+3. Estratégias clássicas para extrair os dados desejados do texto, por exemplo: tokenização, normalização, remoção de stop-words, associação a dicionários/tesauros/ontologias
