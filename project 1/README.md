@@ -59,3 +59,4 @@ Projeto 1 da disciplina NLP da equipe Diplotokens! 2s2026
 
 --------
 
+TODO: Aqui vem a parte escrita do trabalho para entrega! (o template do professor está na pasta docs)

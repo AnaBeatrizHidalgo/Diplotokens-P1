@@ -1,5 +1,6 @@
 # Data
-/data/
+# Obs: como são poucos dados, vamos manter o controle de versão, mas caso seja necessário, podemos descomentar a linha abaixo para ignorar a pasta de dados
+#/data/
 
 # Mac OS-specific storage files
 .DS_Store
