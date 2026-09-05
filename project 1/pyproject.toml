@@ -1,0 +1,47 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "diplo_grafo"
+version = "0.0.1"
+description = "Projeto 1 da disciplina NLP da equipe Diplotokens! 2s2026"
+authors = [
+  { name = "Diplotokens" },
+]
+
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    
+]
+dependencies = [
+    "ipython",
+    "jupyterlab",
+    "loguru",
+    "matplotlib",
+    "notebook",
+    "numpy",
+    "pandas",
+    "pip",
+    "python-dotenv",
+    "ruff",
+    "scikit-learn",
+    "tqdm",
+    "typer",
+]
+requires-python = "~=3.10.0"
+
+
+[tool.ruff]
+line-length = 99
+src = ["diplo_grafo"]
+include = ["pyproject.toml", "diplo_grafo/**/*.py"]
+
+[tool.ruff.lint]
+extend-select = ["I"]  # Add import sorting
+
+[tool.ruff.lint.isort]
+known-first-party = ["diplo_grafo"]
+force-sort-within-sections = true
+
