@@ -1,2 +1,2 @@
-# Diplotokens-P1
+# Diplotokens
 Projetos da disciplina NLP da equipe Diplotokens!
