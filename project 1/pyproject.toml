@@ -22,13 +22,14 @@ dependencies = [
     "matplotlib",
     "notebook",
     "numpy",
-    "pandas",
     "pip",
     "python-dotenv",
     "ruff",
     "scikit-learn",
     "tqdm",
     "typer",
+    "nltk",
+    "pandas",
 ]
 requires-python = "~=3.10.0"
 
