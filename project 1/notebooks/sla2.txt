@@ -1,0 +1,101 @@
+Texto: Many in organization studies and business ethics will be familiar with the rise and fall of Theranos:a biotech
+company started by Elizabeth Holmes that hit a 9-billion-dollar valuation just before leadership was indicted on charges
+of fraud. The story is one that obviously demonstrates several important lessons regarding deception in Silicon Valley,
+transparency in leadership, and the corrupting power of greed. We believe there is also a story of CH-MI here9. Though
+there are dozens of individual cases we could explore, the most glaring is that of Ian Gibbons, the late biochemist and
+chief scientist at Theranos. We argue that Gibbons was a good chemist. In striving to maintain the standards of his
+practice within a vicious institution, he met his untimely death. As we trace the Theranos story, it is worth noting
+that we will be primarily using the reporting and narrative of Carreyrou at The Wall Street Journal. Carreyrou published
+dozens of articles on Theranos between 2014 and 2019, including the original expose that ousted the company. He is also
+the author of Bad Blood: Secrets and Lies in a Silicon Valley Startup Carreyrou, which presents the entire Theranos
+story from inception to collapse. The idea for Theranos began with CEO and founder, Elizabeth Holmes in 2003. She
+dropped out of Stanford to pursue the dream of revolutionizing healthcare by using small fingerpricks of blood to run
+hundreds of diagnostic tests on a portable machine. By 2010, Holmes was able to secure nearly 100 million dollars in
+venture capital and built an impressive board of directors. She was able to do so because she presented an inspiring
+mission. Her product would, she claimed, make preventive care affordable and accessible to the masses. Holmes championed
+Theranos in this way:as an agent for health equity. As she explained in an interview with Bill Clinton, Our work is in
+the belief that the access to healthcare information is a basic human right. [...] Health data needs to be accessible to
+people before they get sick. [...] Our work is in being able to make lab testing accessible in time for therapy to be
+effected and to do that in a way where every person irrespective of their insurance status, irrespective of where they
+live, can afford the ability to get a test done (Holmes,). Theranos supposedly existed for this purpose:to expand access
+to needed health care. Though this purpose was communicated in interviews and pitches, Theranos was never actually a
+company that principally sought to expand access to health. In truth, Holmes had a very different mission:to be a
+billionaire (Carreyrou,, p. 11). This is where the vicious formation of the institution began:at the beginning and with
+the wrong end. She sought exponential growth over and above actually developing an innovative product in biotechnology
+that would contribute to human flourishing and the common good. This end:becoming a billionaire:colored the way Holmes
+led and managed everything at Theranos. This is, after all, the usefulness of final ends (Frankfurt,). They inform,
+guide, and direct our actions, and they do so regardless of whether the appropriate final ends are pursued. Holmes made
+extraordinary claims about the capabilities and possibilities of the technology that could not be supported by her
+chemists or engineers. She carefully created silos to ensure that employees did not understand the full scope of the
+project's development. She held outrageous expectations for her workers, sometimes demanding departments to run 24/7.
+She treated employees as disposable linchpins, quickly discarding those who did not fall in line. Even worse, she would
+punish those who challenged the morality of her actions by firing them, demoting them, or ceasing to give them pertinent
+information. "She was so laser-focused on achieving her goals that she seemed oblivious to the practical implications of
+her decisions" (Carreyrou,, p. 26). Indeed, Holmes would pursue whatever means necessary to make her billionaire vision
+a reality. Vice was not merely excused. It was expected. Moreover, Holmes's myopic billionaire vision effectively
+marginalized the two "core" practices vital to the success of her project:biochemistry and engineering. She hired
+excellent scientists who were trained at Cambridge and Ivy League institutions. However, Holmes did not want them to be
+excellent scientists. She wanted technocrats to create her product for the sake of maximizing profitability. Holmes
+insisted that "the Edison":the machine that Theranos was working on to conduct the blood tests:had to be portable and
+had to use only a small droplet of blood. She was uncompromising in these demands because she already promised them to
+investors. She did this without really understanding whether they were scientifically possible. When the evidence
+repeatedly showed that more than a droplet of blood was needed to conduct the tests, she barreled forward with more
+vigor. It was as if she hoped to yield a successful test by sheer force of will. When her teams did not produce the
+desired answers, she shrouded their results in secrecy. She kept moving things forward:scheduling clinical trials and
+seeking partnerships with drug stores:though the technology was not ready or working accurately. Holmes settled for the
+guise of success in the lab, not excellent science. It was within this highly vicious structure at Theranos that Ian
+Gibbons worked as the Director of Chemistry. Carreyrou develops an exceptional character sketch of Gibbons during his
+time at Theranos, explaining that Gibbons was known for his dedication to and love of his craft (p. 281). "He was
+passionate about the science of blood testing and loved to teach it. In the company's early years, he would sometimes
+hold little lectures to educate the rest of the staff about the fundamentals of biochemistry" (Carreyrou,, p. 281). Most
+importantly, Gibbons had high standards of excellence. He was uncompromising in not making concessions or cutting
+corners that would somehow endanger the veracity of test results and subordinate concern for patients to the product
+itself. He was tireless in his conviction that things "must be done right" (Carreyrou,, p. 202). Gibbons was, in fact, a
+chemist who pursued excellence in his practice, and he was beloved by his coworkers and his dear wife. As a result, many
+things at Theranos troubled him. He was open about his frustrations with Holmes's management, particularly the
+intentional silos she created, the secrecy, and the exaggerations about the technology's readiness. He expressed
+frustration to a co-worker when Theranos moved forward with pursuing a partnership with Walgreens, implementing Theranos
+clinics at their neighborhood pharmacies. The technology was not ready; it did not work. Gibbons's willingness to
+vocalize the truth about the science threatened the secrecy Holmes worked hard to maintain. She did not want his expert
+opinion, even though his job was to do precisely that:to provide his expert opinion. When Holmes caught wind that
+Gibbons was discussing these realities with coworkers, she attempted to fire him. However, his expertise proved
+invaluable, and he was offered another role at the company without the same access to information and authority in his
+craft. He took the demotion, hoping he could continue doing what he loved in some worthwhile capacity. When Gibbons was
+re-hired and demoted at Theranos, he was effectively silenced and removed from the lab. He started working from home as
+a mere technical consultant, remaining steadfast in his commitment to excellence. The new Director of Chemistry was much
+more willing to compromise in places where Gibbons would not relent. However, Gibbons was still committed to the task,
+arguing for hours over the phone about the importance of accurate testing and how anything less than excellent results
+would negatively impact patient wellbeing. His unwavering pursuit of standards rendered him a defunct chemist at a
+company he knew to be deceitful. The circumstances were horrible, so why didn't he just leave? At this point, Gibbons
+was 67 years old, he had recently been diagnosed with cancer, and he was battling undiagnosed depression. As Carreyrou
+explains, he felt it was unlikely that he would be able to secure another job as a chemist if he left Theranos (p. 204).
+Things just kept getting worse from here for Gibbons. He was called to a deposition in a case regarding several Theranos
+patents, and this forced him into a corner. He had two choices: lie and perjure himself about the nature and origin of
+the patents, or break an NDA with Theranos and face Holmes's wrath. It was a heavy moral and existential predicament,
+and Gibbons saw no way out. Theranos attorneys kept pressuring him to lie, to push back the deposition, to use his
+cancer as an excuse to evade court, and so on. But this did not mesh with Gibbons's character. He was not a liar, but if
+he were to go on, he also needed a job and health insurance. This acute MI at the end of his long chronic struggle at
+Theranos weighed on Gibbons heavily. Linking this instance to Figure 1, it is worth emphasizing here that this is a case
+of experiencing CH-MI and A-MI in tandem. In the midst of this painful dilemma, Gibbons tragically took his own life.
+Theranos leadership barely spoke of it after he had been with the company for 10 years and produced most of the patents
+that they had secured. Rather than conveying her remorse to his wife, Holmes told her that Gibbons's laptop and
+corporate documents belonged to Theranos and that she needed to return them to the company promptly. In looking at the
+story of Ian Gibbons and his time at Theranos, it is easy to see the marginalization of practices on display. Holmes
+vigorously pursued a billion-dollar valuation at the expense of scientific integrity. She hired particularly excellent
+scientists and demanded that they sacrifice their commitment to excellence for the sake of Theranos and its feigned
+success. Chemists and engineers at Theranos were expected to betray the standards of the scientific community. In fact,
+they were expected to not care about them at all. One could argue that Gibbons was so deeply habituated as an excellent
+chemist that he could not simply betray those standards for Theranos. His virtuous desires could not be deformed by the
+Weberian manager. Instead, during his last few years at Theranos, Gibbons was forced into a position of silent protest,
+enduring the stress of significant cognitive dissonance. There is a particular sort of pain when someone like Gibbons:a
+practitioner committed to excellence in his practice:is pressured to comply with vice as a worker in a poorly formed
+institution. We describe this pain as CH-MI. It is easy look at this case study and draw the conclusion that such
+circumstances are rare:to hold up the example of Elizabeth Holmes as a fanatical egomaniac. Likewise, it is easy to hold
+up the example of Theranos as an exceptionally disingenuous start-up. Following MacIntyre's critique, perhaps this isn't
+so. Perhaps there are more lawyers being thwarted the opportunity to work for justice, doctors being thwarted the
+opportunity to work for health, and chemists being thwarted the opportunity to uphold the standards of scientific method
+than we are comfortable knowing. Holmes's persona and the structure she implemented at Theranos were, after all, openly
+borrowed from Steve Jobs. She captivated Silicon Valley because she was familiar:tenacious, cold, and obsessed with
+success. The secrecy and results-driven demands that characterized the Theranos culture were easily dismissed and
+excused because of how closely they mirrored the norm. Thus, we conclude that the setting ripe for CH-MI is common and
+pervasive.
