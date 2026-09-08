@@ -15,7 +15,7 @@
     2. Estruturar das informações básicas do csv
         - ID, age, gender..
 
-    3. Usar regex sep para organizar o texto em uma lista de sentenças
+    3. Usar regex sep para organizar o texto em uma lista de sentenças. Uma sentença pode ter um marcador de "has interrogation".
 
     4. Para cada sentença:
 
@@ -25,10 +25,10 @@
 
         6. Classificação:
             - Para cada token:
-                - Checar se é um termo classificável como: doença, quantidade. Já dá pra "marcar" aqui se o token representa um verbo/ação de diagnosticar, ter histórico, fazer exame etc?
+                - Checar se é um termo classificável como: doença, quantidade. Já dá pra "marcar" aqui se o token representa uma DENOTAÇÃO (diagnosticar, ter histórico, realizar procedimento etc)
                 - Descartar tokens inúteis?
         
-        7. Identificar e marcar se a sentença é "duvidosa" (contém negação, pergunta, possibilidade tipo "could have"...). Para uma primeira versão podemos simplesmente descartar e anular essas sentenças
+        7. Identificar e marcar se a sentença é "duvidosa" (contém negação, pergunta, possibilidade tipo "could have"...). Para uma primeira versão podemos simplesmente descartar e anular essas sentenças. Para sentenças com interrogação, pode haver uma lógica para anular apenas a última denotação.
 
     8. Para cada sentença válida:
 
