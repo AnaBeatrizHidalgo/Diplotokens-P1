@@ -40,6 +40,7 @@
 
 
 
+```mermaid
 graph LR
     %% Nós Centrais e Estruturais
     
@@ -70,4 +71,5 @@ graph LR
     class Artigo,Casos,Paciente main;
     class MeSH,Ano,Idade,Genero,Historico,Medicacao,Sintoma,Exame,Doenca,Efeito,Resultado entity;
     class PartesCorpo target;
+```
 
