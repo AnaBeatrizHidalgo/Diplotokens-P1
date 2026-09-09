@@ -221,9 +221,9 @@ mitral | porcine | valve | one | year | prior | presented | with | severe | resp
 emergent | intubation | . | Initial | electrocardiogram | ( | EKG | ) | revealed | sinus | rhythm | with | left |
 anterior | fascicular | block | , | right | bundle | branch | block | , | and | evidence | of | left | atrial |
 enlargement | . | Initial | troponin | was | normal | at | 0.04 ng/mL | , | but | CK-MB | and | total | CK | were |
-elevated | to | 21.2 ng/mL | and | 308 | U | L | , | respectively | . | Anticoagulation | studies | revealed | an | INR
-| of | 1.0 | , | a | PTT | of | 28 | , | and | a | PT | of | 10.9 | . | Following | transfer | to | the | intensive |
-care | unit | , | the | patient | was | started | immediately | on | heparin | infusion | for | suspicion | of | acute |
+elevated | to | 21.2 ng/mL | and | 308 U/L | , | respectively | . | Anticoagulation | studies | revealed | an | INR | of
+| 1.0 | , | a | PTT | of | 28 | , | and | a | PT | of | 10.9 | . | Following | transfer | to | the | intensive | care |
+unit | , | the | patient | was | started | immediately | on | heparin | infusion | for | suspicion | of | acute |
 coronary | syndrome | ( | ACS | ) | ; | computed | tomography | angiogram | ( | CTA | ) | of | the | chest | revealed |
 moderate | patchy | ground-glass | and | nodular | airspace | opacities | with | interstitial | edema | and |
 cardiomegaly | . | Transesophageal | echocardiogram | ( | TEE | ) | was | performed | showing | an | acute | thrombosis
@@ -290,7 +290,7 @@ steroid | cell | tumor | NOS | . | In | the | postoperative | period | , | the |
 serial | measurements | of | serum | testosterone | levels | and | transvaginal | ultrasound | . | At | 24 months | , |
 she | had | no | evidence | of | recurrence | and | began | follow-up | in | reproductive | medicine | consultation | .
 | She | was | proposed | to | in | vitro | fertilization | treatment | , | but | despite | gonadotropin | therapy | ( |
-in | high | doses | , | 300 | U | ) | for | ovarian | stimulation | , | she | had | no | response | . | At | 36 months |
+in | high | doses | , | 300U | ) | for | ovarian | stimulation | , | she | had | no | response | . | At | 36 months |
 postoperatively | , | she | is | still | not | pregnant | and | no | evidence | of | recurrence | too | .
 
 ================================================================================ CASO 6
@@ -336,9 +336,9 @@ ceased | its | re-sterilization | policy | in | 2011 | . | She | was | given | 5
 | shunt | , | intraoperative | or | postoperative | complications | . | Ten | days | later | , | the | patient |
 developed | a | persistent | fever | of | up | to | 40 | C | which | failed | to | respond | to | a | 1 | week | course
 | of | co-amoxyclav | . | The | patient | was | admitted | to | the | pediatric | ward | for | additional |
-investigation | . | The | temperature | was | 39 | C | , | heart | rate | was | 140 | m | , | respiratory | rate | was |
-30 | min | , | and | blood | pressure | was | 100 | 60 mm | Hg | on | admission | . | A | new | systolic | murmur | ( |
-3 | 6 | ) | was | detected | in | the | lower | left | sternal | border | with | no | organomegaly | , | no | splinter |
+investigation | . | The | temperature | was | 39 | C | , | heart | rate | was | 140/m | , | respiratory | rate | was |
+30/min | , | and | blood | pressure | was | 100/60 mm Hg | on | admission | . | A | new | systolic | murmur | ( | 3/6 |
+) | was | detected | in | the | lower | left | sternal | border | with | no | organomegaly | , | no | splinter |
 hemorrhages | or | Roth | s | spots | detected | . | Laboratory | investigations | showed | an | elevated | erythrocyte
 | sedimentation | rate | of | 120 mm | h | , | C-reactive | protein | of | 91 mg/dl | , | a | white | blood | cell |
 count | of | 28,000 | mm | 3 | and | normal | platelet | count | as | well | as | hemoglobin | of | 6 g | for | which |
@@ -357,7 +357,7 @@ atrium | revealed | a | destroyed | tricuspid | valve | with | vegetations | and
 coil | Figure | 1 | . | The | coil | was | removed | , | and | the | VSD | was | closed | by | an | autologous |
 pericardial | patch | using | a | continuous | prolene | suture | Figure | 2 | . | The | tricuspid | valve | could | not
 | be | repaired | and | was | replaced | with | a | size | 31 | tissue | valve | Figure | 3 | . | The | bypass | and |
-cross | clamp | time | were | 35 | and | 12 | min | , | respectively | . | The | patient | developed | heart | block |
+cross | clamp | time | were | 35 | and | 12 min | , | respectively | . | The | patient | developed | heart | block |
 immediately | and | was | paced | , | however | , | she | continued | to | deteriorate | with | heart | failure | and |
 ongoing | sepsis | . | She | required | high | doses | of | inotropes | ( | adrenaline | , | dopamine | , | and |
 dobutamine | ) | and | was | continued | on | antibiotics | . | Cultures | obtained | from | surgical | specimens | were
@@ -703,35 +703,35 @@ neutrophilic | leucocytosis | ( | 9.46 | x | 109 | L | ) | and | normal | lympho
 City | Branch | of | Tongji | Hospital | , | a | designated | hospital | for | diagnosis | and | treatment | of | COVID
 | 19 | in | Wuhan | . | On | admission | , | the | patient | presented | with | mild | coughing | . | Physical |
 examination | revealed | that | the | conscious | of | the | patient | was | clear | , | temperature | was | 37.1 | C |
-, | blood | pressure | was | 136 | 74 mmHg | , | pulse | rate | was | 77 | beats | per | minute | , | respiratory | rate
-| was | 18 | breaths | per | minute | and | peripheral | oxygen | saturation | under | oxygen | inhalation | ( | 3 L |
-min | ) | through | nasal | catheter | was | 98 | . | The | results | of | laboratory | examinations | were | presented
-| in | Table | 1 | . | White | blood | cell | count | , | neutrophilic | granulocyte | count | and | lymphocyte | count
-| were | normal | . | Several | inflammatory | indicators | were | high | . | Mild | injuries | of | kidney | , |
-myocardium | , | liver | and | coagulation | function | were | observed | . | M | . | pneumoniae | infection | was |
-found | by | serology | ( | Figure | 1 | ) | . | Glycosylated | hemoglobin | was | 7.1 | , | and | postprandial | blood
-| sugar | was | higher | than | 11.1 mmol/L | . | Routine | tests | of | stool | and | urine | samples | were | normal |
-. | The | patient | was | diagnosed | of | SLE | combined | with | COVID | 19 | , | influenza | A | , | M | . |
-pneumoniae | infection | and | diabetes | mellitus | . | Prednisone | ( | 25 mg | p | . | o | . | , | once | daily | ) |
-and | hydroxychloroquine | ( | 0.2 g | p | . | o | . | , | twice | daily | ) | were | given | to | cover | the |
-concurrence | of | SLE | and | COVID | 19 | . | Pantoprazole | ( | 40 mg | p | . | o | . | , | once | daily | ) | was |
-used | to | prevent | gastric | mucosal | injury | caused | by | prednisone | . | Levofloxacin | ( | 0.5 g | p | . | o |
-. | , | once | daily | ) | was | given | to | deal | with | bacterial | and | M | . | pneumoniae | infection | . | Then
-| , | acarbose | ( | 50 mg | before | lunch | and | dinner | daily | ) | was | applied | to | control | the | blood |
-glucose | . | On | the | 6 | th | day | of | hospitalization | , | the | symptoms | of | the | patient | eased | . |
-Thoracic | CT | ( | February | 14 | , | 2020 | ) | showed | bilateral | ground-glass | , | patchy | and | cord-like |
-shadows | ( | Figure | 2 | a | ) | , | which | was | better | than | the | second | CT | ( | February | 8 | , | 2020 | )
-| before | admission | ( | according | to | the | medical | records | ) | . | On | the | 8 | th | day | of |
-hospitalization | , | some | laboratory | examinations | were | retested | , | and | most | of | which | were | improved
-| ( | Table | 1 | ) | . | Dosage | of | prednisone | was | reduced | to | 15 mg | once | daily | as | pneumonia |
-improved | . | On | day | 15 | of | hospitalization | , | laboratory | tests | revealed | that | most | of | the |
-values | were | better | than | previous | tests | ( | Table | 1 | ) | . | Inflammatory | indicators | such | as | serum
-| ferritin | , | high-sensitivity | C-reactive | protein | ( | hsCRP | ) | , | erythrocyte | sedimentation | rate | ( |
-ESR | ) | and | interleukin | 6 | were | lower | . | Subgroup | typing | of | lymphocytes | represented | elevation | of
-| CD | 4 | T | cells | ( | 1517 | muL | ) | and | reduction | of | CD | 8 | T | cell | ( | 252 | muL | ) | . | The |
-ratio | of | helper | T | cell | versus | suppressor | T | cell | was | elevated | ( | 6.01 | ) | . | The | thoracic |
-CT | ( | February | 23 | , | 2020 | ) | showed | a | modest | upturn | in | the | lesions | ( | Figure | 2 | b | ) | . |
-The | dosage | of | prednisone | was | then | reduced | to | 10 mg | once | daily | as | pneumonia | improved | . |
+, | blood | pressure | was | 136/74 mmHg | , | pulse | rate | was | 77 | beats | per | minute | , | respiratory | rate |
+was | 18 | breaths | per | minute | and | peripheral | oxygen | saturation | under | oxygen | inhalation | ( | 3 L/min |
+) | through | nasal | catheter | was | 98 | . | The | results | of | laboratory | examinations | were | presented | in |
+Table | 1 | . | White | blood | cell | count | , | neutrophilic | granulocyte | count | and | lymphocyte | count | were
+| normal | . | Several | inflammatory | indicators | were | high | . | Mild | injuries | of | kidney | , | myocardium |
+, | liver | and | coagulation | function | were | observed | . | M | . | pneumoniae | infection | was | found | by |
+serology | ( | Figure | 1 | ) | . | Glycosylated | hemoglobin | was | 7.1 | , | and | postprandial | blood | sugar | was
+| higher | than | 11.1 mmol/L | . | Routine | tests | of | stool | and | urine | samples | were | normal | . | The |
+patient | was | diagnosed | of | SLE | combined | with | COVID | 19 | , | influenza | A | , | M | . | pneumoniae |
+infection | and | diabetes | mellitus | . | Prednisone | ( | 25 mg | p | . | o | . | , | once | daily | ) | and |
+hydroxychloroquine | ( | 0.2 g | p | . | o | . | , | twice | daily | ) | were | given | to | cover | the | concurrence |
+of | SLE | and | COVID | 19 | . | Pantoprazole | ( | 40 mg | p | . | o | . | , | once | daily | ) | was | used | to |
+prevent | gastric | mucosal | injury | caused | by | prednisone | . | Levofloxacin | ( | 0.5 g | p | . | o | . | , |
+once | daily | ) | was | given | to | deal | with | bacterial | and | M | . | pneumoniae | infection | . | Then | , |
+acarbose | ( | 50 mg | before | lunch | and | dinner | daily | ) | was | applied | to | control | the | blood | glucose
+| . | On | the | 6 | th | day | of | hospitalization | , | the | symptoms | of | the | patient | eased | . | Thoracic |
+CT | ( | February | 14 | , | 2020 | ) | showed | bilateral | ground-glass | , | patchy | and | cord-like | shadows | ( |
+Figure | 2 | a | ) | , | which | was | better | than | the | second | CT | ( | February | 8 | , | 2020 | ) | before |
+admission | ( | according | to | the | medical | records | ) | . | On | the | 8 | th | day | of | hospitalization | , |
+some | laboratory | examinations | were | retested | , | and | most | of | which | were | improved | ( | Table | 1 | ) |
+. | Dosage | of | prednisone | was | reduced | to | 15 mg | once | daily | as | pneumonia | improved | . | On | day | 15
+| of | hospitalization | , | laboratory | tests | revealed | that | most | of | the | values | were | better | than |
+previous | tests | ( | Table | 1 | ) | . | Inflammatory | indicators | such | as | serum | ferritin | , |
+high-sensitivity | C-reactive | protein | ( | hsCRP | ) | , | erythrocyte | sedimentation | rate | ( | ESR | ) | and |
+interleukin | 6 | were | lower | . | Subgroup | typing | of | lymphocytes | represented | elevation | of | CD | 4 | T |
+cells | ( | 1517 | muL | ) | and | reduction | of | CD | 8 | T | cell | ( | 252 | muL | ) | . | The | ratio | of |
+helper | T | cell | versus | suppressor | T | cell | was | elevated | ( | 6.01 | ) | . | The | thoracic | CT | ( |
+February | 23 | , | 2020 | ) | showed | a | modest | upturn | in | the | lesions | ( | Figure | 2 | b | ) | . | The |
+dosage | of | prednisone | was | then | reduced | to | 10 mg | once | daily | as | pneumonia | improved | . |
 Nasopharyngeal | swabs | were | collected | for | rRT-PCR | of | SARS-CoV | 2 | on | day | 16 | and | 18 | , | both | of
 | which | were | negative | . | Two | days | later | ( | day | 20 | ) | , | the | patient | developed | wrist | pain | ,
 | and | loxoprofen | ( | 60 mg | p | . | o | . | , | twice | daily | ) | was | used | to | alleviate | it | . | On | day
@@ -1056,17 +1056,17 @@ Regrettably, no pathological analysis of these tissues was performed.
 
 Tokens encontrados: In | the | first | family | , | the | index | patient | ( | patient | 1 | ) | was | a | 12 |
 year-old | female-phenotype | patient | who | presented | with | hypokalemic | ( | 1.8 mmol/l | ) | weakness | that |
-was | accompanied | by | hypertension | ( | 138 | 94 mmHg | ) | . | She | was | born | after | an | uneventful |
-pregnancy | and | was | the | first | child | in | the | family | . | Her | height | was | 142 cm | and | her | weight |
-was | 44 kg | . | She | had | Tanner | stage | 1 | breasts | , | pubic | hair | , | and | no | axillary | hair | . | Her
-| external | genitalia | were | female | type | , | but | with | infantilism | . | She | had | three | younger |
-siblings | , | all | with | female | external | genitalia | . | All | siblings | of | the | index | case | were |
-asymptomatic | and | no | other | family | member | had | a | similar | history | of | hypertension | and | periodic |
-paralysis | . | But | , | the | third | ( | karyotype | 46 | , | XY | , | patient | 2 | ) | and | fourth | ( | karyotype
-| 46 | , | XX | , | patient | 3 | ) | children | were | twins | and | had | hypertension | on | examination | ( | Table
-| 1 | ) | . | At | the | age | of | 4 years | , | the | proband | had | undergone | surgery | at | the | local |
-hospital | for | an | inguinal | hernia | on | the | left | side | . | Regrettably | , | no | pathological | analysis |
-of | these | tissues | was | performed | .
+was | accompanied | by | hypertension | ( | 138/94 mmHg | ) | . | She | was | born | after | an | uneventful | pregnancy
+| and | was | the | first | child | in | the | family | . | Her | height | was | 142 cm | and | her | weight | was | 44
+kg | . | She | had | Tanner | stage | 1 | breasts | , | pubic | hair | , | and | no | axillary | hair | . | Her |
+external | genitalia | were | female | type | , | but | with | infantilism | . | She | had | three | younger | siblings
+| , | all | with | female | external | genitalia | . | All | siblings | of | the | index | case | were | asymptomatic |
+and | no | other | family | member | had | a | similar | history | of | hypertension | and | periodic | paralysis | . |
+But | , | the | third | ( | karyotype | 46 | , | XY | , | patient | 2 | ) | and | fourth | ( | karyotype | 46 | , | XX |
+, | patient | 3 | ) | children | were | twins | and | had | hypertension | on | examination | ( | Table | 1 | ) | . | At
+| the | age | of | 4 years | , | the | proband | had | undergone | surgery | at | the | local | hospital | for | an |
+inguinal | hernia | on | the | left | side | . | Regrettably | , | no | pathological | analysis | of | these | tissues |
+was | performed | .
 
 ================================================================================ CASO 16
 
@@ -1194,8 +1194,8 @@ Tokens encontrados: A | 23 | year-old | male | was | brought | to | the | emerge
 in | Doha | , | after | being | found | on | the | floor | dizzy | and | confused | , | with | urinary | incontinence |
 although | no | one | witnessed | convulsions | . | The | patient | denied | any | fever | , | headache | , | chest |
 pain | , | shortness | of | breath | and | palpitations | , | or | cardiac | diseases | . | On | examination | , | his |
-pulse | was | 75 | beats | per | minute | , | blood | pressure | 125 | 78 | , | JVP | was | not | raised | , | S | 1 |
-and | S | 2 | were | normal | , | and | no | added | sounds | on | the | chest | examination | . | The | patient | was |
+pulse | was | 75 | beats | per | minute | , | blood | pressure | 125/78 | , | JVP | was | not | raised | , | S | 1 | and
+| S | 2 | were | normal | , | and | no | added | sounds | on | the | chest | examination | . | The | patient | was |
 thought | to | have | had | a | syncopal | attack | . | His | complete | blood | count | and | biochemical | test | were
 | within | the | normal | range | . | Computed | tomography | ( | CT | ) | scan | of | the | head | was | unremarkable |
 and | ECG | showed | left | ventricular | hypertrophy | and | early | repolarization | . | Echocardiography | , | apart
@@ -1438,20 +1438,20 @@ of | her | mother | , | she | reported | that | her | daughter | is | absolutely
 she | expressed | her | fear | of | pain | perception | during | the | tracheostomy | procedure | . | Consent | was |
 taken | from | the | patient | to | take | a | photo | for | her | . | In | the | high | dependency | unit | , | 2 | h |
 before | surgery | , | sedation | was | initiated | under | full | monitoring | with | baseline | non-invasive | blood |
-pressure | ( | BP | ) | 111 | 74 mmHg | , | heart | rate | ( | HR | ) | 92 | min | , | oxygen | hemoglobin | saturation
-| 98 | and | respiratory | rate | ( | RR | ) | 17 | min | . | Ketamine | ( | Tekam | , | Hikma | , | Jordan | ) | with |
-a | dose | of | 120 mg | ( | 3 mg/kg | ) | diluted | in | 10 ml | normal | saline | was | administered | through | the |
+pressure | ( | BP | ) | 111/74 mmHg | , | heart | rate | ( | HR | ) | 92/min | , | oxygen | hemoglobin | saturation | 98
+| and | respiratory | rate | ( | RR | ) | 17/min | . | Ketamine | ( | Tekam | , | Hikma | , | Jordan | ) | with | a |
+dose | of | 120 mg | ( | 3 mg/kg | ) | diluted | in | 10 ml | normal | saline | was | administered | through | the |
 gastrostomy | tube | . | That | was | followed | by | administration | of | 80 mcg | ( | 2 mcg/kg | ) | dexmedetomidine
 | ( | Precedex | ; | Hospira | , | Inc | . | , | Lake | Forest | , | IL | , | USA | ) | diluted | in | 10 ml | normal |
 saline | . | EMLA | 5 g | cream | 5 | ( | Astra | Pharma | , | Inc | . | , | Mississauga | , | Ontario | , | Canada | )
 | was | applied | over | the | planned | tracheostomy | site | about | 10 cm | 2 | and | covered | by | transparent |
 film | dressing | ( | Tegaderm | Film | , | 3 | M | Health-Care | , | USA | ) | . | In | OR | , | the | patient | was |
 sedated | yet | awake | with | eye | opening | to | verbal | commands | . | Non-invasive | monitoring | was | applied |
-for | the | patient | ( | BP | , | electrocardiogram | , | pulse | oximetry | ) | . | BP | was | 105 | 70 mmHg | , | HR
-| : | 89 | min | , | RR | : | 16 | min | and | O | 2 | Sat | : | 98 | . | A | 24G | IV | cannula | was | inserted | in |
-the | left | antecubital | vein | guided | by | ultrasound | without | complaint | . | 5 ml | lidocaine | 1 | adrenaline
-| 1 | 200,000 | were | infiltrated | over | tracheostomy | site | by | the | surgeon | after | IV | was | secured | with
-| full | cooperation | by | the | patient | . | Cuffed | tracheostomy | tube | size | 6.0 mm | tube | was | easily |
+for | the | patient | ( | BP | , | electrocardiogram | , | pulse | oximetry | ) | . | BP | was | 105/70 mmHg | , | HR |
+: | 89/min | , | RR | : | 16/min | and | O | 2 | Sat | : | 98 | . | A | 24G | IV | cannula | was | inserted | in | the |
+left | antecubital | vein | guided | by | ultrasound | without | complaint | . | 5 ml | lidocaine | 1 | adrenaline |
+1/200,000 | were | infiltrated | over | tracheostomy | site | by | the | surgeon | after | IV | was | secured | with |
+full | cooperation | by | the | patient | . | Cuffed | tracheostomy | tube | size | 6.0 mm | tube | was | easily |
 inserted | . | No | changes | in | vital | signs | were | observed | during | the | procedure | . | On | the | following
 | day | , | the | cuffed | tracheostomy | tube | was | replaced | by | a | fenestrated | one | ; | to | allow | the |
 patient | to | speak | . | The | mother | informed | the | team | that | her | daughter | was | highly | satisfied | and
@@ -1528,74 +1528,74 @@ which | had | not | bothered | him | significantly | and | did | not | , | in | 
 been | performed | , | without | any | improvement | . | The | clinical | neurological | examination | on | admission |
 revealed | a | paresis | dominantly | of | the | right | distal | arm | but | no | atrophy | . | Specifically | , | he |
 displayed | motor | deficits | ( | Medical | Research | Council | grading | system | ) | in | his | wrist | flexion |
-right | ( | r | ) | : | 4 | 5 | , | left | ( | l | ) | : | 5 | 5 | , | wrist | extension | ( | r | : | 4 | 5 | , | l | :
-| 5 | 5 | ) | , | wrist | abduction | ulnar | : | ( | r | : | 4 | 5 | , | l | : | 5 | 5 | ) | , | radial | : | ( | r | :
-| 4 | 5 | , | l | : | 5 | 5 | ) | , | finger | extension | and | flexion | ( | r | : | 4 | 5 | , | l | : | 5 | 5 | ) |
-in | addition | to | his | finger | spread | ( | r | : | 4 | 5 | , | l | : | 5 | 5 | ) | . | His | thumb | abduction | ,
-| opposition | ( | r | : | 4 | 5 | , | l | : | 5 | 5 | ) | , | and | extension | ( | r | : | 4 | 5 | , | l | : | 5 | 5 |
-) | showed | deficits | on | the | right | side | . | There | was | a | paresis | in | the | external | shoulder |
-rotation | on | both | sides | ( | l | , | r | : | 4 | 5 | ) | but | no | deficits | in | any | other | muscles | ( | l
-| r | : | 5 | 5 | ) | . | The | patient | also | presented | an | isolated | hypoesthesia | in | the | fingertips | ( |
-one | third | of | distal | phalanx | ) | of | his | first | three | fingers | on | both | sides | with | an | exclusion
-| of | the | thumb | pad | and | palm | without | thermdysesthesia | and | pallhypesthesia | . | Cramps | and |
-fasciculations | were | not | observed | . | Reflexes | were | weak | but | equal | on | both | sides | . | The |
-neurological | exam | was | otherwise | unremarkable | . | A | diagnostic | lumbar | puncture | and | subsequent |
-cerebrospinal | fluid | ( | CSF | ) | analysis | showed | a | normal | cell | count | and | slightly | increased | total
-| protein | levels | ( | 603 mg/l | ) | with | a | blood-CSF | barrier | dysfunction | as | quantified | by | the |
-albumin | quotient | , | but | no | intrathecal | immunoglobulin | synthesis | ( | Figure | 1 | ) | . | Flow | cytometry
-| analysis | revealed | an | increase | of | activated | HLA-DR | expressing | CD | 4 | T | cells | ( | 33.7 | ) | in |
-the | CSF | compared | to | age-matched | non-inflammatory | controls | Figure | 1 | ( | b | ) | . | Furthermore | , |
-increased | proportions | of | natural | killer | cells | ( | NK | cells | ) | with | a | CD | 56 | bright | to | CD |
-56 | dim | shift | were | observed | in | the | blood | of | the | patient | compared | to | both | non-inflammatory |
-controls | and | other | inflammatory | neuropathy | patients | . | Both | blood | and | CSF | displayed | higher |
-levels | of | NKT | cells | compared | to | the | non-inflammatory | controls | . | Interestingly | , | we | detected |
-antibodies | against | CASPR | 2 | in | the | CSF | ( | 1 | : | 32 | ) | and | in | the | serum | of | the | patient | (
-| 1 | : | 320 | ) | ( | Table | 1 | ) | ( | indirect | immunofluorescence | assay | ) | . | Serum | ganglioside |
-antibody | determination | showed | negative | Immunoglobulin | ( | Ig | ) | G | antibodies | and | a | borderline |
-positive | result | for | IgM | antibodies | against | GM | 3 | and | GQ | 1 | b | in | the | serum | , | which | , |
-based | on | the | assay | guidelines | , | was | considered | negative | ( | Table | 1 | ) | ( | enzyme | immunoassay |
-) | . | Further | diagnostics | showed | a | motor | nerve | conduction | block | at | Erb | s | point-axilla | with |
-area | reduction | of | 50 | ( | Table | 2 | ) | in | the | right | ulnar | nerve | . | Nerve | conduction | velocity |
-showed | normal | values | in | the | median | and | ulnar | nerve | . | F-wave | latencies | of | the | ulnar | nerves
-| were | prolonged | and | the | right | median | nerve | was | not | measurable | . | The | radial | and | tibial |
-nerve | on | both | sides | showed | normal | functions | . | The | sensory | nerve | conduction | was | normal | in |
-all | of | the | above-mentioned | nerves | suggestive | of | an | isolated | motoric | axonal | and | demyelinating |
-neuropathy | . | The | needle | electromyography | showed | chronic | neurogenic | changes | in | the | abductor |
-pollicis | brevis | muscle | , | with | no | abnormal | activity | at | rest | . | We | diagnosed | a | MMN | as | the |
-patient | fulfilled | the | diagnostic | criteria | . | A | peripheral | nerve | ultrasonography | ( | Figure | 2 | ) |
-showed | an | enlargement | of | the | cross-sectional | areas | of | the | right | median | nerve | and | discontinuous
-| swelling | of | individual | fascicles | of | the | right | median | and | ulnar | nerve | in | the | upper | arm |
-supporting | the | MMN-like | phenotype | . | A | neuropsychiatric | consultation | showed | a | normal | neurocognitive
-| performance | profile | with | no | indication | of | an | autoimmune | encephalitis | profile | . | In | context |
-with | the | clinical | presentation | and | his | normal | brain | MRI | we | thus | ruled | out | an | autoimmune |
+right | ( | r | ) | : | 4 | 5 | , | left | ( | l | ) | : | 5/5 | , | wrist | extension | ( | r | : | 4/5 | , | l | : |
+5/5 | ) | , | wrist | abduction | ulnar | : | ( | r | : | 4/5 | , | l | : | 5/5 | ) | , | radial | : | ( | r | : | 4 | 5
+| , | l | : | 5/5 | ) | , | finger | extension | and | flexion | ( | r | : | 4 | 5 | , | l | : | 5/5 | ) | in | addition
+| to | his | finger | spread | ( | r | : | 4/5 | , | l | : | 5/5 | ) | . | His | thumb | abduction | , | opposition | (
+| r | : | 4/5 | , | l | : | 5/5 | ) | , | and | extension | ( | r | : | 4 | 5 | , | l | : | 5/5 | ) | showed | deficits
+| on | the | right | side | . | There | was | a | paresis | in | the | external | shoulder | rotation | on | both |
+sides | ( | l | , | r | : | 4 | 5 | ) | but | no | deficits | in | any | other | muscles | ( | l | r | : | 5/5 | ) | . |
+The | patient | also | presented | an | isolated | hypoesthesia | in | the | fingertips | ( | one | third | of | distal
+| phalanx | ) | of | his | first | three | fingers | on | both | sides | with | an | exclusion | of | the | thumb | pad
+| and | palm | without | thermdysesthesia | and | pallhypesthesia | . | Cramps | and | fasciculations | were | not |
+observed | . | Reflexes | were | weak | but | equal | on | both | sides | . | The | neurological | exam | was |
+otherwise | unremarkable | . | A | diagnostic | lumbar | puncture | and | subsequent | cerebrospinal | fluid | ( | CSF |
+) | analysis | showed | a | normal | cell | count | and | slightly | increased | total | protein | levels | ( | 603 mg/l
+| ) | with | a | blood-CSF | barrier | dysfunction | as | quantified | by | the | albumin | quotient | , | but | no |
+intrathecal | immunoglobulin | synthesis | ( | Figure | 1 | ) | . | Flow | cytometry | analysis | revealed | an |
+increase | of | activated | HLA-DR | expressing | CD | 4 | T | cells | ( | 33.7 | ) | in | the | CSF | compared | to |
+age-matched | non-inflammatory | controls | Figure | 1 | ( | b | ) | . | Furthermore | , | increased | proportions | of
+| natural | killer | cells | ( | NK | cells | ) | with | a | CD | 56 | bright | to | CD | 56 | dim | shift | were |
+observed | in | the | blood | of | the | patient | compared | to | both | non-inflammatory | controls | and | other |
+inflammatory | neuropathy | patients | . | Both | blood | and | CSF | displayed | higher | levels | of | NKT | cells |
+compared | to | the | non-inflammatory | controls | . | Interestingly | , | we | detected | antibodies | against | CASPR
+| 2 | in | the | CSF | ( | 1 | : | 32 | ) | and | in | the | serum | of | the | patient | ( | 1 | : | 320 | ) | ( |
+Table | 1 | ) | ( | indirect | immunofluorescence | assay | ) | . | Serum | ganglioside | antibody | determination |
+showed | negative | Immunoglobulin | ( | Ig | ) | G | antibodies | and | a | borderline | positive | result | for | IgM
+| antibodies | against | GM | 3 | and | GQ | 1 | b | in | the | serum | , | which | , | based | on | the | assay |
+guidelines | , | was | considered | negative | ( | Table | 1 | ) | ( | enzyme | immunoassay | ) | . | Further |
+diagnostics | showed | a | motor | nerve | conduction | block | at | Erb | s | point-axilla | with | area | reduction |
+of | 50 | ( | Table | 2 | ) | in | the | right | ulnar | nerve | . | Nerve | conduction | velocity | showed | normal |
+values | in | the | median | and | ulnar | nerve | . | F-wave | latencies | of | the | ulnar | nerves | were | prolonged
+| and | the | right | median | nerve | was | not | measurable | . | The | radial | and | tibial | nerve | on | both |
+sides | showed | normal | functions | . | The | sensory | nerve | conduction | was | normal | in | all | of | the |
+above-mentioned | nerves | suggestive | of | an | isolated | motoric | axonal | and | demyelinating | neuropathy | . |
+The | needle | electromyography | showed | chronic | neurogenic | changes | in | the | abductor | pollicis | brevis |
+muscle | , | with | no | abnormal | activity | at | rest | . | We | diagnosed | a | MMN | as | the | patient | fulfilled
+| the | diagnostic | criteria | . | A | peripheral | nerve | ultrasonography | ( | Figure | 2 | ) | showed | an |
+enlargement | of | the | cross-sectional | areas | of | the | right | median | nerve | and | discontinuous | swelling |
+of | individual | fascicles | of | the | right | median | and | ulnar | nerve | in | the | upper | arm | supporting |
+the | MMN-like | phenotype | . | A | neuropsychiatric | consultation | showed | a | normal | neurocognitive |
+performance | profile | with | no | indication | of | an | autoimmune | encephalitis | profile | . | In | context | with
+| the | clinical | presentation | and | his | normal | brain | MRI | we | thus | ruled | out | an | autoimmune |
 encephalitis | . | Due | to | the | CASPR | 2 | antibodies | , | which | can | be | associated | with | malignancy | , |
 we | initiated | a | tumor | search | with | an | abdomen | and | thyroid | sonography | as | well | as | an | urologic
 | consultation | and | Positron | emission | tomography-computed | tomography | ( | PET-CT | ) | which | showed | no |
 indication | of | a | tumor | . | In | a | follow-up | visit | the | patient | showed | signs | of | additional |
 deficits | on | the | left | side | . | Specifically | , | he | had | motor | deficits | in | his | right | finger |
-extension | ( | r | : | 4 | 5 | , | l | : | 4 | 5 | ) | , | his | thumb | abduction | ( | r | : | 4 | 5 | , | l | : | 4
-| 5 | ) | , | as | well | as | thumb | extension | ( | r | : | 4 | 5 | , | l | : | 4 | 5 | ) | . | We | started |
-treatment | with | IVIG | every | 4 weeks | . | Three | months | later | he | reported | a | clinical | improvement | in
-| his | daily | activities | as | he | was | now | able | to | open | drawers | again | . | Objective | parameters |
-included | an | improvement | of | his | finger | extension | ( | r | : | 4 | 5 | ; | l | : | 5 | 5 | ) | and | his |
-wrist | extension | ( | r | : | 5 | 5 | ; | l | : | 4 | 5 | ) | and | grip | strength | ( | Martin-Vigorimeter | ) | ( |
-l | : | 0.6 | bar | ; | r | : | not | measurable | ; | 3 | month | follow-up | l | : | 0.86 | bar | , | r | : | 0.36 |
-bar | ) | . | We | also | measured | an | improved | electroneurography | , | with | improved | conduction | velocity |
-and | amplitude | as | well | as | a | decreased | area | reduction | in | the | conduction | block | ( | Table | 2 | )
-| but | a | new | motor | nerve | conduction | block | with | an | area | reduction | of | 50 | on | the | median |
-nerve | at | the | elbow | on | both | sides | . | In | the | follow-up | , | CASPR | 2 | antibodies | were | confirmed
-| in | the | serum | ( | 1 | : | 10 | ) | with | an | indirect | immunofluorescence | assay | but | not | measured | in
-| the | CSF | , | therefore | also | presenting | a | treatment | response | . | Further | differential | diagnosis |
-included | Lewis-Sumner | syndrome | and | amyotrophic | lateral | sclerosis | as | well | as | other | more | common |
-causes | of | CASPR | 2 | antibodies | . | We | could | not | find | any | signs | of | the | first | motor | neuron |
-in | the | clinical | examination | . | While | the | patient | described | sensory | symptoms | in | the | innervation
-| area | of | the | median | nerve | bilaterally | , | they | did | not | extend | to | the | rest | of | its |
-innervation | area | ( | thumb | pad | , | lower | arm | ) | and | did | not | progress | over | time | . | In |
-addition | , | we | could | not | find | deficits | in | other | sensory | qualities | or | the | sensory | nerve |
-conduction | to | objectify | these | deficits | , | indicating | a | Lewis-Sumner | syndrome | . | However | , | we |
-do | acknowledge | that | the | inflammatory | neuropathies | are | most | likely | an | overlapping | disease |
-spectrum | , | which | is | why | we | also | call | it | MMN-like | disease | . | Further | diagnostics | in | our |
-case | also | showed | no | indication | of | more | common | diseases | associated | with | CASPR | 2 | antibodies | .
+extension | ( | r | : | 4/5 | , | l | : | 4 | 5 | ) | , | his | thumb | abduction | ( | r | : | 4/5 | , | l | : | 4 | 5
+| ) | , | as | well | as | thumb | extension | ( | r | : | 4 | 5 | , | l | : | 4/5 | ) | . | We | started | treatment |
+with | IVIG | every | 4 weeks | . | Three | months | later | he | reported | a | clinical | improvement | in | his |
+daily | activities | as | he | was | now | able | to | open | drawers | again | . | Objective | parameters | included |
+an | improvement | of | his | finger | extension | ( | r | : | 4/5 | ; | l | : | 5/5 | ) | and | his | wrist | extension
+| ( | r | : | 5/5 | ; | l | : | 4 | 5 | ) | and | grip | strength | ( | Martin-Vigorimeter | ) | ( | l | : | 0.6 | bar |
+; | r | : | not | measurable | ; | 3 | month | follow-up | l | : | 0.86 | bar | , | r | : | 0.36 | bar | ) | . | We |
+also | measured | an | improved | electroneurography | , | with | improved | conduction | velocity | and | amplitude |
+as | well | as | a | decreased | area | reduction | in | the | conduction | block | ( | Table | 2 | ) | but | a | new |
+motor | nerve | conduction | block | with | an | area | reduction | of | 50 | on | the | median | nerve | at | the |
+elbow | on | both | sides | . | In | the | follow-up | , | CASPR | 2 | antibodies | were | confirmed | in | the | serum
+| ( | 1 | : | 10 | ) | with | an | indirect | immunofluorescence | assay | but | not | measured | in | the | CSF | , |
+therefore | also | presenting | a | treatment | response | . | Further | differential | diagnosis | included |
+Lewis-Sumner | syndrome | and | amyotrophic | lateral | sclerosis | as | well | as | other | more | common | causes | of
+| CASPR | 2 | antibodies | . | We | could | not | find | any | signs | of | the | first | motor | neuron | in | the |
+clinical | examination | . | While | the | patient | described | sensory | symptoms | in | the | innervation | area | of
+| the | median | nerve | bilaterally | , | they | did | not | extend | to | the | rest | of | its | innervation | area |
+( | thumb | pad | , | lower | arm | ) | and | did | not | progress | over | time | . | In | addition | , | we | could |
+not | find | deficits | in | other | sensory | qualities | or | the | sensory | nerve | conduction | to | objectify |
+these | deficits | , | indicating | a | Lewis-Sumner | syndrome | . | However | , | we | do | acknowledge | that | the |
+inflammatory | neuropathies | are | most | likely | an | overlapping | disease | spectrum | , | which | is | why | we |
+also | call | it | MMN-like | disease | . | Further | diagnostics | in | our | case | also | showed | no | indication |
+of | more | common | diseases | associated | with | CASPR | 2 | antibodies | .
 
 ================================================================================ CASO 23
 
@@ -1706,9 +1706,9 @@ Her | symptoms | were | recurring | and | became | increasingly | more | frequen
 included | hypertension | for | 7 years | and | noncompliance | with | antihypertensives | ( | irbesartan | , | 150
 mg/day | ) | . | She | also | reported | abnormal | glucose | tolerance | for | the | past | year | . | She | denied |
 taking | any | other | medicines | . | Physical | examination | upon | admission | revealed | that | vitals | were | all
-| within | normal | limits | : | blood | pressure | 105 | 51 mmHg | ( | 1 mm | Hg | 0.133 | kPa | ) | , | heart | rate |
-( | HR | ) | 56 | beats | min | , | respiratory | rate | 20 | min | , | and | oxygen | saturation | level | at | 99 | (
-| room | air | ) | . | Cardiac | and | pulmonary | examination | revealed | normal | heart | sounds | without | murmur |
+| within | normal | limits | : | blood | pressure | 105/51 mmHg | ( | 1 mm | Hg | 0.133 | kPa | ) | , | heart | rate | (
+| HR | ) | 56 | beats | min | , | respiratory | rate | 20 | min | , | and | oxygen | saturation | level | at | 99 | ( |
+room | air | ) | . | Cardiac | and | pulmonary | examination | revealed | normal | heart | sounds | without | murmur |
 and | clear | lungs | to | auscultation | . | The | abdomen | was | soft | and | nontender | to | palpation | , |
 without | rebound | tenderness | . | There | was | no | appreciable | bilateral | lower | extremity | edema | . | The |
 electrocardiogram | ( | ECG | ) | performed | at | rest | showed | normal | sinus | rhythm | with | no | significant |
@@ -1724,7 +1724,7 @@ of | aspirin | ( | 300 mg | ) | clopidogrel | ( | 300 mg | ) | was | prescribed 
 was | then | admitted | to | the | cardiac | care | unit | ( | CCU | ) | for | suspicion | of | ACS | . | Twelve |
 minutes | after | hospitalization | , | her | chest | pain | recurred | , | and | monitoring | ECG | revealed |
 ST-segment | elevation | in | lead | II | and | complete | AV-B | with | HR | at | 41 | beats | min | accompanied | by |
-hypotension | ( | BP | at | 96 | 51 mmHg | ) | ( | Figures | 2 | A | , | B | ) | . | According | to | the |
+hypotension | ( | BP | at | 96/51 mmHg | ) | ( | Figures | 2 | A | , | B | ) | . | According | to | the |
 characteristics | of | the | patient | s | chest | pain | , | ECG | ( | near | normal | when | chest | pain | was |
 relieved | ) | , | and | biomarker | ( | normal | troponin | I | ) | obtained | in | ER | , | the | diagnosis | of | CAS
 | was | highly | suspected | . | With | a | possible | diagnosis | of | CAS | , | 5 mg | of | diltiazem | was |
@@ -1909,14 +1909,14 @@ Intralipid. Diet following re-initiation of enteral nutrition consisted of a com
 maternal and donor human milk, Enfaport, MCT oil instead of triheptanoin (per parental request), SolCarb, and Similac
 liquid protein fortifier (Figure 2). He recovered uneventfully and was discharged home on day 33 of life.
 
-Tokens encontrados: This | baby | boy | was | born | at | 33 | 2 | 7 weeks | gestational | age | to | a | 36 | year-old
-| gravida | 3 | , | para | 3 | mother | with | negative | serologies | , | except | for | Group | B | Streptococcus |
+Tokens encontrados: This | baby | boy | was | born | at | 33 | 2/7 weeks | gestational | age | to | a | 36 | year-old |
+gravida | 3 | , | para | 3 | mother | with | negative | serologies | , | except | for | Group | B | Streptococcus |
 unknown | , | whose | pregnancy | was | complicated | by | medication-controlled | gestational | diabetes | and |
 gestational | hypertension | , | and | a | family | history | significant | for | a | sibling | with | LCHADD | . | The
 | patient | was | delivered | by | cesarean | section | at | an | outside | facility | due | to | concern | for |
 serious | maternal | morbidity | associated | with | preeclampsia | , | specifically | HELLP | syndrome | . | Neonatal |
 resuscitation | was | unremarkable | and | the | Appearance | , | Pulse | , | Grimace | , | Activity | , | and |
-Respiration | ( | APGAR | ) | s | were | 8 | and | 9 | at | 1 | and | 5 | min | , | respectively | . | The | birth |
+Respiration | ( | APGAR | ) | s | were | 8 | and | 9 | at | 1 | and | 5 min | , | respectively | . | The | birth |
 weight | was | 2.46 kg | , | length | 47.5 cm | , | and | head | circumference | 32.5 cm | , | which | were | all |
 appropriate | for | gestational | age | . | The | patient | was | admitted | to | the | level | III | NICU | at | the |
 birth | facility | . | A | peripheral | intravenous | line | was | placed | and | 10 | dextrose | fluids | at | 150
@@ -1982,7 +1982,7 @@ complex | partial | seizures | arising | from | the | left | temporal | lobe | .
 | right | hand | . | Impairment | of | consciousness | and | apprehension | together | with | dysphasia | occurred | . |
 Postictally | , | the | dysphasia | continued | and | frequently | there | was | nose | wiping | with | the | left |
 hand | . | When | he | was | considered | a | candidate | for | surgery | , | the | patient | had | 1 | 2 | seizures |
-per | month | with | a | duration | of | 1 | min | . | The | seizures | were | treated | with | oxcarbazepine | 1200
+per | month | with | a | duration | of | 1 min | . | The | seizures | were | treated | with | oxcarbazepine | 1200
 mg/day | and | valproic | acid | 1500 mg/day | . | The | medical | history | was | negative | for | epilepsy-associated
 | risk | factors | such | as | febrile | seizures | , | meningitis | , | and | head | trauma | . | The | family |
 history | was | negative | with | regard | to | epilepsy | . | Neurological | examination | demonstrated | no |
@@ -2199,7 +2199,7 @@ HAdV | 14 | . | Postmortem | examination | of | the | patient | revealed | dark 
 marked | consolidation | and | patchy | hemorrhagic | foci | ; | the | right | lung | weighed | 1,593 g | and | the |
 left | 1,268 g | ( | reference | range | 350 | 450 g | ) | . | Examination | by | microscopy | showed | diffuse |
 alveolar | damage | , | fibrinohemorrhagic | changes | , | areas | of | necrosis | , | and | cellular | debris | ( |
-Figure | 1 | ) | . | Immunohistochemistry | ( | Anti-Adenovirus | Antibody | , | clone | 20 | 11 | MAB | 8052 | ; |
+Figure | 1 | ) | . | Immunohistochemistry | ( | Anti-Adenovirus | Antibody | , | clone | 20/11 | MAB | 8052 | ; |
 Millipore | ) | for | adenovirus | showed | few | epithelial | cells | which | had | cytoplasmic | granular | and |
 nuclear | positivity | . | Once | HAdV | 14 | had | been | isolated | , | we | conducted | a | retrospective | study |
 of | all | adenovirus-positive | viral | cultures | performed | at | the | Provincial | Laboratory | for | Viral |
@@ -2622,7 +2622,7 @@ regardless | of | whether | the | appropriate | final | ends | are | pursued | .
 claims | about | the | capabilities | and | possibilities | of | the | technology | that | could | not | be | supported
 | by | her | chemists | or | engineers | . | She | carefully | created | silos | to | ensure | that | employees | did |
 not | understand | the | full | scope | of | the | project | s | development | . | She | held | outrageous |
-expectations | for | her | workers | , | sometimes | demanding | departments | to | run | 24 | 7 | . | She | treated |
+expectations | for | her | workers | , | sometimes | demanding | departments | to | run | 24/7 | . | She | treated |
 employees | as | disposable | linchpins | , | quickly | discarding | those | who | did | not | fall | in | line | . |
 Even | worse | , | she | would | punish | those | who | challenged | the | morality | of | her | actions | by | firing |
 them | , | demoting | them | , | or | ceasing | to | give | them | pertinent | information | . | She | was | so |
@@ -2838,65 +2838,65 @@ muscle | relaxation | . | Arterial | blood | gas | analysis | showed | a | PaO |
 | of | 36.9 mmHg | , | and | a | pH | of | 7.424 | with | an | inspiratory | fraction | of | oxygen | ( | FiO | 2 | ) |
 of | 0.6 | . | With | an | FiO | 2 | of | 0.4 | , | percutaneous | arterial | oxygen | saturation | ( | SpO | 2 | ) |
 was | maintained | above | 98 | during | the | former | part | of | the | surgical | procedure | . | Approximately | 60
-| min | into | the | surgery | , | SpO | 2 | suddenly | dropped | from | 98 | to | 89 | with | an | FiO | 2 | of | 0.4 |
-. | We | assumed | that | lung | atelectasis | associated | with | airway | secretion | or | pulmonary | soiling |
-through | the | fistulae | was | the | most | likely | reason | for | the | impaired | oxygenation | . |
-Bronchofiberscopic | examination | showed | obstruction | of | the | orifice | of | the | left | main | bronchus | with
-| secretion | . | This | secretion | was | suctioned | , | and | FiO | 2 | was | increased | to | 0.6 | , | and |
-pressure | support | level | was | increased | to | 5 | cmH | 2 | O | . | However | , | oxygenation | only | improved |
-partially | and | arterial | blood | gas | analysis | showed | a | PaO | 2 | of | 101.7 mmHg | with | an | FiO | 2 | of
-| 0.6 | . | After | the | completion | of | surgery | , | chest | X-ray | revealed | right | pneumothorax | ( | Fig | .
-| 2 | ) | . | After | a | chest | drainage | tube | was | inserted | , | right | pneumothorax | was | ameliorated | , |
-and | then | SpO | 2 | returned | to | the | baseline | ( | 99 | ) | with | an | FiO | 2 | of | 0.4 | . | The | patient
-| was | extubated | uneventfully | in | the | operating | room | . | The | postoperative | course | was | mostly |
-uneventful | , | except | that | 650 ml | of | pleural | effusion | in | the | left | thoracic | cavity | was |
-aspirated | on | postoperative | day | ( | POD | ) | 1 | . | The | chest | tube | in | the | right | thoracic | cavity |
-was | withdrawn | on | POD | 1 | , | and | the | patient | was | discharged | from | hospital | on | POD | 18 | . | Our
-| management | plan | , | comprising | combination | of | general | and | epidural | anesthesia | and | maintenance | of
-| spontaneous | respiration | during | the | surgical | procedure | , | according | to | our | previous | report | , |
-went | relatively | well | except | for | the | unexpected | hypoxemia | due | to | intraoperative | pneumothorax | . |
-The | collapse | of | the | right | lung | may | have | been | facilitated | by | the | spontaneous | respiration |
-strategy | resulting | in | impaired | oxygenation | . | Since | no | bullae | were | evident | on | preoperative |
-computed | tomography | , | spontaneous | pneumothorax | was | considered | unlikely | to | have | occurred | . | We |
-believe | that | this | represents | the | first | case | report | to | describe | an | adverse | event | associated |
-with | maintaining | spontaneous | respiration | in | a | case | of | esophagobronchial | fistulae | . | Optimal |
-respiratory | management | may | differ | depending | on | the | site | and | size | of | the | fistulae | between | the
-| digestive | and | respiratory | tracts | . | For | example | , | PPV | may | be | possible | with | a | tracheal |
-fistula | with | sufficient | distance | between | the | fistula | and | carina | , | because | a | tube | cuff | can |
-easily | block | the | fistula | . | In | a | patient | with | a | giant | fistula | at | the | carina | , | one-lung |
-ventilation | with | a | small | tracheal | tube | , | independent | ventilation | of | each | lung | with | two |
-tracheal | tubes | , | or | high-frequency | jet | ventilation | may | be | useful | . | A | veno-venous |
-extracorporeal | membrane | oxygenator | can | also | be | used | to | improve | oxygenation | in | patients | with | a
-| fistula | between | the | respiratory | and | digestive | tracts | . | In | this | case | , | we | chose | respiratory
-| management | with | spontaneous | respiration | since | we | believed | that | tissues | close | to | the |
-esophagobronchial | fistula | should | not | be | damaged | . | Thus | , | we | decided | not | to | attempt | to |
-insert | a | double-lumen | tube | into | the | right | main | bronchus | as | a | first-line | therapy | but | only |
-for | backup | plan | . | We | assumed | that | the | tissue | around | the | fistulae | may | be | very | fragile |
-after | radiotherapy | . | If | the | fistula | had | been | located | in | the | distal | part | of | the | left | main
-| bronchus | , | far | from | the | carina | , | we | may | have | chosen | using | a | right-sided | double-lumen |
-tube | . | Maintaining | spontaneous | respiration | is | one | of | the | methods | of | respiratory | management |
-chosen | in | patients | with | esophagobronchial | fistulae | during | general | anesthesia | . | In | the | present |
-case | , | arterial | oxygenation | and | gas | exchange | were | well | maintained | during | the | first | 60 | min |
-with | spontaneous | respiration | . | We | assume | that | right | pneumothorax | occurred | during | the | surgical |
-procedure | when | SpO | 2 | suddenly | dropped | from | 98 | to | 89 | . | The | collapse | of | the | right | lung |
-may | have | been | facilitated | with | the | occurrence | of | pneumothorax | due | to | spontaneous | respiration | ,
-| while | the | atelectasis | may | have | been | less | severe | if | the | lungs | had | been | ventilated | with |
-PPV | . | One | of | the | lessons | we | learned | from | this | case | was | that | while | spontaneous | respiration
-| may | be | useful | in | a | patient | with | esophagobronchial | fistulae | , | patients | may | be | at | higher |
-risk | of | impaired | oxygenation | in | the | event | of | injury | to | the | parietal | pleura | during | surgery |
-. | Although | the | exact | mechanisms | underlying | the | pneumothorax | that | occurred | in | this | case | during
-| esophageal | bypass | surgery | have | not | been | proven | , | we | assume | that | the | parietal | pleura | was |
-injured | while | surgical | manipulations | were | being | performed | close | to | the | thoracic | cavity | . |
-Before | the | present | case | , | our | university | hospital | had | treated | 48 | cases | of | esophageal | bypass
-| surgery | and | postoperative | pneumothorax | was | encountered | in | only | one | case | ( | 2.1 | ) | ( | personal
-| communication | with | Dr | . | Nakajima | , | Department | of | Surgery | of | Tokyo | Medical | and | Dental |
-University | ) | . | Taking | the | fact | that | pneumothorax | can | occur | ( | albeit | rarely | ) | into | account
-| , | spontaneous | respiration | may | have | needed | to | be | converted | to | PPV | as | soon | as | feasible |
-after | closing | both | the | proximal | and | distal | stumps | of | the | esophagus | . | Having | another | backup |
-plan | to | convert | spontaneous | respiration | to | PPV | on | suspicion | of | pneumothorax | may | be | important |
-for | patients | undergoing | non-thoracic | surgery | being | performed | close | to | the | thoracic | cavity | . | We
-| assume | that | one-lung | ventilation | rather | than | spontaneous | respiration | should | be | chosen | in |
-hospitals | with | higher | incidence | of | pneumothorax | after | esophageal | bypass | surgery | .
+min | into | the | surgery | , | SpO | 2 | suddenly | dropped | from | 98 | to | 89 | with | an | FiO | 2 | of | 0.4 | .
+| We | assumed | that | lung | atelectasis | associated | with | airway | secretion | or | pulmonary | soiling | through
+| the | fistulae | was | the | most | likely | reason | for | the | impaired | oxygenation | . | Bronchofiberscopic |
+examination | showed | obstruction | of | the | orifice | of | the | left | main | bronchus | with | secretion | . |
+This | secretion | was | suctioned | , | and | FiO | 2 | was | increased | to | 0.6 | , | and | pressure | support |
+level | was | increased | to | 5 | cmH | 2 | O | . | However | , | oxygenation | only | improved | partially | and |
+arterial | blood | gas | analysis | showed | a | PaO | 2 | of | 101.7 mmHg | with | an | FiO | 2 | of | 0.6 | . | After
+| the | completion | of | surgery | , | chest | X-ray | revealed | right | pneumothorax | ( | Fig | . | 2 | ) | . |
+After | a | chest | drainage | tube | was | inserted | , | right | pneumothorax | was | ameliorated | , | and | then |
+SpO | 2 | returned | to | the | baseline | ( | 99 | ) | with | an | FiO | 2 | of | 0.4 | . | The | patient | was |
+extubated | uneventfully | in | the | operating | room | . | The | postoperative | course | was | mostly | uneventful |
+, | except | that | 650 ml | of | pleural | effusion | in | the | left | thoracic | cavity | was | aspirated | on |
+postoperative | day | ( | POD | ) | 1 | . | The | chest | tube | in | the | right | thoracic | cavity | was | withdrawn
+| on | POD | 1 | , | and | the | patient | was | discharged | from | hospital | on | POD | 18 | . | Our | management |
+plan | , | comprising | combination | of | general | and | epidural | anesthesia | and | maintenance | of | spontaneous
+| respiration | during | the | surgical | procedure | , | according | to | our | previous | report | , | went |
+relatively | well | except | for | the | unexpected | hypoxemia | due | to | intraoperative | pneumothorax | . | The |
+collapse | of | the | right | lung | may | have | been | facilitated | by | the | spontaneous | respiration | strategy |
+resulting | in | impaired | oxygenation | . | Since | no | bullae | were | evident | on | preoperative | computed |
+tomography | , | spontaneous | pneumothorax | was | considered | unlikely | to | have | occurred | . | We | believe |
+that | this | represents | the | first | case | report | to | describe | an | adverse | event | associated | with |
+maintaining | spontaneous | respiration | in | a | case | of | esophagobronchial | fistulae | . | Optimal | respiratory
+| management | may | differ | depending | on | the | site | and | size | of | the | fistulae | between | the | digestive
+| and | respiratory | tracts | . | For | example | , | PPV | may | be | possible | with | a | tracheal | fistula | with
+| sufficient | distance | between | the | fistula | and | carina | , | because | a | tube | cuff | can | easily | block
+| the | fistula | . | In | a | patient | with | a | giant | fistula | at | the | carina | , | one-lung | ventilation |
+with | a | small | tracheal | tube | , | independent | ventilation | of | each | lung | with | two | tracheal | tubes |
+, | or | high-frequency | jet | ventilation | may | be | useful | . | A | veno-venous | extracorporeal | membrane |
+oxygenator | can | also | be | used | to | improve | oxygenation | in | patients | with | a | fistula | between | the |
+respiratory | and | digestive | tracts | . | In | this | case | , | we | chose | respiratory | management | with |
+spontaneous | respiration | since | we | believed | that | tissues | close | to | the | esophagobronchial | fistula |
+should | not | be | damaged | . | Thus | , | we | decided | not | to | attempt | to | insert | a | double-lumen | tube |
+into | the | right | main | bronchus | as | a | first-line | therapy | but | only | for | backup | plan | . | We |
+assumed | that | the | tissue | around | the | fistulae | may | be | very | fragile | after | radiotherapy | . | If |
+the | fistula | had | been | located | in | the | distal | part | of | the | left | main | bronchus | , | far | from |
+the | carina | , | we | may | have | chosen | using | a | right-sided | double-lumen | tube | . | Maintaining |
+spontaneous | respiration | is | one | of | the | methods | of | respiratory | management | chosen | in | patients |
+with | esophagobronchial | fistulae | during | general | anesthesia | . | In | the | present | case | , | arterial |
+oxygenation | and | gas | exchange | were | well | maintained | during | the | first | 60 min | with | spontaneous |
+respiration | . | We | assume | that | right | pneumothorax | occurred | during | the | surgical | procedure | when |
+SpO | 2 | suddenly | dropped | from | 98 | to | 89 | . | The | collapse | of | the | right | lung | may | have | been |
+facilitated | with | the | occurrence | of | pneumothorax | due | to | spontaneous | respiration | , | while | the |
+atelectasis | may | have | been | less | severe | if | the | lungs | had | been | ventilated | with | PPV | . | One | of
+| the | lessons | we | learned | from | this | case | was | that | while | spontaneous | respiration | may | be | useful
+| in | a | patient | with | esophagobronchial | fistulae | , | patients | may | be | at | higher | risk | of | impaired
+| oxygenation | in | the | event | of | injury | to | the | parietal | pleura | during | surgery | . | Although | the |
+exact | mechanisms | underlying | the | pneumothorax | that | occurred | in | this | case | during | esophageal | bypass
+| surgery | have | not | been | proven | , | we | assume | that | the | parietal | pleura | was | injured | while |
+surgical | manipulations | were | being | performed | close | to | the | thoracic | cavity | . | Before | the | present
+| case | , | our | university | hospital | had | treated | 48 | cases | of | esophageal | bypass | surgery | and |
+postoperative | pneumothorax | was | encountered | in | only | one | case | ( | 2.1 | ) | ( | personal | communication |
+with | Dr | . | Nakajima | , | Department | of | Surgery | of | Tokyo | Medical | and | Dental | University | ) | . |
+Taking | the | fact | that | pneumothorax | can | occur | ( | albeit | rarely | ) | into | account | , | spontaneous |
+respiration | may | have | needed | to | be | converted | to | PPV | as | soon | as | feasible | after | closing | both
+| the | proximal | and | distal | stumps | of | the | esophagus | . | Having | another | backup | plan | to | convert |
+spontaneous | respiration | to | PPV | on | suspicion | of | pneumothorax | may | be | important | for | patients |
+undergoing | non-thoracic | surgery | being | performed | close | to | the | thoracic | cavity | . | We | assume | that
+| one-lung | ventilation | rather | than | spontaneous | respiration | should | be | chosen | in | hospitals | with |
+higher | incidence | of | pneumothorax | after | esophageal | bypass | surgery | .
 
 ================================================================================ CASO 40
 
@@ -2949,55 +2949,54 @@ upper | abdominal | tenderness | , | arythmia | , | irregular | heart | sound | 
 laboratory | test | data | at | admission | showed | that | the | serum | levels | of | alanine | transaminase | ( | ALT
 | ) | , | aspartate | transaminase | ( | AST | ) | , | alkaline | phosphatase | ( | ALP | ) | , |
 gamma-glutamyltransferase | ( | gamma-GT | ) | , | total | bilirubin | ( | TBil | ) | and | direct | bilirubin | ( |
-DBil | ) | were | elevated | to | 79 | U | L | ( | 5 | 45 | U | L | ) | , | 51 | U | L | ( | 5 | 35 | U | L | ) | , |
-540 | U | L | ( | 30 | 110 | U | L | ) | , | 197 | U | L | ( | 7 | 50 | U | L | ) | , | 408 | mumol | L | ( | 0 | 20.5 |
-mumol | L | ) | and | 283.7 | mumol | L | ( | 0 | 6.8 | mumol | L | ) | , | respectively | . | Serum | IgG | and | IgM |
-were | 3,180 mg/dL | ( | 694 | 1620 mg/dL | ) | and | 344 mg/dL | ( | 60 | 263 mg/dL | ) | , | respectively | . | The |
-titer | of | antinuclear | antibody | ( | ANA | ) | was | 1 | : | 320 | . | Screening | for | antoimmune | diseases |
-revealed | that | the | patient | was | positive | for | antimitochondrial | antibody | ( | AMA | ) | , | anti-AMA-M | 2
-| and | anti-Ro | antibody | . | Common | tumor | markers | and | viral | markers | were | all | negative | . | Both |
-computed | tomography | ( | CT | ) | and | magnetic | resonance | image | ( | MRI | ) | revealed | diffusive |
-enlargement | of | the | pancreas | , | capsuled | by | an | armorlike | low-density | rim | and | enhanced |
-homogenously | ( | Figure | 1 | ) | . | Other | abnormalities | included | significant | dilation | of | intra | and |
-extra-hepatic | bile | duct | , | diffusive | thickening | of | the | gallbladder | wall | and | atrophy | of | the |
-right | kidney | . | Endoscopic | retrograde | cholangio-pancreatography | ( | ERCP | ) | was | conducted | , |
-revealing | similar | findings | with | CT | and | MRI | . | No | sign | of | malignancy | was | observed | . | Test |
-of | tumor | markers | from | the | bile | showed | CEA | of | 66.89 ng/mL | ( | 0 | 5 ng/mL | ) | and | CA | 199 |
-larger | than | 4000 | U | mL | ( | 37.0 | U | mL | ) | , | but | examinations | of | exfoliated | cells | proved |
-negative | for | three | consecutive | times | . | The | biliary | culture | was | positive | for | ESBL-producing |
-Klebsiella | pneumoniae | . | Infection | was | suspected | and | meropenem | ( | 0.5 g | per | 8 | hours | ) | was |
-administered | . | Based | on | the | biochemical | evidence | of | cholestasis | from | the | elevation | of | ALP | ,
-| gamma-GT | and | TBil | , | and | the | presence | of | AMA | , | the | patient | was | clinically | diagnosed | with
-| PBC | and | UDCA | ( | 250 mg | , | three | times | per | day | ) | was | initiated | immediately | after |
-nasobiliary | drainage | , | which | partially | improved | the | patient | s | liver | function | ( | Figure | 2 | ) |
-. | Since | the | patient | was | also | suspected | of | suffering | from | AIP | , | the | following | examinations |
-were | conducted | . | IgG | 4 | was | measured | and | turned | out | to | be | 44.36 g/L | ( | 0.03 | 2 g/L | ) | . |
-CT-guided | pancreatic | biopsy | was | performed | , | and | histopathological | evaluation | showed | dense |
-lymphoplasmacytic | infiltration | and | fibrosis | . | IgG | 4 | plasma | cell | was | stained | and | counted | to |
-be | as | high | as | 95 | per | high-power | field | ( | HPF | ) | ( | Figure | 3 | ) | . | ECT | of | salivary | gland
-| was | normal | . | So | the | diagnosis | of | type | I | AIP | was | confirmed | in | accordance | with | the |
-diagnostic | criteria | . | Steroid | therapy | with | intravenous | methylprednisolone | ( | MEP | ) | ( | 40 mg | per
-| day | ) | was | administered | promptly | . | Serum | ALP | , | gamma-GP | , | TBil | and | DBil | just | before |
-steroid | therapy | were | 376 | U | L | , | 38 | U | L | , | 404.9 | mumol | L | and | 289.2 | mumol | L | , |
-respectively | , | and | one | week | later | were | 243 | U | L | , | 47 | U | L | , | 47 | U | L | , | 206.1 | mumol |
-L | and | 167.1 | mumol | L | , | respectively | . | Then | we | stepped | down | the | steroid | therapy | with | oral
-| MEP | 32 mg | daily | , | yet | the | serum | liver | enzymes | and | bilirubin | bounced | up | . | So | we |
-increased | the | dose | to | 32 mg | in | the | morning | and | 16 mg | in | the | afternoon | . | And | then | the |
-laboratory | values | improved | . | A | repeat | MRI | showed | remarkable | reduction | of | the | pancreas | . | 40
-days | after | treatment | , | the | IgG | and | IgM | returned | back | into | the | normal | range | . | The | serum |
-levels | of | ALP | , | gamma-GP | , | TBil | and | DBil | were | 135 | U | L | , | 134 | U | L | , | 82.8 | mumol | L |
-and | 54.9 | mumol | L | , | respectively | . | The | patient | was | discharged | and | followed | up | at | the |
-clinic | with | MEP | tapered | off | weekly | by | 5 mg | . | The | clinical | course | is | depicted | in | Figure | 2
-| . | About | 40 days | after | discharge | , | the | patient | developed | red | maculopapules | on | his | right |
-chest | with | prickling-like | pain | , | worsened | with | erosion | and | blisters | . | The | patient | was |
-diagnosed | with | herpes | zoster | and | treated | with | acyclovir | ( | 500 mg | twice | a | day | ) | for | 9 days
-| . | Unfortunately | for | the | patient | , | a | chest | X-ray | later | showed | multiple | nodules | in | the |
-right | lung | . | Chest | CT | displayed | multiple | patchy | shadows | with | cavity | . | CT-guided | lung | biopsy
-| showed | neutrophil | aggregation | and | fibrous | effusion | within | the | alveoli | . | The | patient | was |
-diagnosed | with | pulmonary | abscess | and | was | treated | effectively | with | moxifloxacin | ( | Figure | 1 | ) |
-. | Given | the | immunosuppressed | status | of | the | patient | , | thymosin | was | injected | twice | a | week | to
-| restore | the | immune | function | . | The | liver | function | and | immunological | indices | of | the | patient |
-were | normal | during | the | subsequent | one-year | follow-up | period | .
+DBil | ) | were | elevated | to | 79 U/L | ( | 5 | 45 U/L | ) | , | 51 U/L | ( | 5 | 35 U/L | ) | , | 540 U/L | ( | 30 |
+110 U/L | ) | , | 197 U/L | ( | 7 | 50 U/L | ) | , | 408 | mumol | L | ( | 0 | 20.5 | mumol | L | ) | and | 283.7 |
+mumol | L | ( | 0 | 6.8 | mumol | L | ) | , | respectively | . | Serum | IgG | and | IgM | were | 3,180 mg/dL | ( | 694
+| 1620 mg/dL | ) | and | 344 mg/dL | ( | 60 | 263 mg/dL | ) | , | respectively | . | The | titer | of | antinuclear |
+antibody | ( | ANA | ) | was | 1 | : | 320 | . | Screening | for | antoimmune | diseases | revealed | that | the |
+patient | was | positive | for | antimitochondrial | antibody | ( | AMA | ) | , | anti-AMA-M | 2 | and | anti-Ro |
+antibody | . | Common | tumor | markers | and | viral | markers | were | all | negative | . | Both | computed |
+tomography | ( | CT | ) | and | magnetic | resonance | image | ( | MRI | ) | revealed | diffusive | enlargement | of |
+the | pancreas | , | capsuled | by | an | armorlike | low-density | rim | and | enhanced | homogenously | ( | Figure | 1
+| ) | . | Other | abnormalities | included | significant | dilation | of | intra | and | extra-hepatic | bile | duct | ,
+| diffusive | thickening | of | the | gallbladder | wall | and | atrophy | of | the | right | kidney | . | Endoscopic |
+retrograde | cholangio-pancreatography | ( | ERCP | ) | was | conducted | , | revealing | similar | findings | with | CT
+| and | MRI | . | No | sign | of | malignancy | was | observed | . | Test | of | tumor | markers | from | the | bile |
+showed | CEA | of | 66.89 ng/mL | ( | 0 | 5 ng/mL | ) | and | CA | 199 | larger | than | 4000 U/mL | ( | 37.0 U/mL | ) |
+, | but | examinations | of | exfoliated | cells | proved | negative | for | three | consecutive | times | . | The |
+biliary | culture | was | positive | for | ESBL-producing | Klebsiella | pneumoniae | . | Infection | was | suspected |
+and | meropenem | ( | 0.5 g | per | 8 | hours | ) | was | administered | . | Based | on | the | biochemical | evidence |
+of | cholestasis | from | the | elevation | of | ALP | , | gamma-GT | and | TBil | , | and | the | presence | of | AMA |
+, | the | patient | was | clinically | diagnosed | with | PBC | and | UDCA | ( | 250 mg | , | three | times | per | day
+| ) | was | initiated | immediately | after | nasobiliary | drainage | , | which | partially | improved | the | patient
+| s | liver | function | ( | Figure | 2 | ) | . | Since | the | patient | was | also | suspected | of | suffering | from
+| AIP | , | the | following | examinations | were | conducted | . | IgG | 4 | was | measured | and | turned | out | to |
+be | 44.36 g/L | ( | 0.03 | 2 g/L | ) | . | CT-guided | pancreatic | biopsy | was | performed | , | and |
+histopathological | evaluation | showed | dense | lymphoplasmacytic | infiltration | and | fibrosis | . | IgG | 4 |
+plasma | cell | was | stained | and | counted | to | be | as | high | as | 95 | per | high-power | field | ( | HPF | ) |
+( | Figure | 3 | ) | . | ECT | of | salivary | gland | was | normal | . | So | the | diagnosis | of | type | I | AIP |
+was | confirmed | in | accordance | with | the | diagnostic | criteria | . | Steroid | therapy | with | intravenous |
+methylprednisolone | ( | MEP | ) | ( | 40 mg | per | day | ) | was | administered | promptly | . | Serum | ALP | , |
+gamma-GP | , | TBil | and | DBil | just | before | steroid | therapy | were | 376 U/L | , | 38 U/L | , | 404.9 | mumol |
+L | and | 289.2 | mumol | L | , | respectively | , | and | one | week | later | were | 243 U/L | , | 47 U/L | , | 47 U/L
+| , | 206.1 | mumol | L | and | 167.1 | mumol | L | , | respectively | . | Then | we | stepped | down | the | steroid |
+therapy | with | oral | MEP | 32 mg | daily | , | yet | the | serum | liver | enzymes | and | bilirubin | bounced | up |
+. | So | we | increased | the | dose | to | 32 mg | in | the | morning | and | 16 mg | in | the | afternoon | . | And |
+then | the | laboratory | values | improved | . | A | repeat | MRI | showed | remarkable | reduction | of | the |
+pancreas | . | 40 days | after | treatment | , | the | IgG | and | IgM | returned | back | into | the | normal | range |
+. | The | serum | levels | of | ALP | , | gamma-GP | , | TBil | and | DBil | were | 135 U/L | , | 134 U/L | , | 82.8 |
+mumol | L | and | 54.9 | mumol | L | , | respectively | . | The | patient | was | discharged | and | followed | up | at
+| the | clinic | with | MEP | tapered | off | weekly | by | 5 mg | . | The | clinical | course | is | depicted | in |
+Figure | 2 | . | About | 40 days | after | discharge | , | the | patient | developed | red | maculopapules | on | his |
+right | chest | with | prickling-like | pain | , | worsened | with | erosion | and | blisters | . | The | patient | was
+| diagnosed | with | herpes | zoster | and | treated | with | acyclovir | ( | 500 mg | twice | a | day | ) | for | 9
+days | . | Unfortunately | for | the | patient | , | a | chest | X-ray | later | showed | multiple | nodules | in | the
+| right | lung | . | Chest | CT | displayed | multiple | patchy | shadows | with | cavity | . | CT-guided | lung |
+biopsy | showed | neutrophil | aggregation | and | fibrous | effusion | within | the | alveoli | . | The | patient | was
+| diagnosed | with | pulmonary | abscess | and | was | treated | effectively | with | moxifloxacin | ( | Figure | 1 | )
+| . | Given | the | immunosuppressed | status | of | the | patient | , | thymosin | was | injected | twice | a | week |
+to | restore | the | immune | function | . | The | liver | function | and | immunological | indices | of | the | patient
+| were | normal | during | the | subsequent | one-year | follow-up | period | .
 
 ================================================================================ CASO 41
 
@@ -3023,8 +3022,8 @@ uneventful. Echocardiogram before discharge confirmed that the prosthetic valves
 Tokens encontrados: A | 53 | year | old | man | admitted | to | our | institution | with | exertional | dyspnea | and |
 angina | . | He | had | had | aortic | valve | replacement | with | Starr-Edwards | 2320 | model | caged | ball |
 mechanical | valve | prosthesis | in | 1974 | and | suffered | a | thromboembolic | serebrovascular | accident | two |
-years | ago | . | His | physical | examination | revealed | left | hemiparesis | with | blood | pressure | 120 | 80 mmHg
-| , | heart | rate | 92 | beats | min | and | regular | . | Cardiac | auscultation | revealed | a | 4 | 6 | systolic |
+years | ago | . | His | physical | examination | revealed | left | hemiparesis | with | blood | pressure | 120/80 mmHg |
+, | heart | rate | 92 | beats | min | and | regular | . | Cardiac | auscultation | revealed | a | 4/6 | systolic |
 murmur | and | rales | were | heard | at | the | base | of | the | lungs | . | Transesophageal | echocardiography |
 showed | a | functioning | Starr-Edwards | caged | ball | mechanical | prosthesis | with | 30 mmHg | gradient | and |
 rheumatic | mitral | valve | disease | with | peak | transmitral | gradient | of | 20 mmHg | and | valve | area | 1.8 cm
@@ -3240,8 +3239,8 @@ etiology | and | hematological | neoplasia | were | ruled | out | . | The | clas
 | met | . | The | patient | was | anti-DNA | negative | , | a | kidney | biopsy | was | recommended | because | of | the
 | presence | of | proteinuria | , | which | was | consistent | with | class | II | mesangial | lupus | nephritis | . |
 Autoimmune | hemolytic | anemia | was | also | confirmed | , | with | laboratory | data | revealing | a | cold |
-agglutinin | titer | Positive | dilution | 1 | 128 | at | 4 | C | , | hemoglobin | 6.2 g/dl | , | hematocrit | 18.1 |
-and | monospecific | direct | antiglobulin | strongly | positive | for | C | 3 | d | and | negative | for | IgG | , |
+agglutinin | titer | Positive | dilution | 1/128 | at | 4 | C | , | hemoglobin | 6.2 g/dl | , | hematocrit | 18.1 | and
+| monospecific | direct | antiglobulin | strongly | positive | for | C | 3 | d | and | negative | for | IgG | , |
 leading | to | the | diagnosis | of | cold | agglutinin | syndrome | . | The | patient | was | transferred | to | the |
 intensive | care | unit | because | of | severe | hematological | involvement | , | as | demonstrated | by |
 pancytopenia | . | Treatment | was | initiated | with | dexamethasone | at | a | dose | of | 40 mg | intravenously |
@@ -3450,7 +3449,7 @@ serum | was | added | to | one | volume | of | 50 | cell | suspension | prepared
 blood | units | Negative | control | Nine | volumes | of | 37 | C | separated | fresh | serum | of | a | group | A |
 healthy | person | was | added | to | one | volume | of | 50 | cell | suspension | prepared | from | pooling | three |
 group | A | blood | units | T | 1 | T | 10 | and | control | tubes | were | incubated | at | 0 | C | in | crushed | ice
-| for | 1 | h | and | then | immediately | transferred | to | water | bath | at | 37 | C | . | After | 30 | min |
+| for | 1 | h | and | then | immediately | transferred | to | water | bath | at | 37 | C | . | After | 30 min |
 incubation | period | , | all | tubes | were | centrifuged | under | low | spin | for | 15 | s | , | and | the |
 supernatants | were | inspected | compared | to | the | patient | s | serum | color | . | The | supernatant | color | of
 | the | positive | control | was | darker | compared | to | the | patient | s | serum | , | while | in | the | negative
@@ -3592,9 +3591,9 @@ enlargement | over | the | past | five | months | . | Following | her | hospital
 preoperative | evaluation | was | conducted | . | All | serum | tumor | markers | , | including | carbohydrate | antigen
 | 12 | 5 | ( | CA | 12 | 5 | ) | , | CA | 19 | 9 | , | alpha-fetoprotein | ( | AFP | ) | , | human | epididymis |
 protein | 4 | ( | HE | 4 | ) | , | and | carcinoembryonic | antigen | ( | CEA | ) | , | were | within | normal | limits
-| . | However | , | her | serum | lactate | dehydrogenase | ( | LDH | ) | level | was | elevated | to | 289 | U | L | .
-| Ultrasonography | identified | a | heterogeneously | echogenic | mass | in | the | anterior | wall | of | the | uterus
-| measuring | 12.6 | x | 12.0 | x | 8.4cm | with | a | regular | outline | and | clear | boundaries | , | consistent |
+| . | However | , | her | serum | lactate | dehydrogenase | ( | LDH | ) | level | was | elevated | to | 289U/L | . |
+Ultrasonography | identified | a | heterogeneously | echogenic | mass | in | the | anterior | wall | of | the | uterus |
+measuring | 12.6 | x | 12.0 | x | 8.4cm | with | a | regular | outline | and | clear | boundaries | , | consistent |
 with | a | uterine | fibroid | . | It | also | revealed | endometrial | thickening | to | 15mm | . | MRI | imaging |
 displayed | two | quasi-circular | masses | within | the | uterine | muscle | wall | ; | the | larger | was | located |
 in | the | anterior | wall | , | measuring | approximately | 9.9 | x | 12.0 | x | 12.6cm | , | with | 80 | protruding |
@@ -3607,7 +3606,7 @@ the | uterus | resembled | that | of | a | five-month | pregnancy | in | size | 
 uterus | was | removed | transvaginally | without | protective | measures | . | The | general | picture | is | as |
 follows | ( | Figure | 2 | ) | . | Microscopic | examination | post-surgery | revealed | the | mass | to | be | a |
 leiomyoma | , | with | most | areas | infarcted | and | some | showing | bizarre | nuclei | and | rare | mitotic |
-figures | ( | 0 | 1 | 10 | HPF | ) | ( | Figure | 3 | ) | . | The | patient | was | advised | of | the | need | for |
+figures | ( | 0 | 1/10 | HPF | ) | ( | Figure | 3 | ) | . | The | patient | was | advised | of | the | need | for |
 close | follow-up | . | A | month | post-operation | , | transabdominal | ultrasonography | showed | no | abnormalities
 | . | However | , | four | months | later | , | she | developed | abdominal | distension | . | Repeat | ultrasonography
 | identified | several | heterogeneous | masses | of | varying | sizes | in | the | right | pelvic | and | abdominal |
@@ -3616,27 +3615,27 @@ abnormal | signal | shadows | involving | the | vaginal | stump | , | right | lo
 mesentery | , | intestinal | space | , | pelvic | cavity | , | and | areas | near | the | common | iliac | vessel |
 bifurcation | and | rectum | . | A | lesion | in | the | right | lower | quadrant | had | penetrated | the | right |
 transversus | abdominis | muscle | , | reaching | the | subcutaneous | fat | ( | Figure | 4 | ) | . | Serum | CA | 12 |
-5 | and | LDH | levels | were | elevated | to | 46.4 | U | mL | and | 340 | U | L | , | respectively | , | while | other
-| markers | remained | normal | . | Physical | examination | revealed | significant | abdominal | distention | with | a
-| large | , | palpable | mass | extending | three | fingers | above | the | umbilicus | and | showing | limited |
-mobility | . | A | firm | , | cystic | mass | approximately | 5 cm | in | diameter | was | palpable | at | the | vaginal
-| stump | , | although | the | vaginal | mucosa | was | intact | . | On | April | 29 | , | 2022 | , | we | performed |
-an | exploratory | laparotomy | , | including | resections | of | pelvic | , | abdominal | , | and | mesenteric | tumors
-| , | and | a | palliative | resection | of | the | right | colon | tumor | . | During | surgery | , | we | identified |
-a | 20 cm | tumor | in | the | abdominal | cavity | , | covered | by | the | greater | omentum | and | prone | to |
-bleeding | , | with | complex | , | primarily | mucous | internal | tissue | . | The | tumor | encased | parts | of |
-the | ascending | and | transverse | colon | , | as | well | as | the | ileum | , | and | extended | through | the |
-right | peritoneum | to | the | right | rectus | abdominis | muscle | . | Additional | tumors | up | to | 3 cm | in |
-diameter | were | found | on | the | small | intestine | and | descending | colon | , | and | larger | tumors | up | to
-| 7 cm | were | present | in | the | pelvis | . | Enlarged | retroperitoneal | lymph | nodes | were | noted | , | the |
-largest | measuring | 4 cm | . | The | bilateral | ovaries | were | not | visible | . | We | advised | the | patient | s
-| family | of | the | challenging | intraoperative | conditions | and | the | impossibility | of | complete |
-cytoreductive | surgery | , | recommending | a | palliative | approach | instead | . | They | consented | to | this |
-plan | . | Microscopic | analysis | confirmed | undifferentiated | sarcomas | in | the | abdominal | and | pelvic |
-masses | , | with | tumor | involvement | noted | in | the | right | colon | , | part | of | the | ileum | , | mesentery
-| and | its | lymph | nodes | , | omentum | , | and | appendix | ( | Figure | 5 | ) | . | Postoperatively | , | the |
-patient | experienced | pleural | effusion | , | right | hydronephrosis | , | and | poor | incision | healing | . |
-After | symptomatic | treatment | , | her | condition | improved | . | Considering | her | overall | status | , | we |
+5 | and | LDH | levels | were | elevated | to | 46.4 U/mL | and | 340 U/L | , | respectively | , | while | other |
+markers | remained | normal | . | Physical | examination | revealed | significant | abdominal | distention | with | a |
+large | , | palpable | mass | extending | three | fingers | above | the | umbilicus | and | showing | limited | mobility
+| . | A | firm | , | cystic | mass | approximately | 5 cm | in | diameter | was | palpable | at | the | vaginal | stump
+| , | although | the | vaginal | mucosa | was | intact | . | On | April | 29 | , | 2022 | , | we | performed | an |
+exploratory | laparotomy | , | including | resections | of | pelvic | , | abdominal | , | and | mesenteric | tumors | ,
+| and | a | palliative | resection | of | the | right | colon | tumor | . | During | surgery | , | we | identified | a |
+20 cm | tumor | in | the | abdominal | cavity | , | covered | by | the | greater | omentum | and | prone | to | bleeding
+| , | with | complex | , | primarily | mucous | internal | tissue | . | The | tumor | encased | parts | of | the |
+ascending | and | transverse | colon | , | as | well | as | the | ileum | , | and | extended | through | the | right |
+peritoneum | to | the | right | rectus | abdominis | muscle | . | Additional | tumors | up | to | 3 cm | in | diameter |
+were | found | on | the | small | intestine | and | descending | colon | , | and | larger | tumors | up | to | 7 cm |
+were | present | in | the | pelvis | . | Enlarged | retroperitoneal | lymph | nodes | were | noted | , | the | largest |
+measuring | 4 cm | . | The | bilateral | ovaries | were | not | visible | . | We | advised | the | patient | s | family
+| of | the | challenging | intraoperative | conditions | and | the | impossibility | of | complete | cytoreductive |
+surgery | , | recommending | a | palliative | approach | instead | . | They | consented | to | this | plan | . |
+Microscopic | analysis | confirmed | undifferentiated | sarcomas | in | the | abdominal | and | pelvic | masses | , |
+with | tumor | involvement | noted | in | the | right | colon | , | part | of | the | ileum | , | mesentery | and | its
+| lymph | nodes | , | omentum | , | and | appendix | ( | Figure | 5 | ) | . | Postoperatively | , | the | patient |
+experienced | pleural | effusion | , | right | hydronephrosis | , | and | poor | incision | healing | . | After |
+symptomatic | treatment | , | her | condition | improved | . | Considering | her | overall | status | , | we |
 recommended | follow-up | chemotherapy | . | However | , | the | patient | chose | to | discontinue | treatment | for |
 personal | reasons | and | was | discharged | , | resulting | in | unsuccessful | follow-up | .
 
@@ -4013,7 +4012,7 @@ stoma | toward | the | bowel | side | to | allow | fine | adjustment | of | tens
 | 5 cm | of | overlap | beyond | the | suture | line | and | the | stoma | opening | . | The | mesh | also | covered |
 the | proximal | colon | , | and | the | portion | in | contact | with | the | stoma | and | proximal | colon | was |
 folded | so | that | the | visceral | ( | intraperitoneal | ) | surface | faced | inward | ( | Fig | . | 4 | ) | . |
-Operative | time | was | 191 | min | with | minimal | blood | loss | . | Postoperative | course | was | uneventful | , |
+Operative | time | was | 191 min | with | minimal | blood | loss | . | Postoperative | course | was | uneventful | , |
 and | the | patient | was | discharged | on | POD | 12 | . | Endoscopy | performed | on | day | 27 | revealed | chronic
 | gastritis | and | linear | duodenal | ulceration | , | likely | ischemic | in | origin | , | and | severe |
 esophagitis | secondary | to | reflux | . | The | gastric | body | and | antrum | also | showed | impaired | distension
