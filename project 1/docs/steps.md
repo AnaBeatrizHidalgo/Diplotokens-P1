@@ -73,3 +73,4 @@ graph LR
     class PartesCorpo target;
 ```
 
+https://tochafh.github.io/Diploghraph-Viewer/
