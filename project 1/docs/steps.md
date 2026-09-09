@@ -38,3 +38,36 @@
 
             - Tem ter um script para resolver sentenças com mais de um verbo/ação que ligue um mesmo tipo de nó, tipo se houver "diagnosticar" e "histórico" na mesma frase com n doenças, o algoritmo tem que decidir quais doenças vão pra cada aresta.
 
+
+
+graph LR
+    %% Nós Centrais e Estruturais
+    
+    Paciente((Paciente))
+
+    %% Atributos e Relações Diretas do Paciente
+
+    Paciente -- "possui histórico familiar" --> Doenca["Doença"]
+    Paciente -- "possui histórico individual" --> Doenca["Doença"]
+    Paciente -- "toma" --> Medicacao["Medicação"]
+    Paciente -- "faz" --> Exame["Exame"]
+    Paciente -- "sente" --> Sintoma["Sintoma"]
+    Paciente -- "diagnosticado" --> Doenca["Doença"]
+    
+
+    %% Desdobramentos Clínicos Secundários
+    Medicacao -- "faz" --> Efeito["Efeito"]
+    Exame -- "revela" --> Resultado["Resultado"]
+    Doenca -- "ocorre em" --> PartesCorpo
+    Sintoma -- "ocorre em" --> PartesCorpo
+    
+
+    %% Estilização visual (Níveis de Hierarquia)
+    classDef main fill:#1E293B,stroke:#0F172A,stroke-width:2px,color:#ffffff;
+    classDef entity fill:#F1F5F9,stroke:#64748B,stroke-width:1.5px,color:#0F172A;
+    classDef target fill:#E0E7FF,stroke:#4338CA,stroke-width:1.5px,color:#1E1B4B;
+
+    class Artigo,Casos,Paciente main;
+    class MeSH,Ano,Idade,Genero,Historico,Medicacao,Sintoma,Exame,Doenca,Efeito,Resultado entity;
+    class PartesCorpo target;
+
