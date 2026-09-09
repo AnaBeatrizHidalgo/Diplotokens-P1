@@ -9,14 +9,15 @@ R1,Result,cystic lesion,size=6cm
 A2,Anatomy,stomach,
 A3,Anatomy,pancreas,
 E2,Exam,EUS-FNA [endoscopic ultrasound-guided fine needle aspiration],
-R2,Result,pancreatic echotexture,size=6cm
-R3,Result,cyst,size=6cm
-R4,Result,internal septations,size=6cm
-R5,Result,associated masses,size=6cm
+R2,Result,pancreatic echotexture,status=normal
+R3,Result,cyst,size=6cm x 9cm
 E3,Exam,FNA [fine needle aspiration],
+R4,Result,extracellular mucin,
+R5,Result,carcinoembryonic antigen,"value=12,476.5; unit=ng/ml"
+R6,Result,carbohydrate antigen,value=6; unit=iu/ml
+D1,Disease,mucinous pancreatic cystic neoplasm,
 E4,Exam,Intraoperative endoscopy,
-D1,Disease,gastric duplication cyst,
+D2,Disease,gastric duplication cyst,
 A4,Anatomy,posterior wall,
 E5,Exam,oesophagogastroduodenoscopy,
-D2,Disease,GDC [gastric duplication cyst],
-S4,Symptom,pain,
+D3,Disease,GDC [gastric duplication cyst],
