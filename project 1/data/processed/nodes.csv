@@ -1,0 +1,22 @@
+node_id,type,label,attributes
+P1,Patient,Patient PMC5137649_01,age=44.0; gender=Female
+S1,Symptom,lower quadrant abdominal pain,
+A1,Anatomy,right flank,
+S2,Symptom,nausea,
+S3,Symptom,constipation,
+E1,Exam,contrast enhanced computed tomography,
+R1,Result,cystic lesion,size=6cm
+A2,Anatomy,stomach,
+A3,Anatomy,pancreas,
+E2,Exam,EUS-FNA [endoscopic ultrasound-guided fine needle aspiration],
+R2,Result,pancreatic echotexture,size=6cm
+R3,Result,cyst,size=6cm
+R4,Result,internal septations,size=6cm
+R5,Result,associated masses,size=6cm
+E3,Exam,FNA [fine needle aspiration],
+E4,Exam,Intraoperative endoscopy,
+D1,Disease,gastric duplication cyst,
+A4,Anatomy,posterior wall,
+E5,Exam,oesophagogastroduodenoscopy,
+D2,Disease,GDC [gastric duplication cyst],
+S4,Symptom,pain,
