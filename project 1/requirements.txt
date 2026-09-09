@@ -1,0 +1,38 @@
+# Diplotokens - Requisitos do Projeto
+# Compatibilidade: Python 3.11
+#
+# Para criar o ambiente:
+#   Opção Conda:
+#     conda create -n diplotokens python=3.11
+#     conda activate diplotokens
+#     pip install -r requirements.txt
+#     pip install -e .
+#
+#   Opção venv:
+#     python3.11 -m venv .venv
+#     source .venv/bin/activate
+#     pip install -r requirements.txt
+#     pip install -e .
+
+# Core Data & ML
+pandas>=2.0.0
+numpy>=1.24.0
+scikit-learn>=1.3.0
+
+# NLP
+nltk>=3.8.1
+
+# Notebooks & Ambiente Jupyter
+ipykernel>=6.25.0
+ipython>=8.15.0
+jupyterlab>=4.0.0
+notebook>=7.0.0
+nbformat>=5.9.0
+
+# Utilitários, Logging & CLI
+typer>=0.9.0
+loguru>=0.7.0
+tqdm>=4.66.0
+python-dotenv>=1.0.0
+matplotlib>=3.7.0
+ruff>=0.1.0
