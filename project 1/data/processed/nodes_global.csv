@@ -1,0 +1,102 @@
+node_id,type,label,attributes
+P_1,Patient,Patient PMC5137649_01,age=44.0; gender=Female; case_idx=0
+S_1,Symptom,lower quadrant abdominal pain,
+A_1,Anatomy,right flank,
+S_2,Symptom,nausea,
+S_3,Symptom,constipation,
+E_1,Exam,contrast enhanced computed tomography,
+R_1,Result,cystic lesion,
+A_2,Anatomy,stomach,
+A_3,Anatomy,pancreas,
+E_2,Exam,EUS-FNA [endoscopic ultrasound-guided fine needle aspiration],
+R_2,Result,pancreatic echotexture,
+R_3,Result,cyst,
+E_3,Exam,FNA [fine needle aspiration],
+R_4,Result,extracellular mucin,
+R_5,Result,carcinoembryonic antigen,
+R_6,Result,carbohydrate antigen,
+D_1,Disease,mucinous pancreatic cystic neoplasm,
+E_4,Exam,Intraoperative endoscopy,
+D_2,Disease,gastric duplication cyst,
+A_4,Anatomy,posterior wall,
+E_5,Exam,oesophagogastroduodenoscopy,
+D_3,Disease,GDC [gastric duplication cyst],
+P_2,Patient,Patient PMC9387390_01,age=57.0; gender=Male; case_idx=1
+E_6,Exam,Computed tomography,
+E_7,Exam,biopsy,
+D_4,Disease,adenocarcinoma,
+M_1,Medication,chemotherapy,
+P_3,Patient,Patient PMC3437073_01,age=55.0; gender=Male; case_idx=2
+D_5,Disease,tuberculosis,
+E_8,Exam,Ultrasound,
+M_2,Medication,Isoniazid,
+M_3,Medication,Rifampin,
+M_4,Medication,Ethambutol,
+M_5,Medication,Pyrazinamide,
+P_4,Patient,Patient PMC7102447_01,age=65.0; gender=Male; case_idx=3
+P_5,Patient,Patient PMC6354154_01,age=30.0; gender=Female; case_idx=4
+P_6,Patient,Patient PMC4782471_01,age=10.0; gender=Female; case_idx=5
+S_4,Symptom,fever,
+M_6,Medication,antibiotics,
+P_7,Patient,Patient PMC4835621_01,age=81.0; gender=Female; case_idx=6
+D_6,Disease,malignancy,
+A_5,Anatomy,abdomen,
+M_7,Medication,omeprazole,
+P_8,Patient,Patient PMC8627357_01,age=36.0; gender=Male; case_idx=7
+S_5,Symptom,dyspnea,
+P_9,Patient,Patient PMC5833205_01,age=0.0; gender=Male; case_idx=8
+P_10,Patient,Patient PMC3917415_01,age=47.0; gender=Female; case_idx=9
+S_6,Symptom,headache,
+P_11,Patient,Patient PMC7718649_01,age=65.0; gender=Female; case_idx=10
+S_7,Symptom,pain,
+P_12,Patient,Patient PMC6134951_01,age=49.0; gender=Female; case_idx=11
+S_8,Symptom,chest pain,
+P_13,Patient,Patient PMC6343374_01,age=0.0; gender=Male; case_idx=12
+D_7,Disease,ventricular septal defect,
+P_14,Patient,Patient PMC9529523_01,age=41.0; gender=Female; case_idx=13
+D_8,Disease,systemic lupus erythematosus,
+P_15,Patient,Patient PMC9532611_01,age=12.0; gender=Female; case_idx=14
+P_16,Patient,Patient PMC9532611_02,age=6.0; gender=Female; case_idx=15
+P_17,Patient,Patient PMC5875137_01,age=83.0; gender=Female; case_idx=16
+P_18,Patient,Patient PMC6949661_01,age=23.0; gender=Male; case_idx=17
+S_9,Symptom,shortness of breath,
+P_19,Patient,Patient PMC10405809_01,age=55.0; gender=Female; case_idx=18
+P_20,Patient,Patient PMC7519975_01,age=33.0; gender=Female; case_idx=19
+P_21,Patient,Patient PMC3950436_01,age=19.0; gender=Female; case_idx=20
+P_22,Patient,Patient PMC10434843_01,age=49.0; gender=Male; case_idx=21
+P_23,Patient,Patient PMC4630775_01,age=39.0; gender=Female; case_idx=22
+P_24,Patient,Patient PMC2700431_01,age=35.0; gender=Male; case_idx=23
+P_25,Patient,Patient PMC10106591_01,age=44.0; gender=Female; case_idx=24
+M_8,Medication,aspirin,
+P_26,Patient,Patient PMC4073451_01,age=14.0; gender=Female; case_idx=25
+P_27,Patient,Patient PMC6083636_01,age=9.0; gender=Male; case_idx=26
+P_28,Patient,Patient PMC6083636_02,age=nan; gender=Unknown; case_idx=27
+P_29,Patient,Patient PMC6083636_03,age=nan; gender=Unknown; case_idx=28
+P_30,Patient,Patient PMC9969157_01,age=7.0; gender=Male; case_idx=29
+P_31,Patient,Patient PMC4828947_01,age=61.0; gender=Male; case_idx=30
+P_32,Patient,Patient PMC7086412_01,age=34.0; gender=Female; case_idx=31
+P_33,Patient,Patient PMC7086412_02,age=31.0; gender=Female; case_idx=32
+P_34,Patient,Patient PMC3557982_01,age=1.0; gender=Female; case_idx=33
+P_35,Patient,Patient PMC9815523_01,age=40.0; gender=Unknown; case_idx=34
+P_36,Patient,Patient PMC4310058_01,age=16.0; gender=Male; case_idx=35
+P_37,Patient,Patient PMC3859158_01,age=44.0; gender=Male; case_idx=36
+P_38,Patient,Patient PMC9650410_01,age=67.0; gender=Female; case_idx=37
+P_39,Patient,Patient PMC5804616_01,age=77.0; gender=Male; case_idx=38
+P_40,Patient,Patient PMC3897989_01,age=65.0; gender=Male; case_idx=39
+S_10,Symptom,abdominal pain,
+P_41,Patient,Patient PMC2817501_01,age=53.0; gender=Male; case_idx=40
+P_42,Patient,Patient PMC11131390_01,age=nan; gender=Male; case_idx=41
+P_43,Patient,Patient PMC10521634_01,age=38.0; gender=Male; case_idx=42
+P_44,Patient,Patient PMC10710131_01,age=26.0; gender=Female; case_idx=43
+P_45,Patient,Patient PMC10488652_01,age=22.0; gender=Female; case_idx=44
+P_46,Patient,Patient PMC11420039_01,age=74.0; gender=Female; case_idx=45
+P_47,Patient,Patient PMC11259348_01,age=nan; gender=Female; case_idx=46
+P_48,Patient,Patient PMC11259348_02,age=nan; gender=Unknown; case_idx=47
+P_49,Patient,Patient PMC11368112_01,age=35.0; gender=Male; case_idx=48
+P_50,Patient,Patient PMC11345641_01,age=48.0; gender=Female; case_idx=49
+P_51,Patient,Patient PMC11723754_01,age=0.0; gender=Male; case_idx=50
+P_52,Patient,Patient PMC11783470_01,age=22.0; gender=Female; case_idx=51
+P_53,Patient,Patient PMC11722600_01,age=41.0; gender=Female; case_idx=52
+P_54,Patient,Patient PMC11722600_02,age=44.0; gender=Female; case_idx=53
+P_55,Patient,Patient PMC12215201_01,age=56.0; gender=Male; case_idx=54
+P_56,Patient,Patient PMC12832199_01,age=57.0; gender=Female; case_idx=55

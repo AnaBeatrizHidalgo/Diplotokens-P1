@@ -1,0 +1,8 @@
+node_id,type,label,attributes
+P1,Patient,Patient PMC3437073_01,age=55.0; gender=Male
+D1,Disease,tuberculosis,
+E1,Exam,Ultrasound,
+M1,Medication,Isoniazid,
+M2,Medication,Rifampin,
+M3,Medication,Ethambutol,
+M4,Medication,Pyrazinamide,
