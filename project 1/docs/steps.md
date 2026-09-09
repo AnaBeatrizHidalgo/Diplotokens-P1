@@ -73,4 +73,9 @@ graph LR
     class PartesCorpo target;
 ```
 
+Aresta toma tem a quantidade tomada de medicação
+Resultado pode ter atributo de medida/quantidade.
+Aresta sente tem atributo tempo...
+
+
 https://tochafh.github.io/Diploghraph-Viewer/
