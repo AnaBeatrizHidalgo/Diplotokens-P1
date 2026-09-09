@@ -31,6 +31,8 @@ dependencies = [
     "nltk",
     "pandas",
     "nbformat",
+    "spacy",
+    "spacy-lookups-data",
 ]
 requires-python = ">=3.11,<3.12"
 
