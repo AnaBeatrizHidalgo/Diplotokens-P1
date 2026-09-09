@@ -2,8 +2,8 @@ import re
 
 
 class Sentence:
-    UNIT = r'(?:kg|mg|mcg|ng|iu|U|L|mmHg|mmol|ml|dl|l|cm|mm|g|hg|min|y/o|yo|yrs?|years?|months?|weeks?|days?)'
-    TIME_UNIT = r'(?:min|hr|hrs|h|s|sec|m)'
+    UNIT = r"(?:kg|mg|mcg|ng|iu|U|L|mmHg|mmol|ml|dl|l|cm|mm|g|hg|min|y/o|yo|yrs?|years?|months?|weeks?|days?)"
+    TIME_UNIT = r"(?:min|hr|hrs|h|s|sec|m)"
     TOKEN_SEP_REGEX = re.compile(
         rf"""
             \d+(?:,\d{{3}})*(?:\.\d+)?
@@ -26,6 +26,19 @@ class Sentence:
 
     def tokenize(self):
         self.tokens = [match.group(0) for match in self.TOKEN_SEP_REGEX.finditer(self.text)]
+        return self.tokens
+
+    def reconstruct_terms(self, vocabulary=None, acronym_map=None, expand_acronyms=True):
+        from diplo_grafo.clinical_terms import reconstruct_clinical_tokens
+
+        if not self.tokens:
+            self.tokenize()
+        self.tokens = reconstruct_clinical_tokens(
+            self.tokens,
+            vocabulary=vocabulary,
+            acronym_map=acronym_map,
+            expand_acronyms=expand_acronyms,
+        )
         return self.tokens
 
     def __str__(self):

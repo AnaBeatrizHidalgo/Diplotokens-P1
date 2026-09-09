@@ -1,0 +1,17 @@
+{
+  "GDC": "gastric duplication cyst",
+  "CEA": "carcinoembryonic antigen",
+  "CA": "carbohydrate antigen",
+  "EUS-FNA": "endoscopic ultrasound-guided fine needle aspiration",
+  "FNA": "fine needle aspiration",
+  "CT": "computed tomography",
+  "MRI": "magnetic resonance imaging",
+  "VSD": "ventricular septal defect",
+  "SLE": "systemic lupus erythematosus",
+  "TTP": "thrombotic thrombocytopenic purpura",
+  "HTN": "hypertension",
+  "DM2": "diabetes mellitus type 2",
+  "IM": "internal medicine",
+  "ER": "emergency room",
+  "UC": "ulcerative colitis"
+}
