@@ -1,0 +1,26 @@
+edge_id,source_id,target_id,relation,attributes
+e1,P1,S1,PRESENTS_WITH,duration=3-day history
+e2,S1,A1,LOCATED_IN,laterality=right
+e3,P1,S2,PRESENTS_WITH,duration=3-day history
+e4,P1,S3,PRESENTS_WITH,duration=3-day history
+e5,P1,E1,UNDERWENT_EXAM,
+e6,E1,R1,REVEALS,
+e7,R1,A2,LOCATED_IN,
+e8,R1,A3,LOCATED_IN,
+e9,P1,E2,UNDERWENT_EXAM,
+e10,E2,R2,REVEALS,
+e11,R2,A2,LOCATED_IN,
+e12,E2,R3,REVEALS,
+e13,R3,A2,LOCATED_IN,
+e14,P1,E3,UNDERWENT_EXAM,
+e15,E3,R3,REVEALS,
+e16,E3,R4,REVEALS,
+e17,E3,R5,REVEALS,
+e18,E3,R6,REVEALS,
+e19,P1,D1,DIAGNOSED_WITH,status=suspected; method=clinical/imaging
+e20,P1,E4,UNDERWENT_EXAM,
+e21,P1,D2,DIAGNOSED_WITH,status=confirmed
+e22,D2,A2,LOCATED_IN,aspect=posterior
+e23,D2,A4,LOCATED_IN,aspect=posterior
+e24,P1,E5,UNDERWENT_EXAM,
+e25,P1,D3,DIAGNOSED_WITH,status=confirmed; method=pathology

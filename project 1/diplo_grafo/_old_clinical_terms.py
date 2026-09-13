@@ -27,13 +27,13 @@ DOCUMENTAÇÃO DA CRIAÇÃO DOS DICIONÁRIOS
      e permitir que o agrupador case termos flexionados no texto contra termos no
      singular cadastrados nas ontologias.
 
-3. LÉXICO MÉDICO:
-   - Camada 1 (termos clínicos centrais): importada de ``clinical_vocabulary.ENTITY_CATEGORIES``
-     via ``clinical_vocabulary.all_terms()``. É a fonte única de termos do pipeline —
-     qualquer adição em ``clinical_vocabulary.py`` reflete automaticamente aqui.
-   - Camada 2 (termos MeSH e keywords do PubMed): extraída de ``metadata.csv`` em tempo
-     de execução por ``build_medical_lexicon``.
-   - Armazenamento: exportado como JSON modular em ``data/external/medical_lexicon.json``.
+3. MEDICAL_LEXICON (Léxico de Conceitos Médicos Canônicos):
+   - Origem Camada 1: Extração automática de todos os descritores MeSH (`mesh_terms`)
+     e palavras-chave dos autores (`keywords`) dos 50 artigos publicados no PubMed
+     presentes em `data/raw/sample/metadata.csv` (Nievas Offidani et al., 2025).
+   - Origem Camada 2: Termos clínicos centrais de alta frequência identificados nos
+     56 casos da amostra (sintomas, anatomia, exames de imagem e técnicas cirúrgicas).
+   - Armazenamento: Exportado como JSON modular em `data/external/medical_lexicon.json`.
 """
 
 from __future__ import annotations
@@ -44,29 +44,27 @@ from pathlib import Path
 
 import pandas as pd
 
-from diplo_grafo.clinical_vocabulary import all_terms
 from diplo_grafo.config import EXTERNAL_DATA_DIR, SAMPLE_DATA_DIR
-
 
 # ==============================================================================
 # 1. TABELA DE SIGLAS E ACRÔNIMOS CLÍNICOS
 # ==============================================================================
 ACRONYM_MAP: dict[str, str] = {
-    "GDC":     "gastric duplication cyst",
-    "CEA":     "carcinoembryonic antigen",
-    "CA":      "carbohydrate antigen",
+    "GDC": "gastric duplication cyst",
+    "CEA": "carcinoembryonic antigen",
+    "CA": "carbohydrate antigen",
     "EUS-FNA": "endoscopic ultrasound-guided fine needle aspiration",
-    "FNA":     "fine needle aspiration",
-    "CT":      "computed tomography",
-    "MRI":     "magnetic resonance imaging",
-    "VSD":     "ventricular septal defect",
-    "SLE":     "systemic lupus erythematosus",
-    "TTP":     "thrombotic thrombocytopenic purpura",
-    "HTN":     "hypertension",
-    "DM2":     "diabetes mellitus type 2",
-    "IM":      "internal medicine",
-    "ER":      "emergency room",
-    "UC":      "ulcerative colitis",
+    "FNA": "fine needle aspiration",
+    "CT": "computed tomography",
+    "MRI": "magnetic resonance imaging",
+    "VSD": "ventricular septal defect",
+    "SLE": "systemic lupus erythematosus",
+    "TTP": "thrombotic thrombocytopenic purpura",
+    "HTN": "hypertension",
+    "DM2": "diabetes mellitus type 2",
+    "IM": "internal medicine",
+    "ER": "emergency room",
+    "UC": "ulcerative colitis",
 }
 
 
@@ -74,18 +72,18 @@ ACRONYM_MAP: dict[str, str] = {
 # 2. DICIONÁRIO DE LEMATIZAÇÃO IRREGULAR
 # ==============================================================================
 IRREGULAR_LEMMAS: dict[str, str] = {
-    "cysts":        "cyst",
-    "lesions":      "lesion",
-    "masses":       "mass",
+    "cysts": "cyst",
+    "lesions": "lesion",
+    "masses": "mass",
     "examinations": "examination",
-    "rates":        "rate",
-    "antibodies":   "antibody",
-    "defects":      "defect",
-    "infections":   "infection",
-    "seizures":     "seizure",
-    "stenoses":     "stenosis",
-    "thrombi":      "thrombus",
-    "diverticula":  "diverticulum",
+    "rates": "rate",
+    "antibodies": "antibody",
+    "defects": "defect",
+    "infections": "infection",
+    "seizures": "seizure",
+    "stenoses": "stenosis",
+    "thrombi": "thrombus",
+    "diverticula": "diverticulum",
 }
 
 
@@ -117,18 +115,53 @@ def lemmatize_token(token: str) -> str:
 # ==============================================================================
 # 3. CONSTRUÇÃO E CARREGAMENTO DO LÉXICO MÉDICO
 # ==============================================================================
+DEFAULT_CORE_TERMS: set[str] = {
+    "lower quadrant abdominal pain",
+    "right flank and lower quadrant abdominal pain",
+    "right flank",
+    "abdominal pain",
+    "nausea",
+    "constipation",
+    "contrast enhanced computed tomography",
+    "computed tomography",
+    "cystic lesion",
+    "pancreas",
+    "stomach",
+    "pancreatic echotexture",
+    "internal septations",
+    "associated masses",
+    "extracellular mucin",
+    "carcinoembryonic antigen",
+    "carbohydrate antigen",
+    "mucinous pancreatic cystic neoplasm",
+    "mucinous pancreatic cyst",
+    "laparoscopic distal pancreatectomy",
+    "surgical resection",
+    "lesser sac",
+    "posterior wall",
+    "intraoperative endoscopy",
+    "coeliac axis",
+    "coeliac vessels",
+    "gastric duplication cyst",
+    "surgical stapler",
+    "oesophagogastroduodenoscopy",
+    "ventricular septal defect",
+    "infective endocarditis",
+    "systemic lupus erythematosus",
+    "chest pain",
+    "fever",
+    "shortness of breath",
+    "dyspnea",
+    "headache",
+    "malignancy",
+}
+
 
 def build_medical_lexicon(
     metadata_source: pd.DataFrame | Path | str | None = None,
 ) -> set[str]:
-    """Extrai termos médicos canônicos de metadata.csv e combina com os termos centrais.
-
-    Os termos centrais vêm de ``clinical_vocabulary.all_terms()``, que agrega
-    todos os sets de ``ENTITY_CATEGORIES``. Adicionar um termo lá é suficiente
-    para que ele entre automaticamente no léxico do tokenizador.
-    """
-    # Camada 1: termos centrais vindos do vocabulário categorizado
-    lexicon = all_terms()
+    """Extrai termos médicos canônicos de metadata.csv e combina com termos centrais."""
+    lexicon = set(DEFAULT_CORE_TERMS)
 
     if metadata_source is None:
         metadata_source = SAMPLE_DATA_DIR / "metadata.csv"
@@ -142,8 +175,8 @@ def build_medical_lexicon(
     else:
         metadata_df = metadata_source
 
-    # Camada 2: keywords e descritores MeSH do PubMed
     for _, row in metadata_df.iterrows():
+        # Extração de keywords
         kw = row.get("keywords")
         if pd.notna(kw) and str(kw).startswith("["):
             for item in str(kw)[1:-1].split(","):
@@ -151,6 +184,7 @@ def build_medical_lexicon(
                 if len(clean) > 2:
                     lexicon.add(clean)
 
+        # Extração de descritores MeSH
         mesh = row.get("mesh_terms")
         if pd.notna(mesh) and str(mesh).startswith("["):
             for item in str(mesh)[1:-1].split(","):
@@ -177,7 +211,8 @@ def load_medical_lexicon(path: Path | str | None = None) -> set[str]:
     file_path = Path(path)
     if file_path.exists():
         with open(file_path, "r", encoding="utf-8") as f:
-            return set(json.load(f))
+            terms = json.load(f)
+            return set(terms)
 
     # Fallback: constrói a partir dos metadados
     return build_medical_lexicon()
