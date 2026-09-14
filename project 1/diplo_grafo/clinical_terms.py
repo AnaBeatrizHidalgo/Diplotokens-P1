@@ -10,30 +10,19 @@ DOCUMENTAÇÃO DA CRIAÇÃO DOS DICIONÁRIOS
 ========================================================================================
 
 1. ACRONYM_MAP (Dicionário de Siglas e Acrônimos):
-   - Origem: Extraído diretamente dos 56 relatos de caso de `data/raw/sample/cases.csv`,
+   - Origem: Extraído diretamente dos 56 relatos de caso da amostra original,
      onde os autores definiram as siglas no próprio texto pelo padrão canônico
-     `termo por extenso (SIGLA)` (ex.: "gastric duplication cyst (GDC)",
-     "carcinoembryonic antigen (CEA)", "ventricular septal defect (VSD)",
-     "internal medicine (IM)", "emergency room (ER)").
-   - Complementado com acrônimos médicos de alta frequência da literatura clínica
-     (CT, MRI, SLE, TTP, HTN, DM2, UC).
+     `termo por extenso (SIGLA)`.
+   - Complementado com acrônimos médicos de alta frequência.
 
 2. IRREGULAR_LEMMAS (Dicionário Morfológico de Plurais Médicos Irregulares):
    - Origem: Vocabulário cirúrgico de exceções da língua inglesa e termos biomédicos
-     de raiz greco-latina recorrentes nos casos (ex: "cysts" -> "cyst", "lesions" -> "lesion",
-     "masses" -> "mass", "diverticula" -> "diverticulum", "thrombi" -> "thrombus",
-     "stenoses" -> "stenosis").
-   - Finalidade: Evitar o custo de redes neurais pesadas para lematização superficial
-     e permitir que o agrupador case termos flexionados no texto contra termos no
-     singular cadastrados nas ontologias.
+     de raiz greco-latina recorrentes nos casos.
+   - Finalidade: Evitar o custo de redes neurais pesadas para lematização superficial.
 
 3. LÉXICO MÉDICO:
-   - Camada 1 (termos clínicos centrais): importada de ``clinical_vocabulary.ENTITY_CATEGORIES``
-     via ``clinical_vocabulary.all_terms()``. É a fonte única de termos do pipeline —
-     qualquer adição em ``clinical_vocabulary.py`` reflete automaticamente aqui.
-   - Camada 2 (termos MeSH e keywords do PubMed): extraída de ``metadata.csv`` em tempo
-     de execução por ``build_medical_lexicon``.
-   - Armazenamento: exportado como JSON modular em ``data/external/medical_lexicon.json``.
+   - Fonte única consumida a partir de `clinical_vocabulary.ENTITY_CATEGORIES` via
+     `clinical_vocabulary.all_terms()`.
 """
 
 from __future__ import annotations
@@ -42,10 +31,8 @@ from collections.abc import Callable
 import json
 from pathlib import Path
 
-import pandas as pd
-
 from diplo_grafo.clinical_vocabulary import all_terms
-from diplo_grafo.config import EXTERNAL_DATA_DIR, SAMPLE_DATA_DIR
+from diplo_grafo.config import EXTERNAL_DATA_DIR
 
 
 # ==============================================================================
@@ -118,55 +105,13 @@ def lemmatize_token(token: str) -> str:
 # 3. CONSTRUÇÃO E CARREGAMENTO DO LÉXICO MÉDICO
 # ==============================================================================
 
-def build_medical_lexicon(
-    metadata_source: pd.DataFrame | Path | str | None = None,
-) -> set[str]:
-    """Extrai termos médicos canônicos de metadata.csv e combina com os termos centrais.
+def build_medical_lexicon() -> set[str]:
+    """Extrai termos médicos canônicos.
 
     Os termos centrais vêm de ``clinical_vocabulary.all_terms()``, que agrega
-    todos os sets de ``ENTITY_CATEGORIES``. Adicionar um termo lá é suficiente
-    para que ele entre automaticamente no léxico do tokenizador.
+    todos os sets de ``ENTITY_CATEGORIES``.
     """
-    # Camada 1: termos centrais vindos do vocabulário categorizado
-    lexicon = all_terms()
-
-    if metadata_source is None:
-        metadata_source = SAMPLE_DATA_DIR / "metadata.csv"
-
-    if isinstance(metadata_source, (str, Path)):
-        meta_path = Path(metadata_source)
-        if meta_path.exists():
-            metadata_df = pd.read_csv(meta_path)
-        else:
-            return lexicon
-    else:
-        metadata_df = metadata_source
-
-    # Camada 2: keywords e descritores MeSH do PubMed
-    for _, row in metadata_df.iterrows():
-        kw = row.get("keywords")
-        if pd.notna(kw) and str(kw).startswith("["):
-            for item in str(kw)[1:-1].split(","):
-                clean = item.strip().strip("'").strip('"').lower()
-                if len(clean) > 2:
-                    lexicon.add(clean)
-
-        mesh = row.get("mesh_terms")
-        if pd.notna(mesh) and str(mesh).startswith("["):
-            for item in str(mesh)[1:-1].split(","):
-                clean = item.split("/")[0].strip().strip("'").strip('"').lower()
-                if len(clean) > 2 and clean not in {
-                    "case reports",
-                    "humans",
-                    "male",
-                    "female",
-                    "adult",
-                    "middle aged",
-                    "aged",
-                }:
-                    lexicon.add(clean)
-
-    return lexicon
+    return all_terms()
 
 
 def load_medical_lexicon(path: Path | str | None = None) -> set[str]:
@@ -179,7 +124,6 @@ def load_medical_lexicon(path: Path | str | None = None) -> set[str]:
         with open(file_path, "r", encoding="utf-8") as f:
             return set(json.load(f))
 
-    # Fallback: constrói a partir dos metadados
     return build_medical_lexicon()
 
 

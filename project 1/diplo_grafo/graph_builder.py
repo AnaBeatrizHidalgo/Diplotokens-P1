@@ -7,7 +7,6 @@ import pandas as pd
 
 from diplo_grafo.clinical_vocabulary import (
     ENTITY_CATEGORIES,
-    SKIP_SENTENCE_FRAGMENTS,
     RE_DIMENSION_3D,
     RE_DIMENSION_2D,
     RE_DIMENSION_1D,
@@ -86,15 +85,13 @@ class KnowledgeGraphBuilder:
         vocabulário clínico.
     ENTITY_CATEGORIES : dict
         Vocabulário clínico categorizado, importado de ``clinical_vocabulary``.
-    _SKIP_SENTENCES : tuple
-        Fragmentos de sentenças irrelevantes, importados de ``clinical_vocabulary``.
     """
 
     # ------------------------------------------------------------------
     # Atributos de classe
     # NODE_PREFIXES: convenção de IDs do grafo — pertence ao builder.
-    # ENTITY_CATEGORIES e _SKIP_SENTENCES: vocabulário clínico — vêm
-    # de clinical_vocabulary.py e são referenciados aqui por clareza.
+    # ENTITY_CATEGORIES: vocabulário clínico — vem de clinical_vocabulary.py
+    # e é referenciado aqui por clareza.
     # ------------------------------------------------------------------
 
     NODE_PREFIXES: dict[str, str] = {
@@ -110,7 +107,6 @@ class KnowledgeGraphBuilder:
     }
 
     ENTITY_CATEGORIES = ENTITY_CATEGORIES          # fonte: clinical_vocabulary.py
-    _SKIP_SENTENCES   = SKIP_SENTENCE_FRAGMENTS    # fonte: clinical_vocabulary.py
 
     # ------------------------------------------------------------------
     # Inicialização e estado de instância
@@ -264,9 +260,6 @@ class KnowledgeGraphBuilder:
         )
 
         for sentence in sentences:
-            if self._should_skip(sentence.text):
-                continue
-
             ctx = self._extract_sentence_context(sentence)
 
             self._apply_symptoms(patient_id, ctx)
@@ -276,14 +269,6 @@ class KnowledgeGraphBuilder:
 
         return self.nodes_df, self.edges_df
 
-    # ------------------------------------------------------------------
-    # Métodos privados — filtragem de sentenças
-    # ------------------------------------------------------------------
-
-    def _should_skip(self, text: str) -> bool:
-        """Retorna True para sentenças sem valor clínico para o grafo."""
-        lower = text.lower()
-        return any(fragment in lower for fragment in self._SKIP_SENTENCES)
 
     # ------------------------------------------------------------------
     # Métodos privados — extração de contexto por sentença
@@ -507,8 +492,11 @@ class KnowledgeGraphBuilder:
                 if "normal" in txt_lower and "echotexture" in res.lower():
                     res_attrs.append("status=normal")
 
-                rid = self.add_node(res, "Result", "; ".join(res_attrs))
-                self.add_edge(eid, rid, "REVEALS")
+                # Cria o nó de Result limpo, sem atributos
+                rid = self.add_node(res, "Result")
+                
+                # Aplica os atributos numéricos diretamente na aresta REVEALS
+                self.add_edge(eid, rid, "REVEALS", "; ".join(res_attrs))
 
                 for anat in ctx.anatomy:
                     loc_attr = f"aspect={ctx.aspect}" if ctx.aspect else ""
