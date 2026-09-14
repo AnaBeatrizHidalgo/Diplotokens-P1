@@ -66,6 +66,7 @@ LIMITACOES CONHECIDAS (vale revisar manualmente depois)
 """
 
 import argparse
+import csv
 import xml.etree.ElementTree as ET
 from collections import defaultdict
 
@@ -166,6 +167,29 @@ def write_python_dict(categories, out_path):
                 f.write(f'        "{escaped}",\n')
             f.write("    },\n")
         f.write("}\n")
+
+def write_csv_dictionaries(categories, output_dir, source_name="MeSH descriptor XML"):
+    """Exporta um CSV oficial por categoria para consumo do pipeline."""
+    import os
+
+    file_names = {
+        "Anatomy": "mesh_anatomy.csv",
+        "Disease": "mesh_diseases.csv",
+        "Exam": "mesh_exams.csv",
+        "Medication": "mesh_medications.csv",
+        "Procedure": "mesh_procedures.csv",
+        "Result": "mesh_results.csv",
+        "Symptom": "mesh_symptoms.csv",
+    }
+    os.makedirs(output_dir, exist_ok=True)
+    for category, terms in sorted(categories.items()):
+        filename = file_names.get(category, f"mesh_{category.lower()}.csv")
+        output_path = os.path.join(output_dir, filename)
+        with open(output_path, "w", encoding="utf-8", newline="") as csv_file:
+            writer = csv.writer(csv_file)
+            writer.writerow(["term", "source", "category"])
+            for term in sorted(terms):
+                writer.writerow([term, source_name, category])
 
 
 # ---------------------------------------------------------------------------
@@ -319,6 +343,8 @@ if __name__ == "__main__":
     parser.add_argument("--out", default="entity_categories.py", help="Arquivo Python de saida")
     parser.add_argument("--all-synonyms", action="store_true",
                          help="Inclui todos os termos de entrada (sinonimos) de cada descritor, nao so o termo preferencial")
+    parser.add_argument("--csv-dir",
+              help="Diretorio para exportar CSVs mesh_<categoria>.csv")
     parser.add_argument("--self-test", action="store_true",
                          help="Roda uma verificacao interna com dados sinteticos, sem precisar do arquivo real do MeSH")
     args = parser.parse_args()
@@ -328,6 +354,8 @@ if __name__ == "__main__":
     elif args.mesh_xml:
         cats = build_categories(args.mesh_xml, all_synonyms=args.all_synonyms)
         write_python_dict(cats, args.out)
+        if args.csv_dir:
+          write_csv_dictionaries(cats, args.csv_dir)
         print("Termos por categoria:")
         for cat, terms in sorted(cats.items()):
             print(f"  {cat}: {len(terms)}")

@@ -1,0 +1,17 @@
+node_id,label,type,attributes
+P:PMC5137649_01,PMC5137649_01,Patient,age=44.0; gender=Female
+S:abdominal_pain,abdominal pain,Symptom,
+S:nausea,nausea,Symptom,
+S:constipation,constipation,Symptom,
+E:tomography,tomography,Exam,
+A:stomach,stomach,Anatomy,
+A:tail,tail,Anatomy,
+A:pancreas,pancreas,Anatomy,
+D:cyst,cyst,Disease,
+E:diagnosis,diagnosis,Exam,
+D:cystic_neoplasm,cystic neoplasm,Disease,
+Pr:pancreatectomy,pancreatectomy,Procedure,
+A:lesser_sac,lesser sac,Anatomy,
+E:endoscopy,endoscopy,Exam,
+E:procedure,procedure,Exam,
+S:pain,pain,Symptom,
