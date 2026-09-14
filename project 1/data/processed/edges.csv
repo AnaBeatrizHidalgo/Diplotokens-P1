@@ -1,0 +1,7 @@
+edge_id,source_id,target_id,relation,attributes
+e1,P1,S1,PRESENTS_WITH,duration=3-day history
+e2,P1,S2,PRESENTS_WITH,duration=3-day history
+e3,P1,S3,PRESENTS_WITH,duration=3-day history
+e4,P1,E1,UNDERWENT_EXAM,
+e5,P1,E2,UNDERWENT_EXAM,
+e6,P1,E3,UNDERWENT_EXAM,

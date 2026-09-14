@@ -1,102 +1,399 @@
 node_id,type,label,attributes
-P_1,Patient,Patient PMC5137649_01,age=44.0; gender=Female; case_idx=0
-S_1,Symptom,lower quadrant abdominal pain,
-A_1,Anatomy,right flank,
-S_2,Symptom,nausea,
-S_3,Symptom,constipation,
-E_1,Exam,contrast enhanced computed tomography,
-R_1,Result,cystic lesion,
-A_2,Anatomy,stomach,
-A_3,Anatomy,pancreas,
-E_2,Exam,EUS-FNA [endoscopic ultrasound-guided fine needle aspiration],
-R_2,Result,pancreatic echotexture,
-R_3,Result,cyst,
-E_3,Exam,FNA [fine needle aspiration],
-R_4,Result,extracellular mucin,
-R_5,Result,carcinoembryonic antigen,
-R_6,Result,carbohydrate antigen,
-D_1,Disease,mucinous pancreatic cystic neoplasm,
-E_4,Exam,Intraoperative endoscopy,
-D_2,Disease,gastric duplication cyst,
-A_4,Anatomy,posterior wall,
-E_5,Exam,oesophagogastroduodenoscopy,
-D_3,Disease,GDC [gastric duplication cyst],
-P_2,Patient,Patient PMC9387390_01,age=57.0; gender=Male; case_idx=1
-E_6,Exam,Computed tomography,
-E_7,Exam,biopsy,
-D_4,Disease,adenocarcinoma,
-M_1,Medication,chemotherapy,
-P_3,Patient,Patient PMC3437073_01,age=55.0; gender=Male; case_idx=2
-D_5,Disease,tuberculosis,
-E_8,Exam,Ultrasound,
-M_2,Medication,Isoniazid,
-M_3,Medication,Rifampin,
-M_4,Medication,Ethambutol,
-M_5,Medication,Pyrazinamide,
-P_4,Patient,Patient PMC7102447_01,age=65.0; gender=Male; case_idx=3
-P_5,Patient,Patient PMC6354154_01,age=30.0; gender=Female; case_idx=4
-P_6,Patient,Patient PMC4782471_01,age=10.0; gender=Female; case_idx=5
-S_4,Symptom,fever,
-M_6,Medication,antibiotics,
-P_7,Patient,Patient PMC4835621_01,age=81.0; gender=Female; case_idx=6
-D_6,Disease,malignancy,
-A_5,Anatomy,abdomen,
-M_7,Medication,omeprazole,
-P_8,Patient,Patient PMC8627357_01,age=36.0; gender=Male; case_idx=7
-S_5,Symptom,dyspnea,
-P_9,Patient,Patient PMC5833205_01,age=0.0; gender=Male; case_idx=8
-P_10,Patient,Patient PMC3917415_01,age=47.0; gender=Female; case_idx=9
-S_6,Symptom,headache,
-P_11,Patient,Patient PMC7718649_01,age=65.0; gender=Female; case_idx=10
-S_7,Symptom,pain,
-P_12,Patient,Patient PMC6134951_01,age=49.0; gender=Female; case_idx=11
-S_8,Symptom,chest pain,
-P_13,Patient,Patient PMC6343374_01,age=0.0; gender=Male; case_idx=12
-D_7,Disease,ventricular septal defect,
-P_14,Patient,Patient PMC9529523_01,age=41.0; gender=Female; case_idx=13
-D_8,Disease,systemic lupus erythematosus,
-P_15,Patient,Patient PMC9532611_01,age=12.0; gender=Female; case_idx=14
-P_16,Patient,Patient PMC9532611_02,age=6.0; gender=Female; case_idx=15
-P_17,Patient,Patient PMC5875137_01,age=83.0; gender=Female; case_idx=16
-P_18,Patient,Patient PMC6949661_01,age=23.0; gender=Male; case_idx=17
-S_9,Symptom,shortness of breath,
-P_19,Patient,Patient PMC10405809_01,age=55.0; gender=Female; case_idx=18
-P_20,Patient,Patient PMC7519975_01,age=33.0; gender=Female; case_idx=19
-P_21,Patient,Patient PMC3950436_01,age=19.0; gender=Female; case_idx=20
-P_22,Patient,Patient PMC10434843_01,age=49.0; gender=Male; case_idx=21
-P_23,Patient,Patient PMC4630775_01,age=39.0; gender=Female; case_idx=22
-P_24,Patient,Patient PMC2700431_01,age=35.0; gender=Male; case_idx=23
-P_25,Patient,Patient PMC10106591_01,age=44.0; gender=Female; case_idx=24
-M_8,Medication,aspirin,
-P_26,Patient,Patient PMC4073451_01,age=14.0; gender=Female; case_idx=25
-P_27,Patient,Patient PMC6083636_01,age=9.0; gender=Male; case_idx=26
-P_28,Patient,Patient PMC6083636_02,age=nan; gender=Unknown; case_idx=27
-P_29,Patient,Patient PMC6083636_03,age=nan; gender=Unknown; case_idx=28
-P_30,Patient,Patient PMC9969157_01,age=7.0; gender=Male; case_idx=29
-P_31,Patient,Patient PMC4828947_01,age=61.0; gender=Male; case_idx=30
-P_32,Patient,Patient PMC7086412_01,age=34.0; gender=Female; case_idx=31
-P_33,Patient,Patient PMC7086412_02,age=31.0; gender=Female; case_idx=32
-P_34,Patient,Patient PMC3557982_01,age=1.0; gender=Female; case_idx=33
-P_35,Patient,Patient PMC9815523_01,age=40.0; gender=Unknown; case_idx=34
-P_36,Patient,Patient PMC4310058_01,age=16.0; gender=Male; case_idx=35
-P_37,Patient,Patient PMC3859158_01,age=44.0; gender=Male; case_idx=36
-P_38,Patient,Patient PMC9650410_01,age=67.0; gender=Female; case_idx=37
-P_39,Patient,Patient PMC5804616_01,age=77.0; gender=Male; case_idx=38
-P_40,Patient,Patient PMC3897989_01,age=65.0; gender=Male; case_idx=39
-S_10,Symptom,abdominal pain,
-P_41,Patient,Patient PMC2817501_01,age=53.0; gender=Male; case_idx=40
-P_42,Patient,Patient PMC11131390_01,age=nan; gender=Male; case_idx=41
-P_43,Patient,Patient PMC10521634_01,age=38.0; gender=Male; case_idx=42
-P_44,Patient,Patient PMC10710131_01,age=26.0; gender=Female; case_idx=43
-P_45,Patient,Patient PMC10488652_01,age=22.0; gender=Female; case_idx=44
-P_46,Patient,Patient PMC11420039_01,age=74.0; gender=Female; case_idx=45
-P_47,Patient,Patient PMC11259348_01,age=nan; gender=Female; case_idx=46
-P_48,Patient,Patient PMC11259348_02,age=nan; gender=Unknown; case_idx=47
-P_49,Patient,Patient PMC11368112_01,age=35.0; gender=Male; case_idx=48
-P_50,Patient,Patient PMC11345641_01,age=48.0; gender=Female; case_idx=49
-P_51,Patient,Patient PMC11723754_01,age=0.0; gender=Male; case_idx=50
-P_52,Patient,Patient PMC11783470_01,age=22.0; gender=Female; case_idx=51
-P_53,Patient,Patient PMC11722600_01,age=41.0; gender=Female; case_idx=52
-P_54,Patient,Patient PMC11722600_02,age=44.0; gender=Female; case_idx=53
-P_55,Patient,Patient PMC12215201_01,age=56.0; gender=Male; case_idx=54
-P_56,Patient,Patient PMC12832199_01,age=57.0; gender=Female; case_idx=55
+P1,Patient,Patient PMC5137649_01,age=44.0; gender=Female
+S1,Symptom,abdominal pain,
+S2,Symptom,nausea,
+S3,Symptom,constipation,
+E1,Exam,physical examination,
+E2,Exam,tomography,
+E3,Exam,diagnosis,
+P2,Patient,Patient PMC9387390_01,age=57.0; gender=Male
+S4,Symptom,diarrhea,
+S5,Symptom,edema,
+E4,Exam,biopsy,
+D1,Disease,adenocarcinoma,
+A1,Anatomy,upper gastrointestinal tract,
+P3,Patient,Patient PMC3437073_01,age=55.0; gender=Male
+D2,Disease,tuberculosis,
+A2,Anatomy,lung,
+R1,Result,abscess,
+M1,Medication,Isoniazid,
+M2,Medication,Rifampin,
+M3,Medication,Ethambutol,
+M4,Medication,Pyrazinamide,
+P4,Patient,Patient PMC7102447_01,age=65.0; gender=Male
+D3,Disease,hypertension,
+A3,Anatomy,mitral valve,
+D4,Disease,asthma,
+M5,Medication,heparin,
+R2,Result,cardiomegaly,
+D5,Disease,acute coronary syndrome,
+D6,Disease,thrombosis,
+M6,Medication,warfarin,
+P5,Patient,Patient PMC6354154_01,age=30.0; gender=Female
+D7,Disease,infertility,
+E5,Exam,body mass index,
+M7,Medication,testosterone,
+M8,Medication,dehydroepiandrosterone,
+E6,Exam,ultrasonography,
+E7,Exam,hysterosalpingography,
+E8,Exam,semen analysis,
+P6,Patient,Patient PMC4782471_01,age=10.0; gender=Female
+E9,Exam,dilatation,
+S6,Symptom,fever,
+E10,Exam,heart rate,
+E11,Exam,respiratory rate,
+E12,Exam,blood pressure,
+E13,Exam,blood cell count,
+E14,Exam,platelet count,
+E15,Exam,Echocardiography,
+M9,Medication,ceftazidime,
+M10,Medication,ciprofloxacin,
+D8,Disease,endocarditis,
+M11,Medication,Vancomycin,
+E16,Exam,incidence,
+D9,Disease,heart failure,
+M12,Medication,dopamine,
+M13,Medication,dobutamine,
+P7,Patient,Patient PMC4835621_01,age=81.0; gender=Female
+S7,Symptom,fatigue,
+S8,Symptom,vomiting,
+D10,Disease,osteoporosis,
+M14,Medication,calcium,
+M15,Medication,hydrochlorothiazide,
+M16,Medication,vitamin D,
+E17,Exam,vital signs,
+S9,Symptom,jaundice,
+E18,Exam,reticulocyte count,
+E19,Exam,liver function tests,
+M17,Medication,autoantibodies,
+E20,Exam,Coombs test,
+M18,Medication,antibodies,
+M19,Medication,rituximab,
+D11,Disease,gastritis,
+A4,Anatomy,esophagus,
+A5,Anatomy,stomach,
+M20,Medication,omeprazole,
+M21,Medication,amoxicillin,
+M22,Medication,clarithromycin,
+P8,Patient,Patient PMC8627357_01,age=36.0; gender=Male
+S10,Symptom,dyspnea,
+M23,Medication,methamphetamine,
+M24,Medication,heroin,
+S11,Symptom,erythema,
+M25,Medication,clindamycin,
+S12,Symptom,hypoxia,
+E21,Exam,oximetry,
+D12,Disease,lymphadenopathy,
+M26,Medication,ceftaroline,
+M27,Medication,linezolid,
+D13,Disease,acidosis,
+D14,Disease,uremia,
+P9,Patient,Patient PMC5833205_01,age=0.0; gender=Male
+E22,Exam,urinalysis,
+M28,Medication,iron,
+D15,Disease,anemia,
+D16,Disease,hypoproteinemia,
+E23,Exam,occult blood,
+P10,Patient,Patient PMC3917415_01,age=47.0; gender=Female
+S13,Symptom,headache,
+M29,Medication,prednisolone,
+M30,Medication,cyclophosphamide,
+E24,Exam,glomerular filtration rate,
+R3,Result,disease,
+A6,Anatomy,kidney,
+D17,Disease,aneurysm,
+A7,Anatomy,neck,
+E25,Exam,microscopy,
+M31,Medication,indocyanine green,
+D18,Disease,hydrocephalus,
+P11,Patient,Patient PMC7718649_01,age=65.0; gender=Female
+M32,Medication,prednisone,
+M33,Medication,hydroxychloroquine,
+S14,Symptom,chills,
+S15,Symptom,anorexia,
+S16,Symptom,heartburn,
+M34,Medication,oseltamivir,
+M35,Medication,moxifloxacin,
+M36,Medication,capsules,
+E26,Exam,polymerase chain reaction,
+E27,Exam,medical records,
+M37,Medication,immunoglobulin G,
+E28,Exam,lymphocyte count,
+D19,Disease,diabetes mellitus,
+M38,Medication,Pantoprazole,
+M39,Medication,Levofloxacin,
+M40,Medication,acarbose,
+M41,Medication,glucose,
+D20,Disease,pneumonia,
+S17,Symptom,pain,
+A8,Anatomy,wrist,
+M42,Medication,immunoglobulin M,
+E29,Exam,negative results,
+P12,Patient,Patient PMC6134951_01,age=49.0; gender=Female
+D21,Disease,myxoma,
+D22,Disease,pleural effusion,
+E30,Exam,in situ hybridization,
+M43,Medication,carboplatin,
+M44,Medication,pemetrexed,
+S18,Symptom,chest pain,
+D23,Disease,dermatitis,
+A9,Anatomy,arm,
+A10,Anatomy,eosinophils,
+D24,Disease,hypersensitivity,
+D25,Disease,eosinophilia,
+D26,Disease,syphilis,
+D27,Disease,strongyloidiasis,
+M45,Medication,diphenhydramine,
+M46,Medication,triamcinolone,
+A11,Anatomy,skin,
+P13,Patient,Patient PMC6343374_01,age=0.0; gender=Male
+D28,Disease,bronchomalacia,
+E31,Exam,mortality,
+P14,Patient,Patient PMC9529523_01,age=41.0; gender=Female
+M47,Medication,nitroglycerin,
+A12,Anatomy,upper extremity,
+A13,Anatomy,fingers,
+M48,Medication,cryoglobulins,
+D29,Disease,vasculitis,
+E32,Exam,lost to follow-up,
+S19,Symptom,weight loss,
+R4,Result,alopecia,
+E33,Exam,vital capacity,
+E34,Exam,forced expiratory volume,
+M49,Medication,carbon monoxide,
+S20,Symptom,failure to thrive,
+R5,Result,hypertrophy,
+E35,Exam,magnetic resonance imaging,
+D30,Disease,pericardial effusion,
+D31,Disease,myocarditis,
+A14,Anatomy,mitochondria,
+P15,Patient,Patient PMC9532611_01,age=12.0; gender=Female
+S21,Symptom,paralysis,
+P16,Patient,Patient PMC9532611_02,age=6.0; gender=Female
+E36,Exam,methods,
+M50,Medication,Adrenocorticotropic hormone,
+M51,Medication,dihydrotestosterone,
+M52,Medication,estradiol,
+M53,Medication,progesterone,
+E37,Exam,liquid chromatography-mass spectrometry,
+E38,Exam,enzyme-linked immunosorbent assay,
+P17,Patient,Patient PMC5875137_01,age=83.0; gender=Female
+D32,Disease,aortic aneurysm,
+A15,Anatomy,breast,
+P18,Patient,Patient PMC6949661_01,age=23.0; gender=Male
+S22,Symptom,urinary incontinence,
+A16,Anatomy,head,
+R6,Result,tachycardia,
+E39,Exam,Digital Rectal Examination,
+E40,Exam,angiography,
+D33,Disease,rupture,
+P19,Patient,Patient PMC10405809_01,age=55.0; gender=Female
+E41,Exam,leukocyte count,
+D34,Disease,gastroesophageal reflux,
+P20,Patient,Patient PMC7519975_01,age=33.0; gender=Female
+M54,Medication,insulin,
+D35,Disease,meningioma,
+R7,Result,inflammation,
+A17,Anatomy,abdomen,
+E42,Exam,records,
+E43,Exam,prothrombin time,
+E44,Exam,international normalized ratio,
+E45,Exam,risk,
+R8,Result,death,
+R9,Result,myocardial infarction,
+M55,Medication,epinephrine,
+E46,Exam,hemodynamic monitoring,
+E47,Exam,prognosis,
+P21,Patient,Patient PMC3950436_01,age=19.0; gender=Female
+D36,Disease,nasal obstruction,
+A18,Anatomy,oropharynx,
+A19,Anatomy,mouth,
+S23,Symptom,apnea,
+A20,Anatomy,veins,
+S24,Symptom,dysphonia,
+M56,Medication,Ketamine,
+M57,Medication,dexmedetomidine,
+M58,Medication,lidocaine,
+P22,Patient,Patient PMC10434843_01,age=49.0; gender=Male
+S25,Symptom,paresis,
+M59,Medication,cortisone,
+E48,Exam,cell count,
+E49,Exam,Flow cytometry,
+E50,Exam,immunoassay,
+E51,Exam,electromyography,
+D37,Disease,encephalitis,
+A21,Anatomy,brain,
+R10,Result,syndrome,
+D38,Disease,amyotrophic lateral sclerosis,
+P23,Patient,Patient PMC4630775_01,age=39.0; gender=Female
+A22,Anatomy,membranes,
+P24,Patient,Patient PMC2700431_01,age=35.0; gender=Male
+D39,Disease,hepatitis B,
+D40,Disease,pneumothorax,
+A23,Anatomy,spinal cord,
+A24,Anatomy,ribs,
+A25,Anatomy,spleen,
+A26,Anatomy,liver,
+P25,Patient,Patient PMC10106591_01,age=44.0; gender=Female
+M60,Medication,irbesartan,
+E52,Exam,palpation,
+M61,Medication,aspirin,
+M62,Medication,clopidogrel,
+E53,Exam,coronary angiography,
+D41,Disease,hypotension,
+A27,Anatomy,back,
+M63,Medication,diltiazem,
+M64,Medication,atorvastatin,
+D42,Disease,myocardial ischemia,
+P26,Patient,Patient PMC4073451_01,age=14.0; gender=Female
+P27,Patient,Patient PMC6083636_01,age=9.0; gender=Male
+S26,Symptom,amblyopia,
+D43,Disease,strabismus,
+A28,Anatomy,eye,
+D44,Disease,albinism,
+P28,Patient,Patient PMC6083636_02,age=nan; gender=Unknown
+E54,Exam,reflex,
+E55,Exam,Biometry,
+P29,Patient,Patient PMC6083636_03,age=nan; gender=Unknown
+E56,Exam,visual acuity,
+D45,Disease,exotropia,
+P30,Patient,Patient PMC9969157_01,age=7.0; gender=Male
+E57,Exam,morbidity,
+D46,Disease,HELLP syndrome,
+S27,Symptom,birth weight,
+P31,Patient,Patient PMC4828947_01,age=61.0; gender=Male
+S28,Symptom,seizures,
+M65,Medication,oxcarbazepine,
+M66,Medication,valproic acid,
+D47,Disease,meningitis,
+D48,Disease,epilepsy,
+D49,Disease,ganglioglioma,
+P32,Patient,Patient PMC7086412_01,age=34.0; gender=Female
+E58,Exam,partial thromboplastin time,
+M67,Medication,misoprostol,
+D50,Disease,shoulder dystocia,
+D51,Disease,dystocia,
+P33,Patient,Patient PMC7086412_02,age=31.0; gender=Female
+E59,Exam,glucose tolerance test,
+D52,Disease,glucose intolerance,
+P34,Patient,Patient PMC3557982_01,age=1.0; gender=Female
+R11,Result,necrosis,
+E60,Exam,Immunohistochemistry,
+D53,Disease,otitis media,
+P35,Patient,Patient PMC9815523_01,age=40.0; gender=Unknown
+E61,Exam,diagnostic imaging,
+E62,Exam,immobilization,
+M68,Medication,vitamin K,
+S29,Symptom,epistaxis,
+P36,Patient,Patient PMC4310058_01,age=16.0; gender=Male
+P37,Patient,Patient PMC3859158_01,age=44.0; gender=Male
+D54,Disease,peptic ulcer,
+D55,Disease,pancreatitis,
+P38,Patient,Patient PMC9650410_01,age=67.0; gender=Female
+M69,Medication,Silicon,
+P39,Patient,Patient PMC5804616_01,age=77.0; gender=Male
+E63,Exam,blood gas analysis,
+A29,Anatomy,thoracic cavity,
+M70,Medication,sevoflurane,
+E64,Exam,Tidal volume,
+M71,Medication,ropivacaine,
+A30,Anatomy,pleura,
+P40,Patient,Patient PMC3897989_01,age=65.0; gender=Male
+S30,Symptom,pruritus,
+A31,Anatomy,urine,
+M72,Medication,bilirubin,
+M73,Medication,meropenem,
+D56,Disease,cholestasis,
+R12,Result,fibrosis,
+M74,Medication,methylprednisolone,
+M75,Medication,acyclovir,
+D57,Disease,herpes zoster,
+P41,Patient,Patient PMC2817501_01,age=53.0; gender=Male
+E65,Exam,auscultation,
+A32,Anatomy,pulmonary artery,
+S31,Symptom,hypothermia,
+P42,Patient,Patient PMC11131390_01,age=nan; gender=Male
+E66,Exam,thyroid function tests,
+D58,Disease,hyperthyroidism,
+D59,Disease,goiter,
+M76,Medication,carbimazole,
+M77,Medication,methimazole,
+S32,Symptom,weight gain,
+D60,Disease,hypothyroidism,
+S33,Symptom,body weight,
+P43,Patient,Patient PMC10521634_01,age=38.0; gender=Male
+S34,Symptom,dizziness,
+M78,Medication,mesalamine,
+D61,Disease,colitis,
+D62,Disease,infections,
+D63,Disease,Venous thrombosis,
+D64,Disease,thrombocytosis,
+M79,Medication,infliximab,
+D65,Disease,abdominal abscess,
+M80,Medication,azathioprine,
+P44,Patient,Patient PMC10710131_01,age=26.0; gender=Female
+D66,Disease,gingival recession,
+A33,Anatomy,tooth,
+P45,Patient,Patient PMC10488652_01,age=22.0; gender=Female
+S35,Symptom,myalgia,
+S36,Symptom,pallor,
+D67,Disease,synovitis,
+S37,Symptom,proteinuria,
+D68,Disease,lupus nephritis,
+E67,Exam,hematocrit,
+D69,Disease,pancytopenia,
+M81,Medication,dexamethasone,
+P46,Patient,Patient PMC11420039_01,age=74.0; gender=Female
+D70,Disease,eczema,
+M82,Medication,tablets,
+P47,Patient,Patient PMC11259348_01,age=nan; gender=Female
+S38,Symptom,hemoglobinuria,
+P48,Patient,Patient PMC11259348_02,age=nan; gender=Unknown
+D71,Disease,Transfusion reaction,
+E68,Exam,molecular typing,
+M83,Medication,suspensions,
+P49,Patient,Patient PMC11368112_01,age=35.0; gender=Male
+A34,Anatomy,lower extremity,
+A35,Anatomy,femoral vein,
+D72,Disease,embolism,
+D73,Disease,pulmonary embolism,
+M84,Medication,cyclosporine,
+P50,Patient,Patient PMC11345641_01,age=48.0; gender=Female
+D74,Disease,leiomyoma,
+D75,Disease,hydronephrosis,
+P51,Patient,Patient PMC11723754_01,age=0.0; gender=Male
+D76,Disease,neurogenic bowel,
+P52,Patient,Patient PMC11783470_01,age=22.0; gender=Female
+D77,Disease,celiac disease,
+E69,Exam,capsule endoscopy,
+R13,Result,menorrhagia,
+P53,Patient,Patient PMC11722600_01,age=41.0; gender=Female
+S39,Symptom,dysmenorrhea,
+S40,Symptom,pelvic pain,
+M85,Medication,chorionic gonadotropin,
+D78,Disease,appendicitis,
+A36,Anatomy,appendix,
+D79,Disease,endometriosis,
+P54,Patient,Patient PMC11722600_02,age=44.0; gender=Female
+A37,Anatomy,cecum,
+A38,Anatomy,ileum,
+A39,Anatomy,peritoneum,
+A40,Anatomy,omentum,
+A41,Anatomy,cells,
+A42,Anatomy,epithelial cells,
+A43,Anatomy,stromal cells,
+P55,Patient,Patient PMC12215201_01,age=56.0; gender=Male
+R14,Result,ascites,
+A44,Anatomy,blood cells,
+D80,Disease,thrombocytopenia,
+M86,Medication,factor VIII,
+D81,Disease,disseminated intravascular coagulation,
+P56,Patient,Patient PMC12832199_01,age=57.0; gender=Female
+S41,Symptom,obesity,
+D82,Disease,adrenal insufficiency,
+R15,Result,leukocytosis,value=9.6; unit=g/dL
+D83,Disease,hypoalbuminemia,
+D84,Disease,acute kidney injury,
+D85,Disease,gastric outlet obstruction,
+E70,Exam,perfusion,
+D86,Disease,esophagitis,
