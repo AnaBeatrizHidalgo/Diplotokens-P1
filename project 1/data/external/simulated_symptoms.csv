@@ -1,0 +1,8 @@
+term,source_tag
+abdominal pain,simulation_from_sample
+nausea,simulation_from_sample
+constipation,simulation_from_sample
+diarrhea,simulation_from_sample
+abdominal fullness,simulation_from_sample
+respiratory distress,simulation_from_sample
+severe mitral stenosis,simulation_from_sample

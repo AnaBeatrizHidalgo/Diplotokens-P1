@@ -1,0 +1,10 @@
+term,source_tag
+computed tomography,simulation_from_sample
+contrast enhanced computed tomography,simulation_from_sample
+EUS-FNA,simulation_from_sample
+FNA,simulation_from_sample
+intraoperative endoscopy,simulation_from_sample
+endoscopy,simulation_from_sample
+pathology,simulation_from_sample
+CT guided biopsy,simulation_from_sample
+transesophageal echocardiogram,simulation_from_sample
