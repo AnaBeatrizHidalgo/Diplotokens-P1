@@ -29,7 +29,7 @@ class Sentence:
         return self.tokens
 
     def reconstruct_terms(self, vocabulary=None, acronym_map=None, expand_acronyms=True):
-        from diplo_grafo._old_clinical_terms import reconstruct_clinical_tokens
+        from .clinical_terms import reconstruct_clinical_tokens
 
         if not self.tokens:
             self.tokenize()
