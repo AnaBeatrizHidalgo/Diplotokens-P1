@@ -91,7 +91,7 @@ No modelo a seguir são colocados exemplos ilustrativos, que serão substituído
 
 > # Modelo para Apresentação da Entrega 1 do Projeto (Arquivo README.md)
 
-# Projeto `<Título em Português>`
+# Projeto ``
 # Project `<Title in English>`
 
 ## Slides
@@ -131,6 +131,11 @@ plt.show();
 ## Ferramentas
 
 > Panorama das ferramentas utilizadas incluindo discussão sobre o uso das mesmas.
+Cookiecutter: Ferramenta de criação organização de arquivos recomendada pelo professor, que após vermos como funciona, decidimos aderir à ela.
+
+Python e Nootebook: Linguagem com alto suporte para auxiliar na tarefa apresentada e o uso de Nootebook pela praticidade de poder alterar partes do código sem precisar rodar o código inteiro novamente.
+
+Diplograph: Ferramenta de visualização do nosso grafo desenvolvida pelo modelo de linguagem Gemini.
 
 ## Resultados
 
@@ -141,6 +146,9 @@ plt.show();
 ## Como Modelos de Linguagem foram Usados
 
 > Descreva aqui em que tarefas os modelos de linguagem foram usados.
+Foram utilizados modelos de linguagem para criar um dicionário de teste com os termos médicos para compararmos com os resultados obtidos utilizando um dicionário real
+
+Também foi utilizado um modelo de linguagem para criar a ferramenta de visualização do grafo: Diplograph
 
 ## Referências Bibliográficas
 
