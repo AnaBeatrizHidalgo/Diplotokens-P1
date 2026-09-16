@@ -223,11 +223,14 @@ Entre as principais análises e aplicações que podem ser conduzidas a partir d
 ## Ferramentas
 
 > Panorama das ferramentas utilizadas incluindo discussão sobre o uso das mesmas.
-Cookiecutter: Ferramenta de criação organização de arquivos recomendada pelo professor, que após vermos como funciona, decidimos aderir à ela.
 
-Python e Nootebook: Linguagem com alto suporte para auxiliar na tarefa apresentada e o uso de Nootebook pela praticidade de poder alterar partes do código sem precisar rodar o código inteiro novamente.
+Cookiecutter: Ferramenta de organização e estruturação inicial do projeto recomendada pelo professor, que após entendermos seu funcionamento, decidimos por seguir a recomendação e utilizar a ferramenta.
 
-Diplograph: Ferramenta de visualização do nosso grafo desenvolvida pelo modelo de linguagem Gemini.
+Python: Escolhido por ser o padrão de mercado em ciência de dados e inteligência artificial. O ecossistema fornece suporte tanto para extração e tratamento dos dados quanto para as tarefas mais específicas de NLP, através da integração de bibliotecas consagradas nestas terefas.
+
+Notebook: Ambiente interativo adotado pela flexibilidade no desenvolvimento exploratório e prototipagem rápida. Permite executar o pipeline de forma incremental sem a necessidade de reprocessar todo o código a cada iteração.
+
+Diplograph: Ferramenta de visualização do grafo desenvolvida pelo modelo de linguagem Gemini.
 
 ## Resultados
 
@@ -248,8 +251,7 @@ A implementação do *pipeline* de Processamento de Língua Natural obteve êxit
 
 ## Como Modelos de Linguagem foram Usados
 
-
-Foram utilizados modelos de linguagem para criar um dicionário de teste com os termos médicos para compararmos com os resultados obtidos utilizando um dicionário real. Além disso, também foi utilizado um modelo de linguagem para criar a ferramenta de visualização do grafo: Diplograph
+Foi utilizado o modelo de linguagem Gemini para duas tarefas: Criar um dicionário de teste com os termos médicos, para compararmos com os resultados obtidos utilizando um dicionário real, e para criar a ferramenta de visualização do grafo: Diplograph.
 
 ## Referências Bibliográficas
 
