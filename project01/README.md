@@ -222,8 +222,6 @@ Entre as principais análises e aplicações que podem ser conduzidas a partir d
 
 ## Ferramentas
 
-> Panorama das ferramentas utilizadas incluindo discussão sobre o uso das mesmas.
-
 Cookiecutter: Ferramenta de organização e estruturação inicial do projeto recomendada pelo professor, que após entendermos seu funcionamento, decidimos por seguir a recomendação e utilizar a ferramenta.
 
 Python: Escolhido por ser o padrão de mercado em ciência de dados e inteligência artificial. O ecossistema fornece suporte tanto para extração e tratamento dos dados quanto para as tarefas mais específicas de NLP, através da integração de bibliotecas consagradas nestas terefas.
@@ -255,6 +253,8 @@ Foi utilizado o modelo de linguagem Gemini para duas tarefas: Criar um dicionár
 
 ## Referências Bibliográficas
 
-> Lista de artigos, links e referências bibliográficas.
->
-> Fiquem à vontade para escolher o padrão de referenciamento preferido pelo grupo.
+Jurafsky, D. & Martin, J. H. (2026). Speech and Language Processing: An Introduction to Natural Language Processing, Computational Linguistics, and Speech Recognition with Language Models (3rd ed.).
+
+Manning, C. D., Raghavan, P., & Schütze, H. (2009). Introduction to Information Retrieval. Cambridge University Press.
+
+Manning, C. D., & Schütze, H. (1999). Foundations of Statistical Natural Language Processing. MIT Press.
