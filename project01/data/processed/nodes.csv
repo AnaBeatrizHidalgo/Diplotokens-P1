@@ -1,8 +1,0 @@
-node_id,type,label,attributes
-P1,Patient,Patient PMC5137649_01,age=44.0; gender=Female
-S1,Symptom,abdominal pain,
-S2,Symptom,nausea,
-S3,Symptom,constipation,
-E1,Exam,physical examination,
-E2,Exam,tomography,
-E3,Exam,diagnosis,

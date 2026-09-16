@@ -1,7 +1,0 @@
-edge_id,source_id,target_id,relation,attributes
-e1,P1,D1,DIAGNOSED_WITH,status=confirmed
-e2,P1,E1,UNDERWENT_EXAM,
-e3,P1,M1,TAKES,dosage=300 mg
-e4,P1,M2,TAKES,dosage=600 mg
-e5,P1,M3,TAKES,dosage=600 mg
-e6,P1,M4,TAKES,dosage=500 mg
