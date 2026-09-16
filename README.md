@@ -1,5 +1,4 @@
-# Projeto `Diplotokenização`
-# Project `Diplotokenization`
+# Repositório dos Projetos de `Processamento de Linguagem Natural`
 
 ### Equipe `Diplotokens`:
 
