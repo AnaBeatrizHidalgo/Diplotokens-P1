@@ -158,7 +158,7 @@ O modelo de dados foi estruturado seguindo o paradigma de Grafo de Propriedades 
 
 Conforme ilustrado no diagrama lógico abaixo, a topologia foi desenhada de forma paciente-cêntrica. O nó `Paciente` atua como o vértice raiz da rede, encapsulando metadados demográficos (idade e gênero) como propriedades internas da própria entidade. A partir deste nó central, irradiam-se as arestas que representam os eventos clínicos e o histórico de saúde do indivíduo:
 
-![Modelo Lógico do Grafo de Conhecimento](project1/docs/modelo_logico.jpeg)
+![Modelo Lógico](docs/modelo_logico.jpeg)
 
 1. **Relações Diretas do Paciente**:
 * `Paciente` $\xrightarrow{\text{possui}}$ `Histórico Familiar` e `Histórico Individual`
@@ -188,13 +188,37 @@ Entidades clínicas secundárias não se conectam diretamente ao paciente, mas d
 * `Doença` $\xrightarrow{\text{incorre em}}$ `Partes do corpo afetadas`
 
 
-
-
 Essa modelagem favorece o reaproveitamento de nós no nível global da base de dados. Por exemplo, a entidade `Doença` (e.g., "gastric duplication cyst") é instanciada apenas uma vez como nó canônico; se múltiplos pacientes possuírem o mesmo diagnóstico, múltiplas arestas `diagnosticado com` apontarão para esse mesmo vértice compartilhado.
+
+
+---
 
 ## Análises que podem ser realizadas
 
-> Apresente aqui uma análise  uma discussão de análises que podem ser realizadas com o seu grafo.
+A conversão de textos clínicos desestruturados em um Grafo de Propriedades (*Property Graph*) interconectado e padronizado por ontologias médicas (como o MeSH) viabiliza uma série de investigações analíticas e aplicações avançadas no domínio da saúde. A topologia paciente-cêntrica adotada permite explorar não apenas a trajetória individual do paciente, mas também padrões populacionais ocultos na base de dados.
+
+Entre as principais análises e aplicações que podem ser conduzidas a partir deste modelo, destacam-se:
+
+1. **Agrupamento (*Clustering*) Fenotípico e Descoberta de Co-ocorrências:**
+* Como doenças e sintomas atuam como nós canônicos compartilhados entre múltiplos pacientes no grafo, é possível aplicar algoritmos de detecção de comunidades e medidas de centralidade estrutural para identificar subpopulações que compartilham os mesmos conjuntos de sintomas, comorbidades (histórico) ou desfechos diagnósticos. Isso facilita a descoberta de padrões de co-ocorrência que poderiam passar despercebidos na análise textual bruta.
+
+
+
+
+2. **Rastreabilidade e Análise Diagnóstica:**
+* A modelagem sequencial encadeada (`Exam` → *revela* → `Result` → *LOCATED_IN* → `Anatomy`) permite análises retrospectivas de concordância diagnóstica. Pode-se rastrear a eficácia de exames específicos (e seus atributos numéricos capturados na aresta `REVEALS`) na detecção de patologias específicas, avaliando caminhos frequentes entre investigações laboratoriais/de imagem e diagnósticos confirmados.
+
+
+
+
+3. **Farmacovigilância e Interações Sintomatológicas:**
+* A estruturação da relação `Paciente` → *TAKES* → `Medicação` (com as respectivas dosagens extraídas na aresta) e `Paciente` → *PRESENTS_WITH* → `Sintoma` (com restrição de escopo de negação) abre margem para a análise empírica de eficácia terapêutica e efeitos adversos. É possível mapear correlações entre dosagens específicas e a resolução ou surgimento de sintomas colaterais na coorte.
+
+
+
+
+4. **Sistemas de Busca Semântica e Apoio à Decisão (RAG):**
+* O grafo gerado (`nodes_global.csv` e `edges_global.csv`) atua como uma base de conhecimento rigorosamente indexada, ideal para alimentar sistemas baseados em *Retrieval-Augmented Generation* (RAG). Diferente da extração textual pura sujeita a alucinações, a consulta ao grafo permite que LLMs ou sistemas de apoio à decisão médica cruzem rapidamente variáveis categóricas (e.g., "pacientes masculinos acima de 40 anos que tomaram Aspirina e apresentaram cefaleia"), garantindo respostas rastreáveis e limitadas às relações formalmente extraídas.
 
 ## Ferramentas
 
@@ -207,16 +231,25 @@ Diplograph: Ferramenta de visualização do nosso grafo desenvolvida pelo modelo
 
 ## Resultados
 
-> Descrição e discussão dos resultados mais importantes obtidos.
->
-> Você pode apresentar imagens apresentando o grafo e discutir o que obteve.
+A implementação do *pipeline* de Processamento de Língua Natural obteve êxito ao converter os relatos textuais não estruturados em uma base de conhecimento em formato de Grafo de Propriedades, permitindo a extração de informações clinicamente relevantes de forma programática e escalável. Os principais resultados observados incluem:
+
+* **Consolidação Topológica e Redução de Isolamento:** Ao integrar os descritores do *Medical Subject Headings* (MeSH) como vocabulário controlado, o sistema padronizou a extração de entidades médicas. Diferentemente da modelagem preliminar (*baseline* sintético), que chegou a apresentar uma taxa de 33,9% de pacientes isolados na rede, a abordagem final reduziu drasticamente esse isolamento. Isso foi possível porque sintomas, exames e doenças passaram a atuar como nós canônicos globais compartilhados, conectando pacientes com quadros clínicos semelhantes e revelando *clusters* de co-ocorrência na população estudada.
+
+
+* **Fidelidade Semântica e Atributos Relacionais:** A decisão arquitetural de transferir métricas escalares para as arestas mostrou-se altamente eficaz. Atributos como dosagens farmacológicas, tempo de duração de sintomas e resultados numéricos de exames foram ancorados com precisão nas respectivas arestas semânticas (`TAKES`, `PRESENTS_WITH` e `REVEALS`), mantendo o espaço de nós limpo e coeso. Adicionalmente, as regras de escopo de negação preveniram a extração de patologias refutadas nos prontuários.
+
+
+* **Viabilidade de Renderização Visual:** A etapa final do processamento resultou na exportação automatizada e estruturada de matrizes de vértices e arestas (`nodes_global.csv` e `edges_global.csv`), que demonstraram total compatibilidade e integração orgânica com a plataforma de visualização *Diplograph*. O grafo gerado suporta navegação interativa, permitindo a seleção granular de pacientes e a inspeção de suas teias de relações clínicas através do painel integrado (*Inspector*).
+
+
+![GrafoV2](docs/GrafoV2.png)
+
+![Grafo-Global](docs/Grafo_Global.png)
 
 ## Como Modelos de Linguagem foram Usados
 
-> Descreva aqui em que tarefas os modelos de linguagem foram usados.
-Foram utilizados modelos de linguagem para criar um dicionário de teste com os termos médicos para compararmos com os resultados obtidos utilizando um dicionário real
 
-Também foi utilizado um modelo de linguagem para criar a ferramenta de visualização do grafo: Diplograph
+Foram utilizados modelos de linguagem para criar um dicionário de teste com os termos médicos para compararmos com os resultados obtidos utilizando um dicionário real. Além disso, também foi utilizado um modelo de linguagem para criar a ferramenta de visualização do grafo: Diplograph
 
 ## Referências Bibliográficas
 
