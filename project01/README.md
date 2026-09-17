@@ -76,7 +76,7 @@ A metodologia desenvolvida para a extração e estruturação do grafo de conhec
 4. **Mapeamento Semântico via Vocabulário Clínico**: Os termos reconstruídos são comparados a uma ontologia central, ancorada em terminologias do *Medical Subject Headings* (MeSH), que atua como fonte única de verdade do projeto. Os termos detectados são mapeados para categorias semânticas estritas: *Symptom*, *Disease*, *Exam*, *Result*, *Anatomy*, *Procedure* e *Medication*.
 
 
-5. **Extração de Atributos e Modificadores**: Através de expressões regulares otimizadas, o sistema extrai parâmetros contextuais e quantitativos da sentença, tais como dimensões físicas (priorizando o reconhecimento espacial 3D sobre 2D e 1D), medições laboratoriais atreladas a unidades, dosagens farmacológicas, durações sintomáticas e marcos temporais pós-operatórios. Estes atributos são associados às entidades clínicas correspondentes com base na vizinhança e distância de caracteres no texto.
+5. **Extração de Atributos e Modificadores**: Através de expressões regulares otimizadas, o sistema extrai parâmetros contextuais e quantitativos da sentença, tais como dimensões físicas, medições laboratoriais atreladas a unidades, dosagens farmacológicas, durações sintomáticas e marcos temporais pós-operatórios. Estes atributos são associados às entidades clínicas correspondentes com base na vizinhança e distância de caracteres no texto.
 
 
 6. **Resolução de Escopo de Negação**: Para evitar a extração de falsos positivos — como patologias ativamente descartadas no relato —, o sistema analisa a oração em busca de operadores de negação ou de resolução clínica (e.g., "no evidence of", "resolved"). O texto é previamente dividido em orações adversativas (usando "but", "however") para restringir com precisão o escopo da negação apenas à cláusula correta.
@@ -249,7 +249,7 @@ A implementação do *pipeline* de Processamento de Língua Natural obteve êxit
 
 ## Como Modelos de Linguagem foram Usados
 
-Foi utilizado o modelo de linguagem Gemini para duas tarefas: Criar um dicionário de teste com os termos médicos, para compararmos com os resultados obtidos utilizando um dicionário real, e para criar a ferramenta de visualização do grafo: Diplograph.
+Foi utilizado o modelo de linguagem Gemini para duas tarefas: Criar um dicionário de teste com os termos médicos, para compararmos com os resultados obtidos utilizando um dicionário real, e para criar a ferramenta de visualização do grafo: Diplograph. Além disso, é válido ressaltar que usamos Inteligência Artificial para desenvolver códigos que não dizem respeito à disciplina de NLP, assim como o Professor recomendou.
 
 ## Referências Bibliográficas
 
