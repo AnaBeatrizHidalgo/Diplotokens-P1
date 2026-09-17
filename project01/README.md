@@ -58,7 +58,8 @@
 
 ## Slides
 
-> Coloque aqui o link para o PDF da apresentação da parte 3.
+[Apresentação do Projeto](https://www.canva.com/design/DAHUi59hmBU/vjP7cpyz_FrPQnUO0HdjwQ/edit)
+
 
 ## Metodologia
 
