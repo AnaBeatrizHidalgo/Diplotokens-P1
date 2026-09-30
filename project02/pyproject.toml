@@ -1,0 +1,37 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "diplo_graph2"
+version = "0.0.1"
+description = "Projeto 2 da equipe Diplotokens para a disciplina NLP da Unicamp (2026.2)"
+authors = [
+  { name = "Diplotokens" },
+]
+
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    
+]
+dependencies = [
+    "pip",
+    "python-dotenv",
+    "ruff",
+]
+requires-python = "~=>3.11.0"
+
+
+[tool.ruff]
+line-length = 99
+src = ["diplo_graph2"]
+include = ["pyproject.toml", "diplo_graph2/**/*.py"]
+
+[tool.ruff.lint]
+extend-select = ["I"]  # Add import sorting
+
+[tool.ruff.lint.isort]
+known-first-party = ["diplo_graph2"]
+force-sort-within-sections = true
+
