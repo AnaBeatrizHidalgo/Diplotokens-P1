@@ -1,9 +1,11 @@
 ## Pipeline de processamento:
 
 ```mermaid
-flowchart LR;
+flowchart TD;
 
-    T(Texto de Entrada)
+    TEXT(Texto de Entrada)
+    P>PRÉ PROCESSAMENTO\nLEMATIZAÇÂO\nTOKENIZAÇÃO\nPodemos testar algumas libs]
+    TOKENS(Tokens)
     N>1. IDENTIFICADOR\n DE NÓS\n- dict\n- NER\n- kNN]
     LN(Lista de Nós\nToken, TPos, Tipo)
     E>2. IDENTIFICADOR\n DE ARESTAS\n- rede neural\n- kNN]
@@ -14,13 +16,15 @@ flowchart LR;
     LT(Lista de Atributos\n das Arestas)
     G((GRAFO))
 
-    T --> N
+    TEXT --> P
+    P --> TOKENS
+    TOKENS --> N
     N --> LN
     LN --> E
     E --> LE
     LE --> QA
 
-    T --> Q
+    TEXT --> Q
     Q --> LQ
     LQ --> QA
 
