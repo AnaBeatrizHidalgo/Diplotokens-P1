@@ -1,6 +1,5 @@
 """
     Este script deve conter as funções das diferenets formas de vetorização de palavras e contextos.
-    E sistema de lematização do texto a partir dos tokens já separados.
 """
 
 def blind_generate_word_ids(texts: list[str]) -> dict[str, int]:
