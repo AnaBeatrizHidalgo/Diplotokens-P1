@@ -69,6 +69,10 @@ class Graph:
     def len_edges(self) -> int:
         return len(self.edges)
 
+    def save_to_csvs(self, nodes_file: str, edges_file: str):
+        raise NotImplementedError("Este método ainda não foi implementado. Ele deve salvar os nós e arestas em arquivos CSV no formato esperado pelo projeto.")
+        pass
+
     def __str__(self):
         return "-------- Nodes --------\n" +\
         "\n".join(f"{i}: {node}" for i, node in enumerate(self.nodes)) +\
