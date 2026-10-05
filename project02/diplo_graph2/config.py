@@ -16,3 +16,5 @@ SAMPLE_DATA_DIR = RAW_DATA_DIR / "sample"
 CASES_CSV = SAMPLE_DATA_DIR / "cases.csv"
 DATA_DICT_CSV = SAMPLE_DATA_DIR / "data_dictionary.csv"
 METADATA_CSV = SAMPLE_DATA_DIR / "metadata.csv"
+
+RESULTS_DIR = DATA_DIR / "results"
