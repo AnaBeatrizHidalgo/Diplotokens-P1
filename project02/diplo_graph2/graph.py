@@ -3,6 +3,13 @@ class Node:
         self.node_type = node_type
         self.label = label
         self.attributes = attributes
+        self.pos_in_case_text: int = -1
+
+    def __init__(self, node_type: str, label: str, pos_in_case_text: int):
+            self.node_type = node_type
+            self.label = label
+            self.attributes: dict[str, str] = {}
+            self.pos_in_case_text = pos_in_case_text
 
     def __str__(self):
         return f"Node(type={self.node_type}, label={self.label}, attributes={self.attributes})"

@@ -4,6 +4,7 @@
 """
 
 import re
+import nltk
 
 UNIT = r"(?:kg|mg|mcg|ng|iu|U|L|mmHg|mmol|ml|dl|l|cm|mm|g|hg|min|y/o|yo|yrs?|years?|months?|weeks?|days?)"
 TIME_UNIT = r"(?:min|hr|hrs|h|s|sec|m)"
@@ -22,18 +23,27 @@ TOKEN_SEP_REGEX = re.compile(
     re.VERBOSE | re.IGNORECASE,
 )
 
+nltk.download('punkt', quiet=True)
+nltk.download('punkt_tab', quiet=True)
+
+def separate_sentences(text: str) -> list[str]:
+    """
+        Recebe um texto e retorna uma lista de sentenças.
+    """
+    return nltk.tokenize.sent_tokenize(text)
 
 def tokenize(text: str) -> list[str]:
     """
         Recebe um texto e retorna uma lista de tokens.
     """
-    return [match.group(0) for match in TOKEN_SEP_REGEX.finditer(text)]
+    #return [match.group(0) for match in TOKEN_SEP_REGEX.finditer(text)]
+    return nltk.tokenize.word_tokenize(text)
 
-def tokenize_to_lower(text: str) -> list[str]:
+def tokenize_to_lower(text: str, blacklist: list[str] = []) -> list[str]:
     """
         Recebe um texto e retorna uma lista de tokens em letras minúsculas.
     """
-    return [token.lower() for token in tokenize(text)]
+    return [token if token in blacklist else token.lower() for token in tokenize(text)]
 
 def lemmatize(tokens: list[str]) -> list[str]:
     """
@@ -41,11 +51,11 @@ def lemmatize(tokens: list[str]) -> list[str]:
     """
     pass
 
-
 def unite_mesh_terms(tokens: list[str]) -> list[str]:
     """
         Recebe uma lista de tokens e retorna uma lista de tokens com termos do mesh unidos.
     """
+    # não necessariamente precisamos implementar e usar no projeto 2
     pass
 
 
@@ -54,4 +64,5 @@ def unite_special_terms(tokens: list[str]) -> list[str]:
         Recebe uma lista de tokens e retorna uma lista de tokens com termos especiais unidos.
     """
     # aqui dá pra usar alguma lib bacana de lematização com ml, treinando com os textos ou sla
+    # não necessariamente precisamos implementar e usar no projeto 2
     pass
