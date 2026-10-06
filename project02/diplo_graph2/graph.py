@@ -1,18 +1,12 @@
 class Node:
-    def __init__(self, node_type: str, label: str, attributes: dict[str, str]):
+    def __init__(self, node_type: str, label: str, attributes: dict[str, str] = {}, pos_in_case_text: int = -1):
         self.node_type = node_type
         self.label = label
         self.attributes = attributes
-        self.pos_in_case_text: int = -1
-
-    def __init__(self, node_type: str, label: str, pos_in_case_text: int):
-            self.node_type = node_type
-            self.label = label
-            self.attributes: dict[str, str] = {}
-            self.pos_in_case_text = pos_in_case_text
+        self.pos_in_case_text: int = pos_in_case_text
 
     def __str__(self):
-        return f"Node(type={self.node_type}, label={self.label}, attributes={self.attributes})"
+        return f"Node(type={self.node_type}, label=\"{self.label}\", attributes={self.attributes}, pos_in_case={self.pos_in_case_text})"
 
 class Edge:
     def __init__(self, from_node: int, to_node: int, relation: str, attributes: dict[str, str]):
@@ -35,11 +29,11 @@ class Graph:
     def add_edge(self, edge: Edge):
         self.edges.append(edge)
 
-    def add_node(self, node_type: str, label: str, attributes: dict[str, str]) -> int:
+    def add_node_c(self, node_type: str, label: str, attributes: dict[str, str]) -> int:
         self.nodes.append(Node(node_type, label, attributes))
         return len(self.nodes) - 1
 
-    def add_edge(self, from_node: int, to_node: int, relation: str, attributes: dict[str, str]) -> int:
+    def add_edge_c(self, from_node: int, to_node: int, relation: str, attributes: dict[str, str]) -> int:
         if 0 <= from_node < len(self.nodes) and 0 <= to_node < len(self.nodes):
             self.edges.append(Edge(from_node, to_node, relation, attributes))
             return len(self.edges) - 1
@@ -89,9 +83,9 @@ class Graph:
 def main():
     print("Testando uso do grafo")
     graph = Graph()
-    node1_index = graph.add_node("TypeA", "Node1", {"attr1": "value1"})
-    node2_index = graph.add_node("TypeB", "Node2", {"attr2": "value2"})
-    edge_index = graph.add_edge(node1_index, node2_index, "RelationX", {"weight": "5"})
+    node1_index = graph.add_node_c("TypeA", "Node1", {"attr1": "value1"})
+    node2_index = graph.add_node_c("TypeB", "Node2", {"attr2": "value2"})
+    edge_index = graph.add_edge_c(node1_index, node2_index, "RelationX", {"weight": "5"})
 
     print(graph)
 
