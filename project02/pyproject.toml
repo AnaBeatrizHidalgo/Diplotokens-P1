@@ -21,7 +21,9 @@ dependencies = [
     "ruff",
     "scikit-learn",
     "pandas",
-    "numpy"
+    "numpy",
+    "nltk",
+    "ipykernel"
 ]
 requires-python = ">3.11.0"
 

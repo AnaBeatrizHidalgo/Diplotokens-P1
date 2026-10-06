@@ -16,8 +16,9 @@ TOKEN_SEP_REGEX = re.compile(
             | \s?{UNIT}(?:/{UNIT})?(?![A-Za-z])
         )?
         | [A-Za-z]+(?:-[A-Za-z]+)*
-        | [.,;:()]
+        | [.,;:()!?]+
     """,
+    # antes a última linha do regex era: | [.,;:()]
     re.VERBOSE | re.IGNORECASE,
 )
 
@@ -28,6 +29,11 @@ def tokenize(text: str) -> list[str]:
     """
     return [match.group(0) for match in TOKEN_SEP_REGEX.finditer(text)]
 
+def tokenize_to_lower(text: str) -> list[str]:
+    """
+        Recebe um texto e retorna uma lista de tokens em letras minúsculas.
+    """
+    return [token.lower() for token in tokenize(text)]
 
 def lemmatize(tokens: list[str]) -> list[str]:
     """
