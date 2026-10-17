@@ -10,14 +10,14 @@ NODE_TAGS = [f"TAG-{s}" for s in NODE_TYPES]
 NUM_TAGS = len(NODE_TAGS)
 
 class NGramsNodeIdentifier:
-    def __init__(self, model: LanguageModel, coef_a: float = 1, coef_b: float = 2, include_lim=0.8, quiet=True, max_node_len: int =7, nodecity_treshold=1.01) -> None:
+    def __init__(self, model: LanguageModel, coef_a: float = 1, coef_b: float = 2, include_base=1, quiet=True, max_node_len: int =7, nodecity_treshold=1.01) -> None:
         self.model = model
         self.coef_a = coef_a
         self.coef_b = coef_b
         self.quiet = quiet
         self.max_node_len = max_node_len
         self.nodecity_treshold = nodecity_treshold
-        self.include_lim = include_lim
+        self.include_base = include_base
         self._endless_fit_count = 0
 
     def log(self, s: object, end="\n"):
@@ -46,7 +46,7 @@ class NGramsNodeIdentifier:
 
                 self.log(f"\n\n----------------> Para o target '{target}':")
 
-                if target in ['.', '!', '?']:
+                if target in ['.', '!', '?', ',']:
                     self.log("Pontuação, skip!")
                     i_target += 1
                     continue
@@ -64,7 +64,7 @@ class NGramsNodeIdentifier:
                 not_nodep = self._get_1follow_avg_prob(i_target, tokens, target)
                 nodecity = max_tagp / not_nodep
 
-                print(f"--- (max_tagp={max_tagp}, mean_tagp={mean_tagp}, tagp_std={std_tagp}, NOT_nodep={not_nodep}, nodecity={nodecity})")
+                self.log(f"--- (max_tagp={max_tagp}, mean_tagp={mean_tagp}, tagp_std={std_tagp}, NOT_nodep={not_nodep}, nodecity={nodecity})")
 
                 if (max_tagp <= (self.coef_a * mean_tagp) + (self.coef_b * std_tagp)) \
                                     or nodecity <= self.nodecity_treshold:
@@ -206,10 +206,10 @@ class NGramsNodeIdentifier:
             pipipi = mean_against_inc_p + std_against_inc_p
 
             for i in range(max_node_len):
-                if includecity[i] < self.include_lim:
+                if includecity[i] < self.include_base:
                     return i
 
             self._endless_fit_count += 1
-            self.log("ENDLESS FIT += 1")
-            return 0
+            print(f"ENDLESS FIT += 1   -->   {possible_inclusions}")
+            return max_node_len
 
