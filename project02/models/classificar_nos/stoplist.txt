@@ -1,0 +1,16 @@
+# Termos do MeSH que geram ruido (uma frase por linha; # = comentario).
+# Sao normalizados pelo mesmo pre-processador do passo 1. Edite livremente.
+diagnosis
+method
+risk
+disease
+emergency
+suspension
+syndrome
+death
+recurrence
+antibody
+glucose
+bilirubin
+iron
+serum
