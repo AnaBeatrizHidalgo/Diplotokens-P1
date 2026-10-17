@@ -160,8 +160,6 @@ AGE_PATIENT = (r"\b(?:an?\s+)?(?:\d+(?:\.\d+)?|[a-z]+)[- ](?:year|month|week|day
                r"(?:man|woman|male|female|boy|girl|infant|newborn|baby|child|patient|lady|nulligravida)\b")
 PATIENT_WORDS = ["patient", "patients", "man", "woman", "boy", "girl", "infant", "newborn", "baby", "child"]
 
-PATIENT_WORDS = []
-
 
 def _alts(terms, plural=True):
     terms = sorted({t.strip() for t in terms.replace("\n", " ").split(";") if t.strip()},
@@ -180,8 +178,8 @@ def _alts(terms, plural=True):
 
 def build_patterns():
     pats = []  # (compiled_regex, tag)  -- ordem = prioridade em empate de tamanho
-    #pats.append((re.compile(AGE_PATIENT, re.I), "PATIENT"))
-    #pats.append((re.compile(r"\b(?:" + "|".join(PATIENT_WORDS) + r")\b", re.I), "PATIENT"))
+    pats.append((re.compile(AGE_PATIENT, re.I), "PATIENT"))
+    pats.append((re.compile(r"\b(?:" + "|".join(PATIENT_WORDS) + r")\b", re.I), "PATIENT"))
     for tag in ['SYMPTOM', 'DISEASE', 'DRUG', 'EXAME']:
         pats.append((re.compile(r"(?<![\w-])(?:" + "|".join(_alts(LEX[tag])) + r")(?![\w-])", re.I), tag))
     mods = "|".join(_alts(ANATOMY_MODIFIERS, plural=False))
@@ -229,7 +227,7 @@ def label_file(src: Path, dst: Path) -> Counter:
     with open(src, newline="", encoding="utf-8") as f:
         reader = csv.DictReader(f)
         rows = list(reader)
-        fields = list(reader.fieldnames or []) + ["case_text_tagged"]
+    fields = list(reader.fieldnames or []) + ["case_text_tagged"]
     for r in rows:
         r["case_text_tagged"], c = tag_text(r["case_text"])
         total.update(c)
