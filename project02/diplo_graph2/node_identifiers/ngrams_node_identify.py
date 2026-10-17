@@ -2,12 +2,27 @@ from diplo_graph2.graph import Node
 import diplo_graph2.process_text.tokenizer as t
 from nltk.lm.api import LanguageModel
 import numpy as np
+import nltk
+
+def _is_punct(tag: str) -> bool:
+    return not any(c.isalpha() for c in tag)   # ',', '.', ':', '(', ')', '``'...
 
 # ideia rafa pra caixa preta 1
 
 NODE_TYPES = ['PATIENT', 'DISEASE', 'SYMPTOM', 'DRUG', 'EXAME', 'ANATOMY', 'EFFECT', 'RESULT']
 NODE_TAGS = [f"TAG-{s}" for s in NODE_TYPES]
 NUM_TAGS = len(NODE_TAGS)
+
+
+# nunca começam um nó
+SKIP_START = {'VB', 'VBD', 'VBP', 'VBZ', 'MD',            # verbos finitos
+              'PRP', 'PRP$', 'WP', 'WP$', 'WDT', 'WRB',   # pronomes / wh-
+              'DT', 'PDT', 'IN', 'CC', 'TO', 'EX', 'RP', 'POS'}
+# nó não pode atravessar (IN e DT ficam de fora: "carcinoma of the pancreas")
+STOP_EXTEND = {'VB', 'VBD', 'VBP', 'VBZ', 'MD', 'PRP', 'WP', 'WDT', 'WRB',
+               'CC', 'TO', 'EX', 'RP'}
+TRIM_END = {'IN', 'DT', 'CC', 'TO'}
+
 
 class NGramsNodeIdentifier:
     def __init__(self, model: LanguageModel, coef_a: float = 1, coef_b: float = 2, include_base=1, quiet=True, max_node_len: int =7, nodecity_treshold=1.01) -> None:
@@ -35,6 +50,7 @@ class NGramsNodeIdentifier:
         for sentence in sentences:
             sentence_spreading = 0;
             tokens = t.tokenize_to_lower(sentence)
+            pos = [tag for _, tag in nltk.pos_tag(tokens)]
 
             i_target = 2
             initial_len_tokens = len(tokens)
@@ -46,8 +62,13 @@ class NGramsNodeIdentifier:
 
                 self.log(f"\n\n----------------> Para o target '{target}':")
 
-                if target in ['.', '!', '?', ',']:
-                    self.log("Pontuação, skip!")
+                #if target in ['.', '!', '?', ',']:
+                #    self.log("Pontuação, skip!")
+                #    i_target += 1
+                #    continue
+
+                if pos[i_target] in SKIP_START or _is_punct(pos[i_target]):
+                    self.log("POS / punct, skip!")
                     i_target += 1
                     continue
 
@@ -72,14 +93,21 @@ class NGramsNodeIdentifier:
                     i_target += 1
                     continue
                     
-                node_len = self._try_fit_node(i_target, tokens, best_tag)
+                #node_len = self._try_fit_node(i_target, tokens, best_tag)
+                node_len = self._try_fit_node(i_target, tokens, best_tag, pos)
 
                 if node_len <= 0:
                     i_target += 1
                     continue
 
+                # apara preposição/artigo solto no fim ("... of", "... the")
+                while node_len > 1 and pos[i_target + node_len - 1] in TRIM_END:
+                    node_len -= 1
+
                 node_label = " ".join(tokens[i_target:i_target+node_len])
                 tokens[i_target:i_target+node_len] = [best_tag]
+
+                pos[i_target:i_target+node_len] = ['NN']        # mantém tokens e pos alinhados
 
                 new_node = Node(
                     node_type = best_tag,
@@ -92,7 +120,7 @@ class NGramsNodeIdentifier:
                 self.log(f":::NODE ENCONTRADO (label={node_label}, type={new_node.node_type}, pos_in_case={new_node.pos_in_case_text})")
                 nodes.append(new_node)
 
-                i_target += node_len
+                i_target += 1
 
             sentence_pos += initial_len_tokens;
 
@@ -137,7 +165,7 @@ class NGramsNodeIdentifier:
         return prob_sum / (context_max_len - 1)
     
 
-    def _try_fit_node(self, node_start: int, sentence_ref: list[str], node_tag) -> int:
+    def _try_fit_node(self, node_start: int, sentence_ref: list[str], node_tag: str, pos: list[str]) -> int:
             """
                 Retorna o node_len. Se node_len=0 é porque o node não deve existir.
             """
@@ -151,6 +179,15 @@ class NGramsNodeIdentifier:
 
             # define o tamanho máximo deste nó de acordo com os limites da frase (excluindo o último token que deve ser pontuação)
             max_node_len = min(self.max_node_len, len(sentence_tokens) - 1 - node_start)
+
+            # capa mais ainda o limite para pontuações / termos proibidos
+            for k in range(max_node_len):
+                p = pos[node_start + k]
+                if p in STOP_EXTEND or _is_punct(p):
+                    max_node_len = k
+                    break
+
+
             self.log(f".max_node_len={max_node_len}")
 
             # palavras que podem ser inclusas no node (em ordem) e seus follows (pode ser ".") correspondentes
