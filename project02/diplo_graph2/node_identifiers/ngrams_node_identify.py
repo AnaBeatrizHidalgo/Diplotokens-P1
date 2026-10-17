@@ -84,6 +84,7 @@ class NGramsNodeIdentifier:
                 new_node = Node(
                     node_type = best_tag,
                     label = node_label,
+                    coord_in_case=(sentence_pos, i_target + sentence_spreading),
                     pos_in_case_text = sentence_pos + i_target + sentence_spreading
                 )
                 sentence_spreading += node_len - 1

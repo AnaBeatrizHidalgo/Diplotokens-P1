@@ -1,8 +1,9 @@
 class Node:
-    def __init__(self, node_type: str, label: str, attributes: dict[str, str] = {}, pos_in_case_text: int = -1):
+    def __init__(self, node_type: str, label: str, attributes: dict[str, str] = {},coord_in_case: tuple[int, int] = (-1, -1) , pos_in_case_text: int = -1):
         self.node_type = node_type
         self.label = label
         self.attributes = attributes
+        self.coord_in_case = coord_in_case
         self.pos_in_case_text: int = pos_in_case_text
 
     def __str__(self):
