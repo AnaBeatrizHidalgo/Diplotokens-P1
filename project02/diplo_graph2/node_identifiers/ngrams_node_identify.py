@@ -10,13 +10,15 @@ NODE_TAGS = [f"TAG-{s}" for s in NODE_TYPES]
 NUM_TAGS = len(NODE_TAGS)
 
 class NGramsNodeIdentifier:
-    def __init__(self, model: LanguageModel, coef_a: float = 1, coef_b: float = 2, quiet=True, max_node_len: int =7, nodecity_treshold=2) -> None:
+    def __init__(self, model: LanguageModel, coef_a: float = 1, coef_b: float = 2, include_lim=0.8, quiet=True, max_node_len: int =7, nodecity_treshold=1.01) -> None:
         self.model = model
         self.coef_a = coef_a
         self.coef_b = coef_b
         self.quiet = quiet
         self.max_node_len = max_node_len
         self.nodecity_treshold = nodecity_treshold
+        self.include_lim = include_lim
+        self._endless_fit_count = 0
 
     def log(self, s: object, end="\n"):
         if not self.quiet:
@@ -46,7 +48,7 @@ class NGramsNodeIdentifier:
 
                 if target in ['.', '!', '?']:
                     self.log("Pontuação, skip!")
-                    i_target += 1;
+                    i_target += 1
                     continue
 
                 # tags' probs
@@ -64,14 +66,20 @@ class NGramsNodeIdentifier:
 
                 print(f"--- (max_tagp={max_tagp}, mean_tagp={mean_tagp}, tagp_std={std_tagp}, NOT_nodep={not_nodep}, nodecity={nodecity})")
 
-                #if (max_tagp > (self.coef_a * mean_tagp) + (self.coef_b * std_tagp)) \
-                #                    and nodecity > self.nodecity_treshold:
+                if (max_tagp <= (self.coef_a * mean_tagp) + (self.coef_b * std_tagp)) \
+                                    or nodecity <= self.nodecity_treshold:
+                    self.log("Nodecity skip!")
+                    i_target += 1
+                    continue
                     
-                node_len, node_label = self._try_fit_node(i_target, tokens, best_tag)
+                node_len = self._try_fit_node(i_target, tokens, best_tag)
 
                 if node_len <= 0:
                     i_target += 1
                     continue
+
+                node_label = " ".join(tokens[i_target:i_target+node_len])
+                tokens[i_target:i_target+node_len] = [best_tag]
 
                 new_node = Node(
                     node_type = best_tag,
@@ -83,7 +91,7 @@ class NGramsNodeIdentifier:
                 self.log(f":::NODE ENCONTRADO (label={node_label}, type={new_node.node_type}, pos_in_case={new_node.pos_in_case_text})")
                 nodes.append(new_node)
 
-                i_target += 1
+                i_target += node_len
 
             sentence_pos += initial_len_tokens;
 
@@ -126,93 +134,11 @@ class NGramsNodeIdentifier:
         #self.log("")
 
         return prob_sum / (context_max_len - 1)
+    
 
-    def _spread_to_node_end(self, node_start: int, sentence_tokens: list[str], node: Node, node_tag):
-        """
-            Retorna o quanto avançou
-        """
-        # "The child has TAG-SYMPTOM on the TAG-ANATOMY."
-        # "The child has pain on the right knee."
-        # "The child has pain on the TAG-ANATOMY [knee .]"
-
-        max_node_len = min(self.max_node_len, len(sentence_tokens) - 1 - node_start)
-        self.log(f"max_node_len={max_node_len}")
-
-        # Obtém a lista das possíveis palavras seguintes do node
-        follow_options = []
-        for node_len in range(1, max_node_len + 1):
-            follow = sentence_tokens[node_start + node_len]
-            follow_options.append(follow)
-
-        self.log(f"Follow options: {follow_options}")
-
-        if len(follow_options) == 0:
-            return 0
-
-        # --------------------------
-        # Probs com a sequência (follows_follow) de um follow original sem consumi-lo
-        # ou seja, prob contra incluir no nó
-        # "The child has pain on the right knee and should not run."
-        # "The child has pain on the TAG-ANATOMY knee and should not run."
-
-        against_probs = []
-        test_sentence = sentence_tokens[0:node_start+1]
-
-        self.log("_________________")
-
-        follow = sentence_tokens[node_start + 1]
-        self.log(f"test i={0}: {test_sentence+[follow]}")
-        p = self._get_1follow_avg_prob(len(test_sentence), test_sentence, follow)
-        against_probs.append((follow, p))
-
-        sentence_tokens[node_start] = node_tag
-        test_sentence = sentence_tokens[0:node_start+1]
-        
-        possible_inclusions = follow_options[:-1]
-
-        
-        for i in range(len(possible_inclusions)):
-            self.log("_________________")
-            test_sentence.append(possible_inclusions[i])
-            follow = sentence_tokens[node_start + i + 2]
-            self.log(f"test i={i+1}: {test_sentence+[follow]}")
-            p = self._get_1follow_avg_prob(len(test_sentence), test_sentence, follow)
-            against_probs.append((follow, p))
-            test_sentence.pop();
-
-        self.log("")
-        self.log(f"Against probs: {against_probs}")
-        
-        # --------------------------
-
-        
-            
-        q = self.quiet
-        self.quiet = True
-        avg_probs = self._get_nfollows_avg_probs(node_start+1, sentence_tokens, follow_options)
-        self.quiet = q
-
-        self.log(f"Probs follow: {[(follow_options[i], avg_probs[i]) for i in range(len(follow_options))]}")
-
-        i_max_prob = int(np.argmax(avg_probs))
-
-        self.log(f"Best next token = {follow_options[i_max_prob]}")
-
-        node_end_in = node_start + i_max_prob
-
-        spreading = 0
-
-        for i in range(node_start + 1, node_end_in + 1):
-            node.label += f" {sentence_tokens.pop(node_start + 1)}"
-            spreading += 1;
-
-        self.log(f"Label final node = {node.label}")
-
-        return spreading
-
-    def _try_fit_node(self, node_start: int, sentence_ref: list[str], node_tag) -> tuple[int, str]:
+    def _try_fit_node(self, node_start: int, sentence_ref: list[str], node_tag) -> int:
             """
-                Retorna o node_len e a label. Se node_len=0 é porque o node não deve existir
+                Retorna o node_len. Se node_len=0 é porque o node não deve existir.
             """
             # "The child has TAG-SYMPTOM on the TAG-ANATOMY."
             # "The child has pain on the right knee."
@@ -243,6 +169,7 @@ class NGramsNodeIdentifier:
 
             include_probs: list[float] = []
             against_include_probs: list[float] = []
+            includecity = []
 
             for i in range(max_node_len):
                 self.log("...................")
@@ -267,10 +194,21 @@ class NGramsNodeIdentifier:
                 self.log(f'> NÃO = {exc_p}  >  "{test_exclude_sentence+[follow]}"')
                 test_exclude_sentence.pop()
 
+                includecity.append(inc_p / exc_p)
                 self.log(f'> COEF = {inc_p / exc_p}')
 
                 if i == 0:
                     test_exclude_sentence.append(node_tag)
 
-            return -1, ""
+            std_against_inc_p = np.std(against_include_probs)
+            mean_against_inc_p = np.mean(against_include_probs)
+            pipipi = mean_against_inc_p + std_against_inc_p
+
+            for i in range(max_node_len):
+                if includecity[i] < self.include_lim:
+                    return i
+
+            self._endless_fit_count += 1
+            self.log("ENDLESS FIT += 1")
+            return 0
 
