@@ -8,7 +8,7 @@
 | Lucas Palacio Almeida  | 236380  |
 | Raphael Salles Vitor de Souza  | 223641  |
 | Rafael Campideli Hoyos  | 175100  |
-| Thiago AUgusto de Tulio Nascimento  | 252937  |
+| Thiago Augusto de Tulio Nascimento  | 252937  |
 
 # Apresentação
 
