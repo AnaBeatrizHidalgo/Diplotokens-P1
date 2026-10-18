@@ -1,0 +1,8 @@
+{
+  "coef_a": 0.976,
+  "coef_b": 1.825,
+  "nodecity_treshold": 1.511,
+  "include_base": 0.902,
+  "max_node_len": 6,
+  "cross": true
+}

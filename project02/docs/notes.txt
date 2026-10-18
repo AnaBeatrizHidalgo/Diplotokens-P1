@@ -1,0 +1,1 @@
+venv/bin/python -m diplo_graph2.node_identifiers.compare_node_classifiers

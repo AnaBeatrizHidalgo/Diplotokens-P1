@@ -3,6 +3,27 @@ import diplo_graph2.process_text.tokenizer as t
 from nltk.lm.api import LanguageModel
 import numpy as np
 import nltk
+import random
+
+from nltk.corpus import brown
+
+def brown_background(n_tokens=10_000, doc_len=300, seed=7,
+                     categories=('editorial', 'government')):
+                        # 'learned' 'news'
+    """Devolve listas de tokens (minúsculos, sem tags), em blocos parecidos com um 'caso'."""
+    sents = [[w.lower() for w in s if w not in ("``", "''")]
+             for s in brown.sents(categories=list(categories))]
+    random.Random(seed).shuffle(sents)
+    docs, cur, total = [], [], 0
+    for s in sents:
+        cur += s
+        total += len(s)
+        if len(cur) >= doc_len:
+            docs.append(cur)
+            cur = []
+        if total >= n_tokens:
+            break
+    return docs
 
 def _is_punct(tag: str) -> bool:
     return not any(c.isalpha() for c in tag)   # ',', '.', ':', '(', ')', '``'...
