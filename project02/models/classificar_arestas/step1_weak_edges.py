@@ -620,23 +620,22 @@ def label_edges_dataframe(
 ) -> List[Dict[str, Any]]:
     """
     Gera pares candidatos e rotulos fracos de arestas para todos os casos de `df`.
-    Aceita tanto `records` (saida de `step2_weak_labels.label_dataframe` no treino)
-    quanto `test['entities']` (saida de `bio_to_entities` no teste).
+    Aceita tanto `records` (saida de `step2_weak_labels.label_dataframe`)
+    quanto `test['entities']` (saida de `bio_to_entities`).
     """
-    # Mapeia case_id -> lista de spans/entidades
     spans_by_case: Dict[str, List[Dict[str, Any]]] = {}
     rows = df.to_dict("records")
 
     for idx, item in enumerate(node_records_or_entities):
+        fallback_cid = str(rows[idx][id_col]) if idx < len(rows) else str(idx)
         if isinstance(item, dict) and "spans" in item:
-            cid = str(item.get("case_id", rows[idx][id_col]))
+            cid = str(item["case_id"]) if "case_id" in item else fallback_cid
             spans_by_case[cid] = item["spans"]
         elif isinstance(item, list):
-            cid = str(rows[idx][id_col])
-            spans_by_case[cid] = item
-        else:
-            cid = str(rows[idx][id_col])
-            spans_by_case[cid] = []
+            if idx < len(rows):
+                spans_by_case[fallback_cid] = item
+        elif idx < len(rows):
+            spans_by_case[fallback_cid] = []
 
     all_edge_records: List[Dict[str, Any]] = []
     for row in rows:
