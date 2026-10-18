@@ -49,7 +49,7 @@ def _is_tag(tok: str) -> bool:
 
 
 class NGramsNodeIdentifier:
-    def __init__(self, model: LanguageModel, model_rev: LanguageModel | None = None, cross=True, coef_a: float = 1, coef_b: float = 2, include_base=1, quiet=True, max_node_len: int =7, nodecity_treshold=1.01) -> None:
+    def __init__(self, model: LanguageModel, model_rev: LanguageModel | None = None, cross=True, coef_a: float = 1, coef_b: float = 2, include_base: float = 1, quiet=True, max_node_len: int =7, nodecity_treshold=1.01) -> None:
         self.model = model
         self.model_rev = model_rev
         self.coef_a = coef_a

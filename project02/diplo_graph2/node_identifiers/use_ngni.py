@@ -30,7 +30,7 @@ def get_default_ngni_ngrams_model():
 
 def get_ngni_results(model, model_rev, text):
 
-    ni = ngni.NGramsNodeIdentifier(model, model_rev=model_rev, cross=True, quiet=True, include_base=0.902
+    ni = ngni.NGramsNodeIdentifier(model, model_rev=model_rev, cross=True, quiet=True, include_base=0.902,
                                    max_node_len=6, coef_a=0.976, coef_b=1.825, nodecity_treshold=1.511)
 
     nodes = ni.identify_nodes(text)
