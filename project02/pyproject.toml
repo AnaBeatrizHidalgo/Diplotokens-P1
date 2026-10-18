@@ -21,6 +21,7 @@ dependencies = [
     "ruff",
     "scikit-learn",
     "pandas",
+    "matplotlib",
     "numpy",
     "nltk",
     "ipykernel"

@@ -2,6 +2,7 @@
 
 Run from project02 with:
     python -m diplo_graph2.node_identifiers.compare_node_classifiers
+    python -m diplo_graph2.node_identifiers.compare_node_classifiers --plot
 """
 from __future__ import annotations
 
@@ -187,11 +188,117 @@ def _validate_test_sets(lr_df: pd.DataFrame, ngni_df: pd.DataFrame):
         raise ValueError(f"O texto de teste diverge entre os modelos: {mismatched}")
 
 
+def _plot_saved_metrics(output_dir: Path) -> tuple[Path, Path]:
+    summary_path = output_dir / "summary.csv"
+    per_label_path = output_dir / "per_label.csv"
+    if not summary_path.exists() or not per_label_path.exists():
+        raise FileNotFoundError(
+            f"Relatorios nao encontrados em {output_dir}. Execute a comparacao sem --plot primeiro."
+        )
+
+    import matplotlib.pyplot as plt
+
+    summary = pd.read_csv(summary_path)
+    per_label = pd.read_csv(per_label_path)
+    model_order = ["LR", "LR_common_labels", "NGNI"]
+    model_names = {
+        "LR": "LR (todas as classes)",
+        "LR_common_labels": "LR (classes comuns)",
+        "NGNI": "NGNI",
+    }
+    overall = summary.set_index("model").reindex(model_order).dropna(
+        subset=["precision", "recall", "f1"]
+    )
+    if overall.empty:
+        raise ValueError(f"Nenhuma metrica geral reconhecida em {summary_path}.")
+
+    metric_names = [("precision", "Precisao"), ("recall", "Recall"), ("f1", "F1")]
+    positions = list(range(len(overall)))
+    width = 0.24
+    figure, axis = plt.subplots(figsize=(10, 5.5))
+    for index, (metric, label) in enumerate(metric_names):
+        offsets = [position + (index - 1) * width for position in positions]
+        axis.bar(offsets, overall[metric], width, label=label)
+    axis.set_xticks(
+        positions,
+        [model_names[model] for model in overall.index],
+    )
+    axis.set_ylim(0, 1)
+    axis.set_ylabel("Pontuacao")
+    axis.set_title("Metricas gerais por modelo e referencia")
+    axis.legend(frameon=False, ncols=3)
+    axis.grid(axis="y", alpha=0.25)
+    axis.set_axisbelow(True)
+    figure.text(
+        0.5, 0.01,
+        "LR: weak labels; NGNI: test_cases_labeled. Comparacao entre referencias distintas.",
+        ha="center", fontsize=9,
+    )
+    figure.tight_layout(rect=(0, 0.05, 1, 1))
+    overall_path = output_dir / "comparison_overall.png"
+    figure.savefig(overall_path, dpi=180)
+    plt.close(figure)
+
+    class_rows = per_label[per_label["model"].isin(["LR_common_labels", "NGNI"])].copy()
+    class_rows["label"] = class_rows["label"].astype(str).str.upper().replace(
+        {"DRUG": "MEDICATION", "EXAME": "EXAM"}
+    )
+    class_scores = class_rows.pivot_table(
+        index="label", columns="model", values="f1", aggfunc="first"
+    )
+    required_models = ["LR_common_labels", "NGNI"]
+    if not set(required_models).issubset(class_scores.columns):
+        raise ValueError("Os relatorios nao contem metricas por classe para os dois modelos.")
+    class_scores = class_scores.dropna(subset=required_models)
+    shared_labels = sorted(class_scores.index)
+    if not shared_labels:
+        raise ValueError("Os relatorios nao contem classes compartilhadas entre LR e NGNI.")
+
+    positions = list(range(len(shared_labels)))
+    figure, axis = plt.subplots(figsize=(10, 5.5))
+    axis.bar(
+        [position - width / 2 for position in positions],
+        class_scores.loc[shared_labels, "LR_common_labels"],
+        width, label="LR (weak labels)", color="#287271",
+    )
+    axis.bar(
+        [position + width / 2 for position in positions],
+        class_scores.loc[shared_labels, "NGNI"],
+        width, label="NGNI (test_cases_labeled)", color="#E07A5F",
+    )
+    axis.set_xticks(positions, shared_labels)
+    axis.set_ylim(0, 1)
+    axis.set_ylabel("F1 de span exato")
+    axis.set_title("F1 por classe compartilhada")
+    axis.legend(frameon=False)
+    axis.grid(axis="y", alpha=0.25)
+    axis.set_axisbelow(True)
+    figure.text(
+        0.5, 0.01,
+        "Cada modelo e avaliado contra sua propria referencia; Patient foi excluido.",
+        ha="center", fontsize=9,
+    )
+    figure.tight_layout(rect=(0, 0.05, 1, 1))
+    per_class_path = output_dir / "comparison_f1_by_label.png"
+    figure.savefig(per_class_path, dpi=180)
+    plt.close(figure)
+    return overall_path, per_class_path
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--dictionary", type=Path, default=WEAK_DICTIONARY)
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT_DIR)
+    parser.add_argument(
+        "--plot", action="store_true",
+        help="plota os CSVs de metricas existentes sem reexecutar os modelos",
+    )
     args = parser.parse_args()
+
+    if args.plot:
+        for path in _plot_saved_metrics(args.output_dir):
+            print(f"Grafico salvo em: {path}")
+        return
 
     lr_df, lr_gold, lr_pred = _load_lr_data(args.dictionary)
     ngni_df, ngni_gold, ngni_pred = _load_ngni_data()
