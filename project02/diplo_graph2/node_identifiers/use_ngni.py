@@ -29,7 +29,9 @@ def get_default_ngni_ngrams_model():
     return model, model_rev
 
 def get_ngni_results(model, model_rev, text):
-    ni = ngni.NGramsNodeIdentifier(model, model_rev=model_rev, cross=True, quiet=True, max_node_len=10, coef_a=1, coef_b=1, nodecity_treshold=1)
+
+    ni = ngni.NGramsNodeIdentifier(model, model_rev=model_rev, cross=True, quiet=True, include_base=0.902
+                                   max_node_len=6, coef_a=0.976, coef_b=1.825, nodecity_treshold=1.511)
 
     nodes = ni.identify_nodes(text)
     return nodes
