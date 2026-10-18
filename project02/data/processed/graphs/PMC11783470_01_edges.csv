@@ -1,0 +1,17 @@
+edge_index,from_node,to_node,source_label,target_label,relation,attributes
+0,0,1,Patient (PMC11783470_01),menorrhagia,HISTORY,confidence=0.5742
+1,0,10,Patient (PMC11783470_01),Vitals signs,UNDERWENT_EXAM,confidence=0.9766
+2,0,11,Patient (PMC11783470_01),Physical examination,UNDERWENT_EXAM,confidence=0.9922
+3,0,12,Patient (PMC11783470_01),pallor,PRESENTS_WITH,confidence=0.9793
+4,0,13,Patient (PMC11783470_01),transferrin,TAKES,value=11.5; unit=g/dL; type=weight; quantity=11.5 g/dL; value_2=200; unit_2=ng/mL; type_2=weight; value_3=76; unit_3=mcg/dL; type_3=weight; confidence=0.9975
+5,0,14,Patient (PMC11783470_01),iron deficiency,DIAGNOSED_WITH,confidence=0.8248
+6,0,15,Patient (PMC11783470_01),esophagogastroduodenoscopy,UNDERWENT_EXAM,confidence=0.9915
+7,0,16,Patient (PMC11783470_01),colonoscopy,UNDERWENT_EXAM,confidence=0.9829
+8,0,17,Patient (PMC11783470_01),biopsied,UNDERWENT_EXAM,confidence=0.9871
+9,0,18,Patient (PMC11783470_01),biopsy,UNDERWENT_EXAM,confidence=0.9929
+10,0,19,Patient (PMC11783470_01),duodenal,DIAGNOSED_WITH,confidence=0.9423
+11,0,20,Patient (PMC11783470_01),biopsies,UNDERWENT_EXAM,confidence=0.9925
+12,0,23,Patient (PMC11783470_01),endoscopy,UNDERWENT_EXAM,confidence=0.9854
+13,0,24,Patient (PMC11783470_01),capsule endoscopy,UNDERWENT_EXAM,confidence=0.9831
+14,0,26,Patient (PMC11783470_01),anemia,DIAGNOSED_WITH,confidence=0.9243
+15,26,25,anemia,small intestinal,LOCATED_IN,confidence=0.9838

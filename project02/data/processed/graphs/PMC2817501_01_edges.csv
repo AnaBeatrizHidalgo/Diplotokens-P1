@@ -1,0 +1,18 @@
+edge_index,from_node,to_node,source_label,target_label,relation,attributes
+0,0,1,Patient (PMC2817501_01),dyspnea,PRESENTS_WITH,value=53; unit=year; type=time; quantity=53-year; confidence=0.9964
+1,0,4,Patient (PMC2817501_01),thromboembolic,HISTORY,confidence=0.7214
+2,4,3,thromboembolic,valve,LOCATED_IN,confidence=0.9836
+3,0,5,Patient (PMC2817501_01),physical examination,UNDERWENT_EXAM,confidence=0.9933
+4,0,7,Patient (PMC2817501_01),blood pressure,UNDERWENT_EXAM,confidence=0.9816
+5,0,8,Patient (PMC2817501_01),heart rate,UNDERWENT_EXAM,confidence=0.9716
+6,5,6,physical examination,hemiparesis,REVEALS,confidence=0.9992
+7,7,6,blood pressure,hemiparesis,REVEALS,value=120/80; unit=mmHg; type=pressure; quantity=120/80 mmHg; confidence=0.998
+8,8,6,heart rate,hemiparesis,REVEALS,confidence=0.9705
+9,0,9,Patient (PMC2817501_01),auscultation,UNDERWENT_EXAM,confidence=0.9802
+10,0,10,Patient (PMC2817501_01),systolic murmur,PRESENTS_WITH,confidence=0.9929
+11,10,11,systolic murmur,lungs,LOCATED_IN,confidence=0.8167
+12,0,12,Patient (PMC2817501_01),Transesophageal,UNDERWENT_EXAM,confidence=0.9914
+13,0,13,Patient (PMC2817501_01),echocardiography,UNDERWENT_EXAM,value=30; unit=mmHg; type=pressure; quantity=30 mmHg; confidence=0.9882
+14,0,17,Patient (PMC2817501_01),arteriography,UNDERWENT_EXAM,confidence=0.9907
+15,0,18,Patient (PMC2817501_01),hypothermia,DIAGNOSED_WITH,confidence=0.8968
+16,0,19,Patient (PMC2817501_01),observed,UNDERWENT_EXAM,confidence=0.9571

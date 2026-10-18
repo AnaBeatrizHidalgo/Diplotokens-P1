@@ -1,0 +1,52 @@
+edge_index,from_node,to_node,source_label,target_label,relation,attributes
+0,0,1,Patient (PMC9529523_01),cardiomyopathy,HISTORY,value=41; unit=year; type=time; quantity=41-year; value_2=11; unit_2=year; type_2=time; confidence=0.9956
+1,0,2,Patient (PMC9529523_01),rheumatic disease,DIAGNOSED_WITH,confidence=0.9064
+2,0,4,Patient (PMC9529523_01),pain,PRESENTS_WITH,confidence=0.9826
+3,4,3,pain,finger,LOCATED_IN,confidence=0.9518
+4,0,10,Patient (PMC9529523_01),nitroglycerin,TAKES,confidence=0.5836
+5,7,8,endocarditis,upper extremity,LOCATED_IN,confidence=0.9747
+6,0,11,Patient (PMC9529523_01),abscess,DIAGNOSED_WITH,confidence=0.8998
+7,0,12,Patient (PMC9529523_01),Antinuclear Antibody,TAKES,confidence=0.9972
+8,0,13,Patient (PMC9529523_01),assay,UNDERWENT_EXAM,confidence=0.959
+9,0,15,Patient (PMC9529523_01),vasculitis,DIAGNOSED_WITH,confidence=0.9743
+10,0,17,Patient (PMC9529523_01),cryoglobulins,TAKES,confidence=0.8019
+11,15,16,vasculitis,cytoplasmic,LOCATED_IN,confidence=0.7651
+12,0,18,Patient (PMC9529523_01),Antiphospholipid antibodies,TAKES,confidence=0.9824
+13,0,19,Patient (PMC9529523_01),anticardiolipin,TAKES,confidence=0.9973
+14,0,21,Patient (PMC9529523_01),rate,UNDERWENT_EXAM,value=77; unit=mm; type=lenght; quantity=77 mm; confidence=0.9377
+15,0,22,Patient (PMC9529523_01),physical examination,UNDERWENT_EXAM,confidence=0.9937
+16,0,24,Patient (PMC9529523_01),systemic lupus erythematosus,DIAGNOSED_WITH,confidence=0.7546
+17,0,25,Patient (PMC9529523_01),hydroxychloroquine,TAKES,value=300; unit=mg; type=weight; quantity=300 mg; value_2=3.9; unit_2=mg/kg; type_2=weight; confidence=0.9945
+18,0,26,Patient (PMC9529523_01),lost to follow-up,UNDERWENT_EXAM,confidence=0.7048
+19,0,27,Patient (PMC9529523_01),weight loss,PRESENTS_WITH,confidence=0.9826
+20,0,28,Patient (PMC9529523_01),alopecia,DIAGNOSED_WITH,confidence=0.9168
+21,0,25,Patient (PMC9529523_01),hydroxychloroquine,TAKES,value=1232.1; unit=ng/ml; type=weight; quantity=1232.1 ng/ml; value_2=1000; unit_2=ng/mL; type_2=weight; confidence=0.9904
+22,0,25,Patient (PMC9529523_01),hydroxychloroquine,TAKES,confidence=0.9967
+23,0,25,Patient (PMC9529523_01),hydroxychloroquine,TAKES,value=200; unit=mg; type=weight; quantity=200 mg; value_2=3.1; unit_2=mg/kg; type_2=weight; confidence=0.9963
+24,0,32,Patient (PMC9529523_01),biopsy,UNDERWENT_EXAM,confidence=0.9897
+25,0,33,Patient (PMC9529523_01),malignant hypertension,HISTORY,confidence=0.7869
+26,0,34,Patient (PMC9529523_01),thrombotic microangiopathy,HISTORY,confidence=0.9559
+27,0,35,Patient (PMC9529523_01),vital capacity,UNDERWENT_EXAM,confidence=0.9821
+28,0,36,Patient (PMC9529523_01),forced expiratory volume,UNDERWENT_EXAM,confidence=0.9808
+29,0,37,Patient (PMC9529523_01),carbon monoxide,TAKES,confidence=0.9965
+30,0,38,Patient (PMC9529523_01),tomography,UNDERWENT_EXAM,confidence=0.99
+31,0,40,Patient (PMC9529523_01),sepsis,HISTORY,confidence=0.9046
+32,0,41,Patient (PMC9529523_01),acute,HISTORY,confidence=0.9787
+33,0,42,Patient (PMC9529523_01),enteropathogenic,HISTORY,confidence=0.9436
+34,40,31,sepsis,kidney,LOCATED_IN,confidence=0.7924
+35,41,31,acute,kidney,LOCATED_IN,confidence=0.9983
+36,42,31,enteropathogenic,kidney,LOCATED_IN,confidence=0.9956
+37,0,43,Patient (PMC9529523_01),failure,PRESENTS_WITH,confidence=0.9698
+38,0,44,Patient (PMC9529523_01),thrive,PRESENTS_WITH,confidence=0.9726
+39,0,45,Patient (PMC9529523_01),pulmonary hypertension,DIAGNOSED_WITH,confidence=0.9398
+40,0,48,Patient (PMC9529523_01),magnetic resonance imaging,UNDERWENT_EXAM,confidence=0.5255
+41,46,47,echocardiography,hypertrophy,REVEALS,confidence=0.9881
+42,48,47,magnetic resonance imaging,hypertrophy,REVEALS,confidence=0.9825
+43,0,50,Patient (PMC9529523_01),dyspnea,DIAGNOSED_WITH,confidence=0.7905
+44,0,51,Patient (PMC9529523_01),pericardial effusion,DIAGNOSED_WITH,confidence=0.9078
+45,0,52,Patient (PMC9529523_01),sinus,DIAGNOSED_WITH,confidence=0.9424
+46,0,53,Patient (PMC9529523_01),pericardiocentesis,UNDERWENT_EXAM,value=860; unit=ml; type=volume; quantity=860 ml; confidence=0.9909
+47,0,55,Patient (PMC9529523_01),C3,TAKES,confidence=0.9834
+48,0,57,Patient (PMC9529523_01),catheterization,UNDERWENT_EXAM,confidence=0.9895
+49,1,59,cardiomyopathy,mitochondria,LOCATED_IN,confidence=0.8024
+50,0,61,Patient (PMC9529523_01),prednisone,TAKES,confidence=0.9977

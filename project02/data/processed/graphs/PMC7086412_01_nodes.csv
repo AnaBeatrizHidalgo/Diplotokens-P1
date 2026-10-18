@@ -1,0 +1,31 @@
+node_index,node_type,label,attributes,coord_in_case,pos_in_case_text
+0,Patient,Patient (PMC7086412_01),case_id=PMC7086412_01; age=34.0; gender=Female,"(0, 0)",0
+1,Exam,records,,"(412, 419)",68
+2,Exam,glucose tolerance testing,,"(469, 494)",77
+3,Anatomy,blood,,"(581, 586)",95
+4,Exam,monitoring,,"(838, 848)",133
+5,Medication,intrauterine,,"(1006, 1018)",157
+6,Disease,demise,,"(1025, 1031)",159
+7,Exam,count,,"(1072, 1077)",166
+8,Exam,prothrombin time,,"(1079, 1095)",167
+9,Exam,partial thromboplastin time,,"(1097, 1124)",169
+10,Disease,thyroid,,"(1160, 1167)",176
+11,Anatomy,urine,,"(1189, 1194)",179
+12,Anatomy,plasma,,"(1231, 1237)",184
+13,Medication,reagin,,"(1238, 1244)",185
+14,Medication,glycoprotein,,"(1340, 1352)",195
+15,Medication,antibodies,,"(1353, 1363)",196
+16,Medication,anticardiolipin,,"(1365, 1380)",197
+17,Exam,prothrombin,,"(1423, 1434)",204
+18,Medication,misoprostol,,"(1789, 1800)",260
+19,Disease,rupture,,"(1849, 1856)",267
+20,Anatomy,membranes,,"(1860, 1869)",269
+21,Exam,dilation,,"(1984, 1992)",286
+22,Anatomy,head,,"(2125, 2129)",306
+23,Disease,vaginal delivery,,"(2280, 2296)",330
+24,Anatomy,shoulder,,"(2382, 2390)",345
+25,Disease,shoulder dystocia,,"(2440, 2457)",354
+26,Disease,dystocia,,"(2538, 2546)",367
+27,Anatomy,Wood's,,"(2565, 2571)",372
+28,Anatomy,arm,,"(2631, 2634)",380
+29,Medication,nitroglycerin,,"(3106, 3119)",449

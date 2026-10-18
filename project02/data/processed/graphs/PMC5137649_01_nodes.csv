@@ -1,0 +1,19 @@
+node_index,node_type,label,attributes,coord_in_case,pos_in_case_text
+0,Patient,Patient (PMC5137649_01),case_id=PMC5137649_01; age=44.0; gender=Female,"(0, 0)",0
+1,Symptom,abdominal pain,,"(85, 99)",14
+2,Symptom,nausea,,"(116, 122)",18
+3,Symptom,constipation,,"(127, 139)",20
+4,Exam,physical examination,,"(229, 249)",33
+5,Exam,tomography,,"(309, 319)",42
+6,Anatomy,stomach,,"(367, 374)",50
+7,Anatomy,pancreas,,"(396, 404)",56
+8,Disease,pancreatic,,"(472, 482)",66
+9,Disease,cyst,,"(501, 505)",70
+10,Disease,neoplasm,,"(902, 910)",138
+11,Exam,endoscopy,,"(1370, 1379)",211
+12,Disease,mucosal,,"(1401, 1408)",216
+13,Result,cyst,,"(1479, 1483)",227
+14,Exam,dissected,,"(1692, 1701)",264
+15,Exam,oesophagogastroduodenoscopy,,"(1866, 1893)",294
+16,Symptom,her,,"(2333, 2336)",371
+17,Symptom,pain,,"(2337, 2341)",372

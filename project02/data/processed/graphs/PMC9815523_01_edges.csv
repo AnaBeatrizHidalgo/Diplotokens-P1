@@ -1,0 +1,18 @@
+edge_index,from_node,to_node,source_label,target_label,relation,attributes
+0,0,2,Patient (PMC9815523_01),thrombosis,DIAGNOSED_WITH,confidence=0.8613
+1,2,1,thrombosis,arm,LOCATED_IN,confidence=0.8515
+2,0,3,Patient (PMC9815523_01),diagnostic imaging,UNDERWENT_EXAM,confidence=0.523
+3,0,4,Patient (PMC9815523_01),angiography,UNDERWENT_EXAM,confidence=0.6703
+4,0,5,Patient (PMC9815523_01),idiopathic,DIAGNOSED_WITH,confidence=0.9675
+5,0,7,Patient (PMC9815523_01),immobilization,UNDERWENT_EXAM,confidence=0.6022
+6,0,8,Patient (PMC9815523_01),vitamin K,TAKES,confidence=0.9976
+7,0,9,Patient (PMC9815523_01),epistaxis,DIAGNOSED_WITH,value=1; type=numero_puro; quantity=1; confidence=0.7926
+8,0,10,Patient (PMC9815523_01),menorrhagia,HISTORY,value=2; type=numero_puro; quantity=2; confidence=0.5356
+9,0,11,Patient (PMC9815523_01),vaginal,DIAGNOSED_WITH,value=3; type=numero_puro; quantity=3; confidence=0.8985
+10,11,12,vaginal,blood,LOCATED_IN,confidence=0.9802
+11,0,13,Patient (PMC9815523_01),heparin,TAKES,value=10.5; unit=months; type=time; quantity=10.5 months; confidence=0.9978
+12,0,16,Patient (PMC9815523_01),symptomatic,DIAGNOSED_WITH,confidence=0.8614
+13,16,15,symptomatic,subclavian vein,LOCATED_IN,confidence=0.943
+14,0,17,Patient (PMC9815523_01),morbidity,UNDERWENT_EXAM,confidence=0.9459
+15,0,18,Patient (PMC9815523_01),drain,PRESENTS_WITH,value=2; type=numero_puro; quantity=2; value_2=2; type_2=numero_puro; value_3=3; type_3=numero_puro; confidence=0.9881
+16,0,19,Patient (PMC9815523_01),pneumonia,DIAGNOSED_WITH,confidence=0.9671

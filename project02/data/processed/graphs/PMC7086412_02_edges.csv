@@ -1,0 +1,11 @@
+edge_index,from_node,to_node,source_label,target_label,relation,attributes
+0,0,1,Patient (PMC7086412_02),intrauterine,TAKES,confidence=0.9972
+1,0,2,Patient (PMC7086412_02),records,UNDERWENT_EXAM,confidence=0.9875
+2,0,3,Patient (PMC7086412_02),glucose tolerance test,UNDERWENT_EXAM,confidence=0.9824
+3,0,4,Patient (PMC7086412_02),body mass index,UNDERWENT_EXAM,confidence=0.9883
+4,0,6,Patient (PMC7086412_02),misoprostol,TAKES,confidence=0.9979
+5,0,7,Patient (PMC7086412_02),rupture,DIAGNOSED_WITH,confidence=0.9201
+6,7,8,rupture,membranes,LOCATED_IN,confidence=0.9989
+7,0,9,Patient (PMC7086412_02),dilation,UNDERWENT_EXAM,confidence=0.9808
+8,0,12,Patient (PMC7086412_02),shoulder dystocia,DIAGNOSED_WITH,confidence=0.9712
+9,0,12,Patient (PMC7086412_02),shoulder dystocia,DIAGNOSED_WITH,value=3590; unit=g; type=weight; quantity=3590 g; confidence=0.8632

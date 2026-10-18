@@ -1,0 +1,6 @@
+edge_index,from_node,to_node,source_label,target_label,relation,attributes
+0,0,2,Patient (PMC4310058_01),headaches,PRESENTS_WITH,confidence=0.9704
+1,0,5,Patient (PMC4310058_01),tomography,UNDERWENT_EXAM,confidence=0.9833
+2,0,6,Patient (PMC4310058_01),magnetic resonance imaging,UNDERWENT_EXAM,confidence=0.9933
+3,0,10,Patient (PMC4310058_01),thin,PRESENTS_WITH,confidence=0.9833
+4,10,9,thin,bone,LOCATED_IN,confidence=0.9997

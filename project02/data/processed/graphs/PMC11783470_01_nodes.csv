@@ -1,0 +1,28 @@
+node_index,node_type,label,attributes,coord_in_case,pos_in_case_text
+0,Patient,Patient (PMC11783470_01),case_id=PMC11783470_01; age=22.0; gender=Female,"(0, 0)",0
+1,Disease,menorrhagia,,"(63, 74)",10
+2,Disease,gastrointestinal,,"(96, 112)",15
+3,Symptom,heartburn,,"(160, 169)",21
+4,Symptom,nausea,,"(171, 177)",22
+5,Symptom,vomiting,,"(179, 187)",23
+6,Symptom,abdominal pain,,"(189, 203)",24
+7,Disease,melena,,"(227, 233)",29
+8,Disease,hematochezia,,"(235, 247)",30
+9,Symptom,weight loss,,"(267, 278)",33
+10,Exam,Vitals signs,,"(280, 292)",35
+11,Exam,Physical examination,,"(306, 326)",39
+12,Symptom,pallor,,"(383, 389)",49
+13,Medication,transferrin,,"(430, 441)",57
+14,Disease,iron deficiency,,"(587, 602)",84
+15,Exam,esophagogastroduodenoscopy,,"(629, 655)",90
+16,Exam,colonoscopy,,"(666, 677)",93
+17,Exam,biopsied,,"(791, 799)",113
+18,Exam,biopsy,,"(856, 862)",125
+19,Disease,duodenal,,"(1036, 1044)",151
+20,Exam,biopsies,,"(1045, 1053)",152
+21,Disease,celiac disease,,"(1079, 1093)",158
+22,Exam,ileocolonoscopy,,"(1099, 1114)",161
+23,Exam,endoscopy,,"(1464, 1473)",212
+24,Exam,capsule endoscopy,,"(1561, 1578)",227
+25,Anatomy,small intestinal,,"(1590, 1606)",231
+26,Disease,anemia,,"(1617, 1623)",235

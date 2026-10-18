@@ -1,0 +1,14 @@
+edge_index,from_node,to_node,source_label,target_label,relation,attributes
+0,0,1,Patient (PMC5833205_01),edema,PRESENTS_WITH,value=2; unit=weeks; type=time; quantity=2 weeks; confidence=0.9745
+1,0,1,Patient (PMC5833205_01),edema,PRESENTS_WITH,confidence=0.8837
+2,1,2,edema,abdominal,LOCATED_IN,confidence=0.7502
+3,1,3,edema,lower extremity,LOCATED_IN,confidence=0.9921
+4,0,5,Patient (PMC5833205_01),urinalysis,UNDERWENT_EXAM,value=1.8; unit=g/dL; type=weight; quantity=1.8 g/dL; confidence=0.9961
+5,0,6,Patient (PMC5833205_01),microcytic,DIAGNOSED_WITH,confidence=0.9721
+6,0,7,Patient (PMC5833205_01),anemia,DIAGNOSED_WITH,value=6.4; unit=mg/dL; type=weight; quantity=6.4 mg/dL; confidence=0.9373
+7,0,8,Patient (PMC5833205_01),iron deficiency,DIAGNOSED_WITH,confidence=0.9686
+8,0,9,Patient (PMC5833205_01),hypoproteinemia,DIAGNOSED_WITH,value=4.9; unit=ng/L; type=weight; quantity=4.9 ng/L; value_2=1.6; unit_2=g/dL; type_2=weight; value_3=3.0; unit_3=g/dL; type_3=weight; confidence=0.9769
+9,0,10,Patient (PMC5833205_01),occult blood,UNDERWENT_EXAM,value=1.13; unit=mg/g; type=weight; quantity=1.13 mg/g; confidence=0.9956
+10,0,11,Patient (PMC5833205_01),endoscopy,UNDERWENT_EXAM,confidence=0.9869
+11,0,12,Patient (PMC5833205_01),colonoscopy,UNDERWENT_EXAM,confidence=0.9817
+12,0,1,Patient (PMC5833205_01),edema,PRESENTS_WITH,value=1; unit=week; type=time; quantity=1 week; confidence=0.9896

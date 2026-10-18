@@ -1,3 +1,6 @@
+import csv
+from pathlib import Path
+
 class Node:
     def __init__(self, node_type: str, label: str, attributes: dict[str, str] = {},coord_in_case: tuple[int, int] = (-1, -1) , pos_in_case_text: int = -1):
         self.node_type = node_type
@@ -71,9 +74,51 @@ class Graph:
     def len_edges(self) -> int:
         return len(self.edges)
 
-    def save_to_csvs(self, nodes_file: str, edges_file: str):
-        raise NotImplementedError("Este método ainda não foi implementado. Ele deve salvar os nós e arestas em arquivos CSV no formato esperado pelo projeto.")
-        pass
+    def save_to_csvs(self, nodes_file: str | Path, edges_file: str | Path):
+        """Salva os nós e arestas do grafo em arquivos CSV nos formatos esperados pelo projeto."""
+        nodes_path = Path(nodes_file)
+        edges_path = Path(edges_file)
+        nodes_path.parent.mkdir(parents=True, exist_ok=True)
+        edges_path.parent.mkdir(parents=True, exist_ok=True)
+
+        # 1. Salva o CSV de Nós
+        with nodes_path.open("w", newline="", encoding="utf-8") as f_n:
+            writer = csv.DictWriter(
+                f_n,
+                fieldnames=["node_index", "node_type", "label", "attributes", "coord_in_case", "pos_in_case_text"],
+            )
+            writer.writeheader()
+            for idx, n in enumerate(self.nodes):
+                attr_str = "; ".join(f"{k}={v}" for k, v in (n.attributes or {}).items() if v != "")
+                writer.writerow({
+                    "node_index": idx,
+                    "node_type": n.node_type,
+                    "label": n.label,
+                    "attributes": attr_str,
+                    "coord_in_case": f"({n.coord_in_case[0]}, {n.coord_in_case[1]})",
+                    "pos_in_case_text": n.pos_in_case_text,
+                })
+
+        # 2. Salva o CSV de Arestas
+        with edges_path.open("w", newline="", encoding="utf-8") as f_e:
+            writer = csv.DictWriter(
+                f_e,
+                fieldnames=["edge_index", "from_node", "to_node", "source_label", "target_label", "relation", "attributes"],
+            )
+            writer.writeheader()
+            for idx, e in enumerate(self.edges):
+                attr_str = "; ".join(f"{k}={v}" for k, v in (e.attributes or {}).items() if v != "")
+                src_label = self.node(e.from_node).label if 0 <= e.from_node < self.len_nodes() else ""
+                tgt_label = self.node(e.to_node).label if 0 <= e.to_node < self.len_nodes() else ""
+                writer.writerow({
+                    "edge_index": idx,
+                    "from_node": e.from_node,
+                    "to_node": e.to_node,
+                    "source_label": src_label,
+                    "target_label": tgt_label,
+                    "relation": e.relation,
+                    "attributes": attr_str,
+                })
 
     def __str__(self):
         return "-------- Nodes --------\n" +\

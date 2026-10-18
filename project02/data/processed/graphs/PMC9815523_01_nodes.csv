@@ -1,0 +1,21 @@
+node_index,node_type,label,attributes,coord_in_case,pos_in_case_text
+0,Patient,Patient (PMC9815523_01),case_id=PMC9815523_01; age=40.0; gender=Unknown,"(0, 0)",0
+1,Anatomy,arm,,"(414, 417)",70
+2,Disease,thrombosis,,"(469, 479)",79
+3,Exam,diagnostic imaging,,"(667, 685)",108
+4,Exam,angiography,,"(699, 710)",113
+5,Disease,idiopathic,,"(845, 855)",136
+6,Anatomy,thoracic outlet,,"(934, 949)",150
+7,Exam,immobilization,,"(1127, 1141)",180
+8,Medication,vitamin K,,"(1249, 1258)",197
+9,Disease,epistaxis,,"(2001, 2010)",311
+10,Disease,menorrhagia,,"(2037, 2048)",317
+11,Disease,vaginal,,"(2156, 2163)",334
+12,Anatomy,blood,,"(2164, 2169)",335
+13,Medication,heparin,,"(3050, 3057)",472
+14,Anatomy,rib,,"(3682, 3685)",563
+15,Anatomy,subclavian vein,,"(4185, 4200)",642
+16,Disease,symptomatic,,"(4222, 4233)",647
+17,Exam,morbidity,,"(4476, 4485)",681
+18,Symptom,drain,,"(5973, 5978)",899
+19,Disease,pneumonia,,"(6013, 6022)",905

@@ -1,0 +1,12 @@
+node_index,node_type,label,attributes,coord_in_case,pos_in_case_text
+0,Patient,Patient (PMC4630775_01),case_id=PMC4630775_01; age=39.0; gender=Female,"(0, 0)",0
+1,Disease,rupture,,"(104, 111)",16
+2,Anatomy,membranes,,"(115, 124)",18
+3,Anatomy,skin,,"(211, 215)",33
+4,Anatomy,dorsal,,"(229, 235)",37
+5,Anatomy,hand,,"(236, 240)",38
+6,Anatomy,forearm,,"(261, 268)",41
+7,Result,ischemia,,"(280, 288)",44
+8,Anatomy,thumb,,"(296, 301)",47
+9,Disease,compartment syndrome,,"(335, 355)",54
+10,Symptom,signs,,"(452, 457)",69
