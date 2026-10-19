@@ -1,6 +1,6 @@
 edge_index,from_node,to_node,source_label,target_label,relation,attributes
-0,0,1,Patient (PMC4630775_01),rupture,DIAGNOSED_WITH,value=39; unit=week; type=time; quantity=39-week; value_2=45; unit_2=year; type_2=time; confidence=0.8302
-1,1,2,rupture,membranes,LOCATED_IN,confidence=0.999
-2,0,9,Patient (PMC4630775_01),compartment syndrome,DIAGNOSED_WITH,confidence=0.6724
-3,0,9,Patient (PMC4630775_01),compartment syndrome,FAMILIAR_HISTORY,confidence=0.947
-4,0,10,Patient (PMC4630775_01),signs,PRESENTS_WITH,confidence=0.9857
+0,0,1,Patient (PMC4630775_01),rupture,DIAGNOSED_WITH,value=39; unit=week; type=time; quantity=39-week; value_2=45; unit_2=year; type_2=time; confidence=0.5907
+1,1,2,rupture,membranes,LOCATED_IN,confidence=0.9981
+2,0,9,Patient (PMC4630775_01),compartment syndrome,DIAGNOSED_WITH,confidence=0.7096
+3,0,9,Patient (PMC4630775_01),compartment syndrome,FAMILIAR_HISTORY,confidence=0.4886
+4,0,10,Patient (PMC4630775_01),signs,PRESENTS_WITH,confidence=0.9794

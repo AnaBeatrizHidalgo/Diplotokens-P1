@@ -1,0 +1,18 @@
+[
+  {
+    "conjunto": "Treino",
+    "n_pares": 2039,
+    "n_arestas_reais": 786,
+    "precision": 0.7965921192758253,
+    "recall": 0.9516539440203562,
+    "f1": 0.8672463768115942
+  },
+  {
+    "conjunto": "Teste",
+    "n_pares": 439,
+    "n_arestas_reais": 176,
+    "precision": 0.7777777777777778,
+    "recall": 0.9545454545454546,
+    "f1": 0.8571428571428571
+  }
+]
