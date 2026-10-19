@@ -1,14 +1,14 @@
-node_index,node_type,label,attributes,coord_in_case,pos_in_case_text
-0,Patient,Patient (PMC4310058_01),case_id=PMC4310058_01; age=16.0; gender=Male,"(0, 0)",0
-1,Anatomy,skull,,"(84, 89)",13
-2,Symptom,headaches,,"(397, 406)",66
-3,Anatomy,parietal bone,,"(561, 574)",92
-4,Anatomy,scalp,,"(590, 595)",96
-5,Exam,tomography,,"(821, 831)",133
-6,Exam,magnetic resonance imaging,,"(960, 986)",158
-7,Anatomy,cranioplasty,,"(1127, 1139)",184
-8,Anatomy,tissue,,"(1189, 1195)",192
-9,Anatomy,bone,,"(1300, 1304)",209
-10,Symptom,thin,,"(1309, 1313)",211
-11,Anatomy,osteoblastic,,"(2268, 2280)",364
-12,Result,inflammation,,"(2333, 2345)",373
+node_id,type,label,attributes
+PMC4310058_01:N0,Patient,Patient (PMC4310058_01),case_id=PMC4310058_01; age=16.0; gender=Male
+PMC4310058_01:N1,Anatomy,skull,
+PMC4310058_01:N2,Symptom,headaches,
+PMC4310058_01:N3,Anatomy,parietal bone,
+PMC4310058_01:N4,Anatomy,scalp,
+PMC4310058_01:N5,Exam,tomography,
+PMC4310058_01:N6,Exam,magnetic resonance imaging,
+PMC4310058_01:N7,Anatomy,cranioplasty,
+PMC4310058_01:N8,Anatomy,tissue,
+PMC4310058_01:N9,Anatomy,bone,
+PMC4310058_01:N10,Symptom,thin,
+PMC4310058_01:N11,Anatomy,osteoblastic,
+PMC4310058_01:N12,Result,inflammation,

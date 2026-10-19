@@ -1,63 +1,63 @@
-node_index,node_type,label,attributes,coord_in_case,pos_in_case_text
-0,Patient,Patient (PMC9529523_01),case_id=PMC9529523_01; age=41.0; gender=Female,"(0, 0)",0
-1,Disease,cardiomyopathy,,"(83, 97)",12
-2,Disease,rheumatic disease,,"(217, 234)",32
-3,Anatomy,finger,,"(299, 305)",43
-4,Symptom,pain,,"(306, 310)",44
-5,Result,ulcers,,"(312, 318)",45
-6,Disease,infective,,"(429, 438)",61
-7,Disease,endocarditis,,"(439, 451)",62
-8,Anatomy,upper extremity,,"(459, 474)",65
-9,Anatomy,fingers,,"(534, 541)",74
-10,Medication,nitroglycerin,,"(567, 580)",80
-11,Disease,abscess,,"(627, 634)",88
-12,Medication,Antinuclear Antibody,,"(751, 771)",105
-13,Exam,assay,,"(800, 805)",110
-14,Anatomy,Chromatin,,"(853, 862)",119
-15,Disease,vasculitis,,"(1053, 1063)",150
-16,Anatomy,cytoplasmic,,"(1103, 1114)",156
-17,Medication,cryoglobulins,,"(1200, 1213)",165
-18,Medication,Antiphospholipid antibodies,,"(1215, 1242)",166
-19,Medication,anticardiolipin,,"(1304, 1319)",173
-20,Anatomy,erythrocyte,,"(1370, 1381)",180
-21,Exam,rate,,"(1396, 1400)",182
-22,Exam,physical examination,,"(1465, 1485)",197
-23,Anatomy,skin,,"(1498, 1502)",202
-24,Disease,systemic lupus erythematosus,,"(1619, 1647)",219
-25,Medication,hydroxychloroquine,,"(1676, 1694)",227
-26,Exam,lost to follow-up,,"(1846, 1863)",256
-27,Symptom,weight loss,,"(2012, 2023)",280
-28,Disease,alopecia,,"(2099, 2107)",294
-29,Anatomy,urine,,"(2337, 2342)",340
-30,Anatomy,blood,,"(2440, 2445)",358
-31,Anatomy,kidney,,"(2680, 2686)",398
-32,Exam,biopsy,,"(2755, 2761)",410
-33,Disease,malignant hypertension,,"(2820, 2842)",419
-34,Disease,thrombotic microangiopathy,,"(2855, 2881)",423
-35,Exam,vital capacity,,"(2962, 2976)",435
-36,Exam,forced expiratory volume,,"(2991, 3015)",440
-37,Medication,carbon monoxide,,"(3095, 3110)",458
-38,Exam,tomography,,"(3189, 3199)",473
-39,Disease,interstitial lung disease,,"(3250, 3275)",484
-40,Disease,sepsis,,"(3321, 3327)",494
-41,Disease,acute,,"(3332, 3337)",496
-42,Disease,enteropathogenic,,"(3376, 3392)",503
-43,Symptom,failure,,"(3573, 3580)",532
-44,Symptom,thrive,,"(3584, 3590)",534
-45,Disease,pulmonary hypertension,,"(3674, 3696)",548
-46,Exam,echocardiography,,"(3786, 3802)",561
-47,Result,hypertrophy,,"(3831, 3842)",565
-48,Exam,magnetic resonance imaging,,"(3856, 3882)",568
-49,Disease,infiltrative,,"(3911, 3923)",576
-50,Disease,dyspnea,,"(4062, 4069)",596
-51,Disease,pericardial effusion,,"(4166, 4186)",614
-52,Disease,sinus,,"(4365, 4370)",644
-53,Exam,pericardiocentesis,,"(4514, 4532)",665
-54,Anatomy,fluid,,"(4568, 4573)",672
-55,Medication,C3,,"(4654, 4656)",683
-56,Anatomy,heart,,"(4691, 4696)",693
-57,Exam,catheterization,,"(4697, 4712)",694
-58,Disease,myocarditis,,"(4843, 4854)",713
-59,Anatomy,mitochondria,,"(4935, 4947)",724
-60,Exam,electron microscopy,,"(5033, 5052)",736
-61,Medication,prednisone,,"(5223, 5233)",765
+node_id,type,label,attributes
+PMC9529523_01:N0,Patient,Patient (PMC9529523_01),case_id=PMC9529523_01; age=41.0; gender=Female
+PMC9529523_01:N1,Disease,cardiomyopathy,
+PMC9529523_01:N2,Disease,rheumatic disease,
+PMC9529523_01:N3,Anatomy,finger,
+PMC9529523_01:N4,Symptom,pain,
+PMC9529523_01:N5,Result,ulcers,
+PMC9529523_01:N6,Disease,infective,
+PMC9529523_01:N7,Disease,endocarditis,
+PMC9529523_01:N8,Anatomy,upper extremity,
+PMC9529523_01:N9,Anatomy,fingers,
+PMC9529523_01:N10,Medication,nitroglycerin,
+PMC9529523_01:N11,Disease,abscess,
+PMC9529523_01:N12,Medication,Antinuclear Antibody,
+PMC9529523_01:N13,Exam,assay,
+PMC9529523_01:N14,Anatomy,Chromatin,
+PMC9529523_01:N15,Disease,vasculitis,
+PMC9529523_01:N16,Anatomy,cytoplasmic,
+PMC9529523_01:N17,Medication,cryoglobulins,
+PMC9529523_01:N18,Medication,Antiphospholipid antibodies,
+PMC9529523_01:N19,Medication,anticardiolipin,
+PMC9529523_01:N20,Anatomy,erythrocyte,
+PMC9529523_01:N21,Exam,rate,
+PMC9529523_01:N22,Exam,physical examination,
+PMC9529523_01:N23,Anatomy,skin,
+PMC9529523_01:N24,Disease,systemic lupus erythematosus,
+PMC9529523_01:N25,Medication,hydroxychloroquine,
+PMC9529523_01:N26,Exam,lost to follow-up,
+PMC9529523_01:N27,Symptom,weight loss,
+PMC9529523_01:N28,Disease,alopecia,
+PMC9529523_01:N29,Anatomy,urine,
+PMC9529523_01:N30,Anatomy,blood,
+PMC9529523_01:N31,Anatomy,kidney,
+PMC9529523_01:N32,Exam,biopsy,
+PMC9529523_01:N33,Disease,malignant hypertension,
+PMC9529523_01:N34,Disease,thrombotic microangiopathy,
+PMC9529523_01:N35,Exam,vital capacity,
+PMC9529523_01:N36,Exam,forced expiratory volume,
+PMC9529523_01:N37,Medication,carbon monoxide,
+PMC9529523_01:N38,Exam,tomography,
+PMC9529523_01:N39,Disease,interstitial lung disease,
+PMC9529523_01:N40,Disease,sepsis,
+PMC9529523_01:N41,Disease,acute,
+PMC9529523_01:N42,Disease,enteropathogenic,
+PMC9529523_01:N43,Symptom,failure,
+PMC9529523_01:N44,Symptom,thrive,
+PMC9529523_01:N45,Disease,pulmonary hypertension,
+PMC9529523_01:N46,Exam,echocardiography,
+PMC9529523_01:N47,Result,hypertrophy,
+PMC9529523_01:N48,Exam,magnetic resonance imaging,
+PMC9529523_01:N49,Disease,infiltrative,
+PMC9529523_01:N50,Disease,dyspnea,
+PMC9529523_01:N51,Disease,pericardial effusion,
+PMC9529523_01:N52,Disease,sinus,
+PMC9529523_01:N53,Exam,pericardiocentesis,
+PMC9529523_01:N54,Anatomy,fluid,
+PMC9529523_01:N55,Medication,C3,
+PMC9529523_01:N56,Anatomy,heart,
+PMC9529523_01:N57,Exam,catheterization,
+PMC9529523_01:N58,Disease,myocarditis,
+PMC9529523_01:N59,Anatomy,mitochondria,
+PMC9529523_01:N60,Exam,electron microscopy,
+PMC9529523_01:N61,Medication,prednisone,
