@@ -62,10 +62,13 @@ Projeto 2 da equipe Diplotokens para a disciplina NLP da Unicamp (2026.2)
 ## Slides
 
 > Coloque aqui o link para o PDF da apresentação da parte 2.
+Link do canva: https://canva.link/0oid1yea0xke50l  
 
 ## Demonstração Executável
 
 > Coloque aqui um link para uma demonstração executável do seu código. Pode ser um Jupyter notebook (rodando no Binder ou no Colab) e/ou uma página Web que apresente visualmente seus resultados.
+
+Você pode executar o pipiline completo do nosso modelo rodando o seguinte notebook: [Abrir o notebook completo](notebooks/pipeline_completo.ipynb)
 
 ## Metodologia
 > Descreva aqui a metodologia que foi usada para a extração do grafo de conhecimento. Você pode apresentar um diagrama, com estágios e descrever cada um deles.
@@ -85,6 +88,10 @@ Os arquivos responsáveis pela separação dos casos e pela tokenização estão
 
 1. **Caixa preta 1 - Classificação de nos**:
 - Abordagem 1: **NGNI**
+
+Nesta abordagem, o NGNI (N-Grams Node Identifier) aprende padrões de linguagem a partir dos casos de treinamento rotulados e usa um modelo estatístico de n-gramas para localizar entidades no texto. Antes do treinamento, um léxico fixo de termos médicos identifica menções a doenças, sintomas, medicamentos, exames, anatomia, efeitos e resultados. Regras adicionais marcam menções ao paciente. Os termos encontrados são substituídos por tags, como `TAG-SYMPTOM`; em sobreposições, prioriza-se o trecho mais longo e, em caso de empate, a ordem de prioridade das categorias.
+
+O modelo de n-gramas é treinado sobre os casos rotulados e também utiliza textos de referência do corpus Brown como contexto linguístico. São treinados modelos para percorrer as sequências nos sentidos direto e reverso. Na identificação, o NGNI combina as probabilidades dos contextos para decidir se uma palavra inicia uma entidade e qual é sua classe. Em seguida, avalia se palavras vizinhas devem fazer parte do mesmo trecho, respeitando limites definidos por pontuação, classe gramatical e tamanho máximo. Os hiperparâmetros são ajustados com validação separada por artigo, para que casos do mesmo artigo não sejam divididos entre treino e validação; o conjunto de teste fica reservado para a avaliação final. Na avaliação comparativa, a classe *Patient* não é contabilizada.
 
 - Abordagem 2: **Rotulação fraca + Regressão Logistica Multinomial**
 
@@ -112,6 +119,7 @@ Para cada token, extraímos características da própria palavra (forma, prefixo
 > Coloque a imagem do PNG do seu modelo lógico como ilustrado abaixo (a imagem estará na pasta `image`):
 >
 > ![Modelo Lógico de Grafos](images/modelo-logico-grafos.png)
+
 O modelo do grado permaneceu o que foi usado no projeto 1, pois durante discusões não se notou necessidade de alterar o modelo lógico para conseguir realizar a arquitetura que propusemos
 
 ![Modelo Lógico de Grafos](docs/modelo_grafo.jpeg)
@@ -121,22 +129,53 @@ O modelo do grado permaneceu o que foi usado no projeto 1, pois durante discusõ
 
 > Apresente aqui uma análise  uma discussão de análises que podem ser realizadas com o seu grafo.
 Com as caixas pretas estruturadas conseguimos realizar as seguinte comparações
+
 1. Diferença entre soluções de classificação de nos
 
--> Aqui analisar os graficos que apresentamos
+Nas métricas apresentadas, a regressão logística obteve F1 de 91,3% contra os rótulos fracos e de 89,5% quando consideramos apenas as classes comuns, enquanto o NGNI obteve 12,8% contra test_cases_labeled. Por classe, o LR apresentou seus melhores resultados em Anatomy (~95%) e Disease (~89%); no NGNI, o maior F1 foi em Anatomy (~23%), e Result não teve acertos. Uma possível explicação é que o LR combina características do token e do contexto com candidatos do dicionário, enquanto o NGNI pode ser mais sensível à identificação dos limites exatos das entidades e à classificação de cada tipo.
+
+No entanto, essa diferença deve ser interpretada com cautela: os modelos foram avaliados contra referências distintas, e a avaliação do LR usa rótulos fracos produzidos a partir do dicionário que também orienta o modelo. Assim, os gráficos indicam maior concordância do LR com sua referência, mas uma comparação conclusiva exigiria avaliar os dois modelos contra o mesmo gabarito.
+
+![Comparação Geral](/project02/reports/node_classification_metrics/comparison_overall.png)
+
+
+![Comparação por Label](/project02/reports/node_classification_metrics/comparison_f1_by_label.png)
+
 2. Comparação entre grafo projeto 1 e projeto 2
+
+As duas imagens representam um caso clínico organizado em torno de um nó central do paciente. Nos dois grafos aparecem entidades de diferentes categorias — doenças, sintomas, exames e estruturas anatômicas — ligadas por relações como `DIAGNOSED_WITH`, `PRESENTS_WITH`, `UNDERWENT_EXAM` e `LOCATED_IN`. Isso mostra a continuidade do objetivo do projeto: transformar informações clínicas do texto em entidades e relações explícitas.
+
+No grafo do projeto 1, o paciente é identificado principalmente pelo código do caso, e as entidades aparecem em grupos relativamente distintos ao seu redor. No grafo do projeto 2, o nó central explicita também o tipo `Patient`, e há exemplos mais específicos ou detalhados de entidades e exames, como `physical examination` e `esophagogastroduodenoscopy`. Também aparecem relações adicionais, como `PAPILLARY_HISTORY`, indicando uma tentativa de representar informações clínicas que não se limitam às relações mais frequentes. A disposição dos nós e das arestas torna mais visível a conexão entre o paciente, os diagnósticos, os sintomas, os exames e as localizações anatômicas.
+
+Assim, a evolução observável está sobretudo na apresentação mais explícita do tipo das entidades e na maior variedade de conceitos e relações representados no exemplo do projeto 2. A imagem também permite notar pontos a revisar: alguns rótulos parecem pouco informativos ou ambíguos isoladamente — por exemplo, `her` —, e certos nomes longos ficam truncados. Isso sugere que a extração e a visualização podem se beneficiar de validação dos rótulos e de ajustes de apresentação. Como são exemplos visuais, e não uma comparação quantitativa de todos os grafos, eles ilustram diferenças, mas não bastam para concluir que o projeto 2 é globalmente mais completo ou preciso.
+
+![Grafo projeto 1](/project02/reports/figures/Grafo_proj1.png)
+
+![Grafo projeto 2](/project02/reports/figures/Grafo_proj2.png)
 
 ## Ferramentas
 
 > Panorama das ferramentas utilizadas incluindo discussão sobre o uso das mesmas.
 
+Para a geração dos grafos de forma visual utilizamos a plataforma: https://tochafh.github.io/Diploghraph-Viewer/ 
+
+Essa feramenta foi criada por nos e pode-se visualizar o codigo no repositório git: **LINK DO GITHUB**
+
 ## Resultados
 
-> Descrição e discussão dos resultados mais importantes obtidos.
->
-> Você pode apresentar imagens apresentando o grafo e discutir o que obteve.
+As métricas globais indicam que o classificador de arestas manteve desempenho parecido entre a validação cruzada no treino e o conjunto de teste. No teste, obteve precisão de **77,8%**, recall de **95,5%** e F1 de **85,7%**; no treino, os valores foram **79,7%**, **95,2%** e **86,7%**. A pequena queda de F1 no teste sugere que não houve uma degradação acentuada nesse conjunto. O recall alto mostra que o modelo recupera a maior parte das relações reais, enquanto a precisão menor indica que ainda propõe algumas relações incorretas.
 
--> Indicação de metricas e mostra exemplo de grafo e as medidas coletadas
+O resumo considera as classes de aresta positivas, excluindo `NONE`. No teste foram avaliados **439 pares candidatos**, dos quais **176** correspondiam a arestas reais. Nesse cenário, a precisão de 77,8% equivale a cerca de uma em cada cinco relações positivas previstas não corresponder ao gabarito. A proporção entre pares positivos e negativos também importa: por isso, o F1 alto da classe `NONE` na tabela por tipo não deve ser confundido com o desempenho na identificação das relações que formam o grafo.
+
+As métricas por tipo mostram resultados distintos entre relações. `UNDERWENT_EXAM` e `TAKES` tiveram F1 de **95,0%** no teste; `LOCATED_IN`, **82,4%**; `DIAGNOSED_WITH`, **81,5%**; `PRESENTS_WITH`, **80,9%**; e `REVEALS`, **80,0%**. Em contraste, `HISTORY` teve recall de apenas **16,7%** e F1 de **25,0%**, ou seja, a maior parte das relações desse tipo não foi recuperada. `FAMILIAR_HISTORY` apresentou F1 de **66,7%**, mas esse resultado deve ser visto com cautela devido ao baixo número de exemplos. `HAS_EFFECT` não aparece na tabela, então não é possível avaliar seu desempenho com os resultados apresentados. Assim, uma média global razoável esconde dificuldades importantes em relações menos frequentes ou mais ambíguas.
+
+Entre os possíveis fatores estão o desequilíbrio na frequência das classes, a ambiguidade das pistas linguísticas e a dependência de rótulos fracos para construir os exemplos de treino. Relações como `HISTORY` e `FAMILIAR_HISTORY` podem exigir distinguir a história do próprio paciente da história familiar, algo que pistas lexicais isoladas nem sempre resolvem. Além disso, erros nas entidades extraídas anteriormente podem afetar os pares candidatos e, consequentemente, a classificação das arestas.
+
+Como melhorias, recomendamos ampliar e revisar manualmente as anotações das relações raras, especialmente `HISTORY` e `FAMILIAR_HISTORY`; avaliar o modelo com métricas por classe e matriz de confusão, além das métricas globais; e investigar os falsos positivos para ajustar as pistas de rotulação, o esquema de relações e os limiares de decisão. Também é importante validar o pipeline completo — extração de nós e classificação de arestas — com um conjunto de referência anotado manualmente, pois as métricas atuais avaliam a classificação dos pares disponíveis e não necessariamente a qualidade final de todos os grafos produzidos.
+
+![Metricas por tipo Areasta](/project02/reports/figures/metricas_tipo_aresta.png)
+
+![Resumo GLobal](/project02/reports/figures/resumo_global.png)
 
 ## Como Modelos de Linguagem foram Usados
 
