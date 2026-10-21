@@ -1,25 +1,25 @@
-node_index,node_type,label,attributes,coord_in_case,pos_in_case_text
-0,Patient,Patient (PMC5833205_01),case_id=PMC5833205_01; age=0.0; gender=Male,"(0, 0)",0
-1,Symptom,edema,,"(149, 154)",20
-2,Anatomy,abdominal,,"(275, 284)",39
-3,Anatomy,lower extremity,,"(310, 325)",43
-4,Anatomy,milk,,"(596, 600)",91
-5,Exam,urinalysis,,"(706, 716)",111
-6,Disease,microcytic,,"(876, 886)",135
-7,Disease,anemia,,"(887, 893)",136
-8,Disease,iron deficiency,,"(959, 974)",150
-9,Disease,hypoproteinemia,,"(1003, 1018)",159
-10,Exam,occult blood,,"(1226, 1238)",198
-11,Exam,endoscopy,,"(1277, 1286)",205
-12,Exam,colonoscopy,,"(1291, 1302)",207
-13,Anatomy,lower gastrointestinal tract,,"(1384, 1412)",220
-14,Anatomy,eosinophils,,"(1495, 1506)",235
-15,Anatomy,antrum,,"(1522, 1528)",239
-16,Result,inflammation,,"(1608, 1620)",251
-17,Anatomy,esophagus,,"(1628, 1637)",254
-18,Anatomy,duodenum,,"(1639, 1647)",255
-19,Anatomy,colon,,"(1649, 1654)",256
-20,Anatomy,rectum,,"(1660, 1666)",258
-21,Anatomy,blood,,"(1728, 1733)",270
-22,Anatomy,milk protein,,"(2022, 2034)",322
-23,Symptom,diarrhea,,"(2154, 2162)",343
+node_id,type,label,attributes
+PMC5833205_01:N0,Patient,Patient (PMC5833205_01),case_id=PMC5833205_01; age=0.0; gender=Male
+PMC5833205_01:N1,Symptom,edema,
+PMC5833205_01:N2,Anatomy,abdominal,
+PMC5833205_01:N3,Anatomy,lower extremity,
+PMC5833205_01:N4,Anatomy,milk,
+PMC5833205_01:N5,Exam,urinalysis,
+PMC5833205_01:N6,Disease,microcytic,
+PMC5833205_01:N7,Disease,anemia,
+PMC5833205_01:N8,Disease,iron deficiency,
+PMC5833205_01:N9,Disease,hypoproteinemia,
+PMC5833205_01:N10,Exam,occult blood,
+PMC5833205_01:N11,Exam,endoscopy,
+PMC5833205_01:N12,Exam,colonoscopy,
+PMC5833205_01:N13,Anatomy,lower gastrointestinal tract,
+PMC5833205_01:N14,Anatomy,eosinophils,
+PMC5833205_01:N15,Anatomy,antrum,
+PMC5833205_01:N16,Result,inflammation,
+PMC5833205_01:N17,Anatomy,esophagus,
+PMC5833205_01:N18,Anatomy,duodenum,
+PMC5833205_01:N19,Anatomy,colon,
+PMC5833205_01:N20,Anatomy,rectum,
+PMC5833205_01:N21,Anatomy,blood,
+PMC5833205_01:N22,Anatomy,milk protein,
+PMC5833205_01:N23,Symptom,diarrhea,

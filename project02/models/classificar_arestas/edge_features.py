@@ -5,18 +5,15 @@ Extracao de features para cada par candidato (E1, E2) + texto intermediario:
   2. N-gramas / TF-IDF do texto entre as entidades (span_between) e contexto local
   3. Metrica PMI (Pointwise Mutual Information) entre (E1, E2)
   4. Distancia em tokens (token_dist, log_dist, faixas de distancia e barreiras de oracao)
-  5. Dropout de pistas (Cue Dropout) no treino para forcar generalizacao pelo contexto.
 """
 
 from __future__ import annotations
 
 import math
-import random
 from collections import Counter
 from typing import Any, Dict, List, Optional, Sequence, Tuple
 
 import numpy as np
-import pandas as pd
 from scipy import sparse
 from sklearn.base import BaseEstimator, TransformerMixin
 from sklearn.feature_extraction import DictVectorizer
@@ -25,60 +22,30 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.pipeline import Pipeline
 
 from project02.models.classificar_arestas.step1_weak_edges import (
-    ALL_CUE_WORDS,
     VALID_SCHEMA_PAIRS,
     generate_case_edge_candidates,
 )
-
-
-# =====================================================================
-# 1. MASCARAMENTO DE PISTAS (CUE DROPOUT) PARA REGULARIZACAO NO TREINO
-# =====================================================================
-def _mask_cue_words(text: str, cue_dropout: float, rng: random.Random) -> str:
-    """
-    Esconde palavras-gatilho explicitas (ex: 'revealed', 'history', 'mother')
-    com probabilidade `cue_dropout` durante o treino, forcando a Regressao
-    Logistica a aprender tambem pelos tipos, PMI, distancia e demais palavras.
-    """
-    if cue_dropout <= 0.0 or not text:
-        return text
-    out_tokens = []
-    for tok in text.split():
-        clean = tok.lower().strip(".,;:!?()[]{}\"'")
-        if clean in ALL_CUE_WORDS and rng.random() < cue_dropout:
-            continue
-        out_tokens.append(tok)
-    return " ".join(out_tokens)
 
 
 def _headword(norm_text: str) -> str:
     """
     Retorna a palavra-cabeca (headword) da entidade (ultimo token em ingles,
     ex: 'cystic lesion' -> 'lesion', 'ct scan' -> 'scan').
-    Reduz esparsidade no calculo do PMI em corpus pequenos.
     """
     parts = norm_text.strip().split()
     return parts[-1] if parts else norm_text
 
 
 # =====================================================================
-# 2. EXTRACAO DE FEATURES ESTRUTURADAS POR PAR (E1, E2)
+# 1. EXTRACAO DE FEATURES ESTRUTURADAS POR PAR (E1, E2)
 # =====================================================================
-def extract_pair_struct_features(
-    rec: Dict[str, Any],
-    cue_dropout: float = 0.0,
-    rng: Optional[random.Random] = None,
-) -> Dict[str, Any]:
+def extract_pair_struct_features(rec: Dict[str, Any]) -> Dict[str, Any]:
     """
     Constroi o dicionario de features estruturadas de um par (E1, E2):
-    - Tipos de E1 e E2 e sua interacao (pair_type)
-    - Distancia em tokens (continua, logaritmica e categorizada)
-    - Ordem de leitura e estrutura de oracao
-    - Palavras de fronteira (headwords)
+      1. Tipos de E1 e E2 e sua interacao (pair_type)
+      2. Distancia em tokens (continua, logaritmica e categorizada)
+      3. Ordem de leitura e estrutura superficial da oracao
     """
-    if rng is None:
-        rng = random.Random(42)
-
     t1 = rec["type_E1"]
     t2 = rec["type_E2"]
     pair_type = f"{t1}->{t2}"
@@ -115,63 +82,52 @@ def extract_pair_struct_features(
         "valid_schema_pair": 1.0 if is_valid_pair else 0.0,
         "e1_is_virtual": 1.0 if rec.get("e1_is_virtual", False) else 0.0,
 
-        # 2. Features de Distancia (Cruciais para separar LOCATED_IN / REVEALS de NONE)
+        # 2. Features de Distancia
         "token_dist_scaled": scaled_dist,
         "log_dist": log_dist,
         f"dist_bin={dist_bin}": 1.0,
         f"pair_dist={pair_type}|{dist_bin}": 1.0,
         f"pair_log_dist={pair_type}": log_dist,
 
-        # 3. Estrutura sintatica superficial (mesma oracao e entidades intervenientes)
+        # 3. Mesma oracao e palavras-cabeca das entidades
         "same_clause": 1.0 if same_clause else 0.0,
         f"pair_clause={pair_type}|same={same_clause}": 1.0,
         f"head_E1={e1_head}": 1.0,
         f"head_E2={e2_head}": 1.0,
     }
 
-    # Verifica se ha outra entidade do mesmo tipo no caminho entre E1 e E2
     intervening = rec.get("intervening_types", [])
     feats["num_intervening"] = float(len(intervening))
     if t1 in intervening or t2 in intervening:
         feats["has_same_type_intervening"] = 1.0
         feats[f"pair_intervening={pair_type}"] = 1.0
 
-    # 4. Pistas lexicais (com Cue Dropout no treino para evitar memorizacao pura)
-    for cue in rec.get("cues_matched", []):
-        if cue_dropout > 0.0 and rng.random() < cue_dropout:
-            continue
-        feats[f"cue={cue}"] = 1.0
-        feats[f"pair_cue={pair_type}|{cue}"] = 1.0
-
     return feats
 
 
 # =====================================================================
-# 3. CONSTRUCAO DO DATASET (COM SUPORTE A CUE_DROPOUT COMO NO PASSO DE NOS)
+# 2. CONSTRUCAO DO DATASET DE PARES CANDIDATOS
 # =====================================================================
 def build_edge_dataset(
     edge_records: Sequence[Dict[str, Any]],
-    cue_dropout: float = 0.0,
-    seed: int = 42,
 ) -> Tuple[List[Dict[str, Any]], np.ndarray, List[Tuple[str, int]]]:
     """
-    Transforma a lista de pares candidatos em (X, y, ids) para treino ou validacao.
+    Transforma a lista de pares candidatos em (X, y, ids) para treino, validacao ou teste.
     Cada item de X contem:
       - 'struct': dicionario de features estruturadas (tipos, distancia, etc.)
       - 'span_between': texto intermediario entre E1 e E2 (para TF-IDF de n-gramas)
       - 'context_text': janela esquerda + direita ao redor do par (para TF-IDF de contexto)
-      - metadados normalizados de E1 e E2 (para calculo do PMI sem vazamento de dados)
+      - metadados normalizados de E1 e E2 (para calculo do PMI)
     """
-    rng = random.Random(seed)
     X: List[Dict[str, Any]] = []
     y_list: List[str] = []
     ids: List[Tuple[str, int]] = []
 
     for idx, rec in enumerate(edge_records):
-        struct_feats = extract_pair_struct_features(rec, cue_dropout=cue_dropout, rng=rng)
-        span_text = _mask_cue_words(rec.get("span_between", ""), cue_dropout, rng)
-        left_ctx = _mask_cue_words(rec.get("left_context", ""), cue_dropout, rng)
-        right_ctx = _mask_cue_words(rec.get("right_context", ""), cue_dropout, rng)
+        struct_feats = extract_pair_struct_features(rec)
+        span_text = str(rec.get("span_between", ""))
+        left_ctx = str(rec.get("left_context", ""))
+        right_ctx = str(rec.get("right_context", ""))
 
         X.append({
             "struct": struct_feats,
@@ -193,7 +149,7 @@ def build_edge_dataset(
 
 
 # =====================================================================
-# 4. TRANSFORMADOR UNIFICADO: PMI + TF-IDF (SPAN) + DICT VECTORIZER
+# 3. TRANSFORMADOR UNIFICADO: PMI + TF-IDF (SPAN) + DICT VECTORIZER
 # =====================================================================
 class EdgeFeatureVectorizer(BaseEstimator, TransformerMixin):
     """
@@ -222,12 +178,12 @@ class EdgeFeatureVectorizer(BaseEstimator, TransformerMixin):
         self._fit_pmi_tables(X)
 
         # 2. Enriquece o dicionario 'struct' de cada amostra com os scores de PMI
-        struct_dicts = [self._augment_with_pmi(item) for item in X]
+        struct_dicts: Any = [self._augment_with_pmi(item) for item in X]
         self.dict_vec_ = DictVectorizer(sparse=True)
         self.dict_vec_.fit(struct_dicts)
 
         # 3. Ajusta TF-IDF para o texto ENTRE as entidades (span_between)
-        span_texts = [item.get("span_between", "") for item in X]
+        span_texts = [str(item.get("span_between", "")) for item in X]
         self.span_tfidf_ = TfidfVectorizer(
             ngram_range=self.ngram_range,
             max_features=self.max_span_features,
@@ -235,7 +191,6 @@ class EdgeFeatureVectorizer(BaseEstimator, TransformerMixin):
             token_pattern=r"(?u)\b\w[\w'-]*\b",
             lowercase=True,
         )
-        # Garante vocabulario nao vazio mesmo se todos os spans forem vazios
         if any(t.strip() for t in span_texts):
             self.span_tfidf_.fit(span_texts)
             self._has_span_vocab_ = len(self.span_tfidf_.vocabulary_) > 0
@@ -243,7 +198,7 @@ class EdgeFeatureVectorizer(BaseEstimator, TransformerMixin):
             self._has_span_vocab_ = False
 
         # 4. Ajusta TF-IDF para o contexto local ao redor do par
-        ctx_texts = [item.get("context_text", "") for item in X]
+        ctx_texts = [str(item.get("context_text", "")) for item in X]
         self.ctx_tfidf_ = TfidfVectorizer(
             ngram_range=self.ngram_range,
             max_features=self.max_ctx_features,
@@ -286,16 +241,7 @@ class EdgeFeatureVectorizer(BaseEstimator, TransformerMixin):
             names.extend([f"ctx_tfidf:{w}" for w in self.ctx_tfidf_.get_feature_names_out()])
         return np.array(names, dtype=object)
 
-    # -----------------------------------------------------------------
-    # Calculo interno de PMI (Pointwise Mutual Information)
-    # -----------------------------------------------------------------
     def _fit_pmi_tables(self, X: Sequence[Dict[str, Any]]) -> None:
-        """
-        Estima P(E1), P(E2) e P(E1, E2) nos pares de treino para:
-          - Entidades normalizadas exatas (e1_norm, e2_norm)
-          - Palavras-cabeca / headwords (e1_head, e2_head)
-          - Tipos das entidades (type_E1, type_E2) em contexto proximo (token_dist <= 10)
-        """
         self.n_total_ = max(1, len(X))
         self.e1_counts_: Counter = Counter()
         self.e2_counts_: Counter = Counter()
@@ -324,22 +270,11 @@ class EdgeFeatureVectorizer(BaseEstimator, TransformerMixin):
 
             self.t1_counts_[t1] += 1
             self.t2_counts_[t2] += 1
-            # Conta co-ocorrencia de tipos proximos (ate 10 tokens)
             dist_scaled = item["struct"].get("token_dist_scaled", 0.0)
-            if dist_scaled <= 1.0:  # token_dist <= 10
+            if dist_scaled <= 1.0:
                 self.pair_type_counts_[(t1, t2)] += 1
 
-    def _compute_single_pmi(
-        self,
-        c_pair: float,
-        c1: float,
-        c2: float,
-        n_total: float,
-    ) -> float:
-        """
-        Calcula PMI(x, y) = log2( P(x, y) / (P(x) * P(y)) ) com suavizacao de Laplace
-        para lidar com pares nao vistos no conjunto de teste.
-        """
+    def _compute_single_pmi(self, c_pair: float, c1: float, c2: float, n_total: float) -> float:
         alpha = self.pmi_smoothing
         p_xy = (c_pair + alpha) / (n_total + alpha)
         p_x = (c1 + alpha) / (n_total + alpha)
@@ -347,7 +282,6 @@ class EdgeFeatureVectorizer(BaseEstimator, TransformerMixin):
         return math.log2(p_xy / (p_x * p_y))
 
     def _augment_with_pmi(self, item: Dict[str, Any]) -> Dict[str, Any]:
-        """Copia o dicionario `struct` e adiciona as metricas de PMI do par."""
         feats = dict(item["struct"])
         e1, e2 = item["e1_norm"], item["e2_norm"]
         h1, h2 = item["e1_head"], item["e2_head"]
@@ -355,22 +289,13 @@ class EdgeFeatureVectorizer(BaseEstimator, TransformerMixin):
         pair_type = f"{t1}->{t2}"
 
         pmi_lex = self._compute_single_pmi(
-            self.pair_lex_counts_[(e1, e2)],
-            self.e1_counts_[e1],
-            self.e2_counts_[e2],
-            self.n_total_,
+            self.pair_lex_counts_[(e1, e2)], self.e1_counts_[e1], self.e2_counts_[e2], self.n_total_
         )
         pmi_head = self._compute_single_pmi(
-            self.pair_head_counts_[(h1, h2)],
-            self.h1_counts_[h1],
-            self.h2_counts_[h2],
-            self.n_total_,
+            self.pair_head_counts_[(h1, h2)], self.h1_counts_[h1], self.h2_counts_[h2], self.n_total_
         )
         pmi_type = self._compute_single_pmi(
-            self.pair_type_counts_[(t1, t2)],
-            self.t1_counts_[t1],
-            self.t2_counts_[t2],
-            self.n_total_,
+            self.pair_type_counts_[(t1, t2)], self.t1_counts_[t1], self.t2_counts_[t2], self.n_total_
         )
 
         ppmi_lex = max(0.0, pmi_lex)
@@ -381,14 +306,13 @@ class EdgeFeatureVectorizer(BaseEstimator, TransformerMixin):
         feats["pmi_head"] = pmi_head
         feats["ppmi_head"] = ppmi_head
         feats["pmi_type"] = pmi_type
-        # Interacao entre tipo do par e PMI (permite um peso de PMI especifico por classe)
         feats[f"pair_ppmi={pair_type}"] = ppmi_head
 
         return feats
 
 
 # =====================================================================
-# 5. MODELO DE REGRESSAO LOGISTICA MULTINOMIAL E INFERENCIA (SOFTMAX)
+# 4. MODELO DE REGRESSAO LOGISTICA MULTINOMIAL E INFERENCIA (SOFTMAX)
 # =====================================================================
 def make_edge_model(C: float = 1.0, seed: int = 42) -> Pipeline:
     """
@@ -412,14 +336,13 @@ def predict_edges_with_proba(
     edge_records: Sequence[Dict[str, Any]],
 ) -> List[Dict[str, Any]]:
     """
-    Recebe uma lista de pares candidatos (de um caso ou conjunto de teste),
-    calcula o vetor de probabilidades Softmax para cada classe de aresta
-    e retorna os pares enriquecidos com `pred_label`, `pred_prob` e `probabilities`.
+    Calcula o vetor de probabilidades Softmax para cada classe de aresta
+    e retorna os pares enriquecidos com `pred_label`, `pred_confidence` e `probabilities`.
     """
     if not edge_records:
         return []
 
-    X_eval, _, _ = build_edge_dataset(edge_records, cue_dropout=0.0)
+    X_eval, _, _ = build_edge_dataset(edge_records)
     proba_matrix = model.predict_proba(X_eval)
     classes = list(model.classes_)
 
@@ -427,10 +350,6 @@ def predict_edges_with_proba(
     for rec, probs in zip(edge_records, proba_matrix):
         prob_dict = {cls_name: round(float(p), 4) for cls_name, p in zip(classes, probs)}
 
-        # Regra de consistencia de esquema na inferencia:
-        # Se o par (type_E1, type_E2) nao pertence a VALID_SCHEMA_PAIRS,
-        # ou se a classe predita nao e compativel com (type_E1, type_E2),
-        # restringimos a escolha entre as classes validas para o par + 'NONE'.
         pair_tuple = (rec["type_E1"], rec["type_E2"])
         allowed_positive = set(VALID_SCHEMA_PAIRS.get(pair_tuple, []))
         allowed_classes = allowed_positive | {"NONE"}
@@ -466,7 +385,6 @@ def predict_case_edges(
     """
     Gera todos os pares candidatos de um caso de teste, aplica a Regressao
     Logistica Multinomial e retorna as arestas do grafo.
-    Se `only_positive=True`, filtra `pred_label != 'NONE'`.
     """
     candidates = generate_case_edge_candidates(
         case_id=case_id,

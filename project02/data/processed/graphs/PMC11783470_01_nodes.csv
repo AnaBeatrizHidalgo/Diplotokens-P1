@@ -1,28 +1,28 @@
-node_index,node_type,label,attributes,coord_in_case,pos_in_case_text
-0,Patient,Patient (PMC11783470_01),case_id=PMC11783470_01; age=22.0; gender=Female,"(0, 0)",0
-1,Disease,menorrhagia,,"(63, 74)",10
-2,Disease,gastrointestinal,,"(96, 112)",15
-3,Symptom,heartburn,,"(160, 169)",21
-4,Symptom,nausea,,"(171, 177)",22
-5,Symptom,vomiting,,"(179, 187)",23
-6,Symptom,abdominal pain,,"(189, 203)",24
-7,Disease,melena,,"(227, 233)",29
-8,Disease,hematochezia,,"(235, 247)",30
-9,Symptom,weight loss,,"(267, 278)",33
-10,Exam,Vitals signs,,"(280, 292)",35
-11,Exam,Physical examination,,"(306, 326)",39
-12,Symptom,pallor,,"(383, 389)",49
-13,Medication,transferrin,,"(430, 441)",57
-14,Disease,iron deficiency,,"(587, 602)",84
-15,Exam,esophagogastroduodenoscopy,,"(629, 655)",90
-16,Exam,colonoscopy,,"(666, 677)",93
-17,Exam,biopsied,,"(791, 799)",113
-18,Exam,biopsy,,"(856, 862)",125
-19,Disease,duodenal,,"(1036, 1044)",151
-20,Exam,biopsies,,"(1045, 1053)",152
-21,Disease,celiac disease,,"(1079, 1093)",158
-22,Exam,ileocolonoscopy,,"(1099, 1114)",161
-23,Exam,endoscopy,,"(1464, 1473)",212
-24,Exam,capsule endoscopy,,"(1561, 1578)",227
-25,Anatomy,small intestinal,,"(1590, 1606)",231
-26,Disease,anemia,,"(1617, 1623)",235
+node_id,type,label,attributes
+PMC11783470_01:N0,Patient,Patient (PMC11783470_01),case_id=PMC11783470_01; age=22.0; gender=Female
+PMC11783470_01:N1,Disease,menorrhagia,
+PMC11783470_01:N2,Disease,gastrointestinal,
+PMC11783470_01:N3,Symptom,heartburn,
+PMC11783470_01:N4,Symptom,nausea,
+PMC11783470_01:N5,Symptom,vomiting,
+PMC11783470_01:N6,Symptom,abdominal pain,
+PMC11783470_01:N7,Disease,melena,
+PMC11783470_01:N8,Disease,hematochezia,
+PMC11783470_01:N9,Symptom,weight loss,
+PMC11783470_01:N10,Exam,Vitals signs,
+PMC11783470_01:N11,Exam,Physical examination,
+PMC11783470_01:N12,Symptom,pallor,
+PMC11783470_01:N13,Medication,transferrin,
+PMC11783470_01:N14,Disease,iron deficiency,
+PMC11783470_01:N15,Exam,esophagogastroduodenoscopy,
+PMC11783470_01:N16,Exam,colonoscopy,
+PMC11783470_01:N17,Exam,biopsied,
+PMC11783470_01:N18,Exam,biopsy,
+PMC11783470_01:N19,Disease,duodenal,
+PMC11783470_01:N20,Exam,biopsies,
+PMC11783470_01:N21,Disease,celiac disease,
+PMC11783470_01:N22,Exam,ileocolonoscopy,
+PMC11783470_01:N23,Exam,endoscopy,
+PMC11783470_01:N24,Exam,capsule endoscopy,
+PMC11783470_01:N25,Anatomy,small intestinal,
+PMC11783470_01:N26,Disease,anemia,

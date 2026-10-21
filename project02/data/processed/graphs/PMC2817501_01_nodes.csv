@@ -1,21 +1,21 @@
-node_index,node_type,label,attributes,coord_in_case,pos_in_case_text
-0,Patient,Patient (PMC2817501_01),case_id=PMC2817501_01; age=53.0; gender=Male,"(0, 0)",0
-1,Symptom,dyspnea,,"(62, 69)",9
-2,Anatomy,aortic valve,,"(93, 105)",15
-3,Anatomy,valve,,"(170, 175)",25
-4,Disease,thromboembolic,,"(210, 224)",32
-5,Exam,physical examination,,"(269, 289)",39
-6,Result,hemiparesis,,"(304, 315)",43
-7,Exam,blood pressure,,"(321, 335)",45
-8,Exam,heart rate,,"(349, 359)",50
-9,Exam,auscultation,,"(394, 406)",58
-10,Symptom,systolic murmur,,"(422, 437)",63
-11,Anatomy,lungs,,"(478, 483)",74
-12,Exam,Transesophageal,,"(485, 500)",75
-13,Exam,echocardiography,,"(501, 517)",76
-14,Anatomy,mitral valve,,"(622, 634)",91
-15,Anatomy,pulmonary artery,,"(803, 819)",122
-16,Anatomy,tissue,,"(906, 912)",138
-17,Exam,arteriography,,"(923, 936)",140
-18,Disease,hypothermia,,"(1226, 1237)",186
-19,Exam,observed,,"(1347, 1355)",201
+node_id,type,label,attributes
+PMC2817501_01:N0,Patient,Patient (PMC2817501_01),case_id=PMC2817501_01; age=53.0; gender=Male
+PMC2817501_01:N1,Symptom,dyspnea,
+PMC2817501_01:N2,Anatomy,aortic valve,
+PMC2817501_01:N3,Anatomy,valve,
+PMC2817501_01:N4,Disease,thromboembolic,
+PMC2817501_01:N5,Exam,physical examination,
+PMC2817501_01:N6,Result,hemiparesis,
+PMC2817501_01:N7,Exam,blood pressure,
+PMC2817501_01:N8,Exam,heart rate,
+PMC2817501_01:N9,Exam,auscultation,
+PMC2817501_01:N10,Symptom,systolic murmur,
+PMC2817501_01:N11,Anatomy,lungs,
+PMC2817501_01:N12,Exam,Transesophageal,
+PMC2817501_01:N13,Exam,echocardiography,
+PMC2817501_01:N14,Anatomy,mitral valve,
+PMC2817501_01:N15,Anatomy,pulmonary artery,
+PMC2817501_01:N16,Anatomy,tissue,
+PMC2817501_01:N17,Exam,arteriography,
+PMC2817501_01:N18,Disease,hypothermia,
+PMC2817501_01:N19,Exam,observed,

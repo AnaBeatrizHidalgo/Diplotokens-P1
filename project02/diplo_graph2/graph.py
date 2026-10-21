@@ -5,7 +5,7 @@ class Node:
     def __init__(self, node_type: str, label: str, attributes: dict[str, str] = {},coord_in_case: tuple[int, int] = (-1, -1) , pos_in_case_text: int = -1):
         self.node_type = node_type
         self.label = label
-        self.attributes = attributes
+        self.attributes = attributes if attributes is not None else {}
         self.coord_in_case = coord_in_case
         self.pos_in_case_text: int = pos_in_case_text
 
@@ -74,51 +74,55 @@ class Graph:
     def len_edges(self) -> int:
         return len(self.edges)
 
-    def save_to_csvs(self, nodes_file: str | Path, edges_file: str | Path):
-        """Salva os nós e arestas do grafo em arquivos CSV nos formatos esperados pelo projeto."""
-        nodes_path = Path(nodes_file)
-        edges_path = Path(edges_file)
-        nodes_path.parent.mkdir(parents=True, exist_ok=True)
-        edges_path.parent.mkdir(parents=True, exist_ok=True)
+    @staticmethod
+    def _clean(v) -> str:
+        # o parser do viewer separa atributos por ";" e linhas por quebra de linha
+        return str(v).replace(";", ",").replace("\n", " ").strip()
 
-        # 1. Salva o CSV de Nós
-        with nodes_path.open("w", newline="", encoding="utf-8") as f_n:
-            writer = csv.DictWriter(
-                f_n,
-                fieldnames=["node_index", "node_type", "label", "attributes", "coord_in_case", "pos_in_case_text"],
-            )
-            writer.writeheader()
-            for idx, n in enumerate(self.nodes):
-                attr_str = "; ".join(f"{k}={v}" for k, v in (n.attributes or {}).items() if v != "")
-                writer.writerow({
-                    "node_index": idx,
-                    "node_type": n.node_type,
-                    "label": n.label,
-                    "attributes": attr_str,
-                    "coord_in_case": f"({n.coord_in_case[0]}, {n.coord_in_case[1]})",
-                    "pos_in_case_text": n.pos_in_case_text,
-                })
+    @staticmethod
+    def _fmt_attrs(d: dict | None) -> str:
+        return "; ".join(f"{k}={Graph._clean(v)}" for k, v in (d or {}).items() if v != "")
 
-        # 2. Salva o CSV de Arestas
-        with edges_path.open("w", newline="", encoding="utf-8") as f_e:
-            writer = csv.DictWriter(
-                f_e,
-                fieldnames=["edge_index", "from_node", "to_node", "source_label", "target_label", "relation", "attributes"],
-            )
-            writer.writeheader()
-            for idx, e in enumerate(self.edges):
-                attr_str = "; ".join(f"{k}={v}" for k, v in (e.attributes or {}).items() if v != "")
-                src_label = self.node(e.from_node).label if 0 <= e.from_node < self.len_nodes() else ""
-                tgt_label = self.node(e.to_node).label if 0 <= e.to_node < self.len_nodes() else ""
-                writer.writerow({
-                    "edge_index": idx,
-                    "from_node": e.from_node,
-                    "to_node": e.to_node,
-                    "source_label": src_label,
-                    "target_label": tgt_label,
-                    "relation": e.relation,
-                    "attributes": attr_str,
-                })
+    def node_rows(self, id_prefix: str = "") -> list[dict]:
+        return [
+            {"node_id": f"{id_prefix}N{i}", "type": n.node_type,
+                "label": n.label, "attributes": Graph._fmt_attrs(n.attributes)}
+            for i, n in enumerate(self.nodes)
+        ]
+
+    def edge_rows(self, id_prefix: str = "") -> list[dict]:
+        return [
+            {"edge_id": f"{id_prefix}E{i}",
+             "source_id": f"{id_prefix}N{e.from_node}",
+             "target_id": f"{id_prefix}N{e.to_node}",
+             "relation": e.relation, "attributes": Graph._fmt_attrs(e.attributes)}
+            for i, e in enumerate(self.edges)
+        ]
+
+    @staticmethod
+    def write_viewer_csvs(node_rows, edge_rows, nodes_file, edges_file):
+        NODE_FIELDS = ["node_id", "type", "label", "attributes"]
+        EDGE_FIELDS = ["edge_id", "source_id", "target_id", "relation", "attributes"]
+        for path, fields, rows in ((nodes_file, NODE_FIELDS, node_rows), (edges_file, EDGE_FIELDS, edge_rows)):
+            path = Path(path)
+            path.parent.mkdir(parents=True, exist_ok=True)
+            with path.open("w", newline="", encoding="utf-8") as f:
+                w = csv.DictWriter(f, fieldnames=fields)
+                w.writeheader()
+                w.writerows(rows)
+
+    @staticmethod
+    def save_many_graphs(graphs: dict[str, "Graph"], nodes_file, edges_file):
+        """Junta vários casos em um único par de CSVs (IDs prefixados com o case_id)."""
+        nodes, edges = [], []
+        for case_id, g in graphs.items():
+            nodes += g.node_rows(f"{case_id}:")
+            edges += g.edge_rows(f"{case_id}:")
+        Graph.write_viewer_csvs(nodes, edges, nodes_file, edges_file)
+
+    def save_to_csvs(self, nodes_file, edges_file, id_prefix: str = ""):
+        """CSVs no formato do Diplograph Viewer (node_id,type,label,attributes / edge_id,source_id,target_id,relation,attributes)."""
+        Graph.write_viewer_csvs(self.node_rows(id_prefix), self.edge_rows(id_prefix), nodes_file, edges_file)
 
     def __str__(self):
         return "-------- Nodes --------\n" +\

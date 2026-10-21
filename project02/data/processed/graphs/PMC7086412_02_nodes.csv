@@ -1,19 +1,19 @@
-node_index,node_type,label,attributes,coord_in_case,pos_in_case_text
-0,Patient,Patient (PMC7086412_02),case_id=PMC7086412_02; age=31.0; gender=Female,"(0, 0)",0
-1,Medication,intrauterine,,"(200, 212)",35
-2,Exam,records,,"(244, 251)",42
-3,Exam,glucose tolerance test,,"(330, 352)",56
-4,Exam,body mass index,,"(481, 496)",77
-5,Disease,glucose intolerance,,"(777, 796)",127
-6,Medication,misoprostol,,"(1647, 1658)",262
-7,Disease,rupture,,"(1707, 1714)",269
-8,Anatomy,membranes,,"(1718, 1727)",271
-9,Exam,dilation,,"(1842, 1850)",288
-10,Anatomy,head,,"(1962, 1966)",305
-11,Anatomy,shoulder,,"(1990, 1998)",309
-12,Disease,shoulder dystocia,,"(2048, 2065)",318
-13,Disease,dystocia,,"(2146, 2154)",331
-14,Anatomy,Wood's,,"(2173, 2179)",336
-15,Anatomy,back,,"(2333, 2337)",359
-16,Anatomy,arm,,"(2499, 2502)",381
-17,Anatomy,axilla,,"(2560, 2566)",391
+node_id,type,label,attributes
+PMC7086412_02:N0,Patient,Patient (PMC7086412_02),case_id=PMC7086412_02; age=31.0; gender=Female
+PMC7086412_02:N1,Medication,intrauterine,
+PMC7086412_02:N2,Exam,records,
+PMC7086412_02:N3,Exam,glucose tolerance test,
+PMC7086412_02:N4,Exam,body mass index,
+PMC7086412_02:N5,Disease,glucose intolerance,
+PMC7086412_02:N6,Medication,misoprostol,
+PMC7086412_02:N7,Disease,rupture,
+PMC7086412_02:N8,Anatomy,membranes,
+PMC7086412_02:N9,Exam,dilation,
+PMC7086412_02:N10,Anatomy,head,
+PMC7086412_02:N11,Anatomy,shoulder,
+PMC7086412_02:N12,Disease,shoulder dystocia,
+PMC7086412_02:N13,Disease,dystocia,
+PMC7086412_02:N14,Anatomy,Wood's,
+PMC7086412_02:N15,Anatomy,back,
+PMC7086412_02:N16,Anatomy,arm,
+PMC7086412_02:N17,Anatomy,axilla,

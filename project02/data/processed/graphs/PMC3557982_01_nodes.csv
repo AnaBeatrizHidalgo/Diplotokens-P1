@@ -1,26 +1,26 @@
-node_index,node_type,label,attributes,coord_in_case,pos_in_case_text
-0,Patient,Patient (PMC3557982_01),case_id=PMC3557982_01; age=1.0; gender=Female,"(0, 0)",0
-1,Disease,nasopharyngeal,,"(19, 33)",4
-2,Exam,aspiration,,"(47, 57)",7
-3,Disease,pneumococcus,,"(156, 168)",22
-4,Exam,blood cultures,,"(223, 237)",31
-5,Anatomy,leukocytes,,"(314, 324)",45
-6,Medication,determine,,"(757, 766)",107
-7,Exam,serotype,,"(771, 779)",109
-8,Disease,infecting,,"(832, 841)",118
-9,Anatomy,lungs,,"(940, 945)",134
-10,Result,hemorrhagic,,"(983, 994)",140
-11,Anatomy,lung,,"(1011, 1015)",144
-12,Exam,microscopy,,"(1097, 1107)",161
-13,Result,necrosis,,"(1177, 1185)",170
-14,Exam,Immunohistochemistry,,"(1219, 1239)",176
-15,Anatomy,cytoplasmic,,"(1354, 1365)",192
-16,Exam,retrospective study,,"(1446, 1465)",205
-17,Disease,respiratory tract infection,,"(2112, 2139)",307
-18,Disease,bilateral,,"(2150, 2159)",312
-19,Disease,otitis media,,"(2160, 2172)",313
-20,Disease,pneumonia,,"(2260, 2269)",332
-21,Disease,infection,,"(2375, 2384)",351
-22,Anatomy,radius,,"(2595, 2601)",388
-23,Exam,Phylogenetic,,"(3335, 3347)",506
-24,Disease,phylogenetic analysis,,"(3565, 3586)",540
+node_id,type,label,attributes
+PMC3557982_01:N0,Patient,Patient (PMC3557982_01),case_id=PMC3557982_01; age=1.0; gender=Female
+PMC3557982_01:N1,Disease,nasopharyngeal,
+PMC3557982_01:N2,Exam,aspiration,
+PMC3557982_01:N3,Disease,pneumococcus,
+PMC3557982_01:N4,Exam,blood cultures,
+PMC3557982_01:N5,Anatomy,leukocytes,
+PMC3557982_01:N6,Medication,determine,
+PMC3557982_01:N7,Exam,serotype,
+PMC3557982_01:N8,Disease,infecting,
+PMC3557982_01:N9,Anatomy,lungs,
+PMC3557982_01:N10,Result,hemorrhagic,
+PMC3557982_01:N11,Anatomy,lung,
+PMC3557982_01:N12,Exam,microscopy,
+PMC3557982_01:N13,Result,necrosis,
+PMC3557982_01:N14,Exam,Immunohistochemistry,
+PMC3557982_01:N15,Anatomy,cytoplasmic,
+PMC3557982_01:N16,Exam,retrospective study,
+PMC3557982_01:N17,Disease,respiratory tract infection,
+PMC3557982_01:N18,Disease,bilateral,
+PMC3557982_01:N19,Disease,otitis media,
+PMC3557982_01:N20,Disease,pneumonia,
+PMC3557982_01:N21,Disease,infection,
+PMC3557982_01:N22,Anatomy,radius,
+PMC3557982_01:N23,Exam,Phylogenetic,
+PMC3557982_01:N24,Disease,phylogenetic analysis,
