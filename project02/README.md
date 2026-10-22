@@ -102,7 +102,19 @@ Para cada token, extraímos características da própria palavra (forma, prefixo
 
 2. **Caixa preta 2 - Classificação de arestas/relações**
 
+Esta etapa identifica como as entidades extraídas se relacionam no texto. Primeiro, o sistema segmenta cada caso em sentenças e gera pares candidatos de entidades que aparecem na mesma sentença. A combinação de tipos restringe as relações possíveis: por exemplo, `Patient`–`Symptom` pode receber `PRESENTS_WITH`, e `Exam`–`Result` pode receber `REVEALS`. Quando uma sentença contém entidades clínicas, mas não menciona explicitamente o paciente, pode ser criado um nó `Patient` virtual como âncora. Para cada par, também são registrados a ordem de leitura, o texto entre as entidades, o contexto próximo, a distância em tokens e a presença de barreiras entre orações.
+
+No conjunto de treinamento, esses pares recebem rótulos fracos por regras e pistas lexicais do texto, como termos relacionados a diagnóstico, histórico, negação e efeito. As relações consideradas incluem `DIAGNOSED_WITH`, `HISTORY`, `FAMILIAR_HISTORY`, `PRESENTS_WITH`, `TAKES`, `UNDERWENT_EXAM`, `LOCATED_IN`, `REVEALS` e `HAS_EFFECT`; pares sem evidência de uma relação válida recebem `NONE`. Esses rótulos são supervisão automática, não anotações clínicas revisadas manualmente, e podem conter ruído.
+
+Para classificar os pares, o modelo combina quatro grupos de informações: tipos e combinação de tipos das entidades; características estruturais, como ordem, distância, mesma oração e palavras-cabeça; TF-IDF de unigramas e bigramas do trecho entre as entidades e do contexto local; e medidas de associação PMI entre os termos, suas palavras-cabeça e seus tipos. Essas características alimentam uma regressão logística multinomial com pesos balanceados entre classes. A validação cruzada separa os dados por artigo, evitando que casos do mesmo artigo apareçam simultaneamente em treino e validação. Depois da validação, o modelo é ajustado com os pares de treino e aplicado aos pares candidatos do teste; as predições diferentes de `NONE` são usadas como arestas do grafo, acompanhadas das probabilidades por classe e da confiança da predição.
+
 3. **Identificação de quantidades**
+
+A identificação de quantidades complementa as arestas do grafo com valores clínicos mencionados no texto. O sistema percorre cada sentença e usa expressões regulares para reconhecer números e formatos como dimensões (por exemplo, `6 cm x 9 cm`), medidas de peso e volume, pressão, frequência, tempo e unidades especiais. Números sem unidade só são aceitos em contextos restritos, como quando vêm após termos como `day`, `stage`, `grade`, `type` ou `level`; referências a figuras e tabelas também são filtradas para reduzir falsos positivos. Para cada ocorrência, são registrados o texto original, o valor, a unidade, a categoria da medida e sua posição no texto.
+
+Depois, cada quantidade é associada a uma aresta positiva da mesma sentença. A seleção prioriza relações consideradas compatíveis com a categoria da medida — por exemplo, medidas de pressão podem ser associadas a `PRESENTS_WITH` ou `REVEALS` — e escolhe a aresta mais próxima dos nós relacionados, desde que esteja dentro do limite de distância configurado. Se não houver uma aresta compatível, o procedimento considera as demais arestas positivas da sentença. O valor, a unidade e o tipo da quantidade são adicionados como atributos da aresta; se houver mais de uma quantidade associada, as seguintes são armazenadas em campos adicionais. Na construção do grafo, esses atributos são preservados junto com a confiança da classificação da relação.
+
+Como a extração é baseada em padrões de texto e a associação usa compatibilidade de tipo e proximidade, podem ocorrer omissões ou associações incorretas, sobretudo quando uma sentença contém várias entidades e medidas, ou quando uma unidade não está coberta pelas regras. A etapa também não interpreta por si só o significado clínico do valor, como sua normalidade ou a qual evento temporal se refere. A cobertura das expressões regulares, os limites de distância e as associações resultantes devem, portanto, ser avaliados em exemplos anotados e ampliados conforme os erros observados.
 
 ### Confronto com Trabalho Anterior
 
@@ -157,9 +169,10 @@ Assim, a evolução observável está sobretudo na apresentação mais explícit
 
 > Panorama das ferramentas utilizadas incluindo discussão sobre o uso das mesmas.
 
-Para a geração dos grafos de forma visual utilizamos a plataforma: https://tochafh.github.io/Diploghraph-Viewer/ 
+Diplograph: Ferramenta de visualização do grafo desenvolvida pelo modelo de linguagem Gemini.
 
-Essa feramenta foi criada por nos e pode-se visualizar o codigo no repositório git: **LINK DO GITHUB**
+Cookiecutter: Ferramenta de organização e estruturação inicial do projeto recomendada pelo professor, que após entendermos seu funcionamento, decidimos por seguir a recomendação e utilizar a ferramenta.
+
 
 ## Resultados
 
@@ -186,3 +199,9 @@ Como melhorias, recomendamos ampliar e revisar manualmente as anotações das re
 > Lista de artigos, links e referências bibliográficas.
 >
 > Fiquem à vontade para escolher o padrão de referenciamento preferido pelo grupo.
+
+Jurafsky, D. & Martin, J. H. (2026). Speech and Language Processing: An Introduction to Natural Language Processing, Computational Linguistics, and Speech Recognition with Language Models (3rd ed.).
+
+Manning, C. D., Raghavan, P., & Schütze, H. (2009). Introduction to Information Retrieval. Cambridge University Press.
+
+Manning, C. D., & Schütze, H. (1999). Foundations of Statistical Natural Language Processing. MIT Press.
