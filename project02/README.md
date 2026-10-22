@@ -86,7 +86,7 @@ Nesta etapa, separamos os casos em conjuntos de treinamento e teste e aplicamos 
 
 Os arquivos responsáveis pela separação dos casos e pela tokenização estão em `models/pre_processamento`.
 
-1. **Caixa preta 1 - Classificação de nos**:
+1. **Caixa preta 1 - Classificação de nós**:
 - Abordagem 1: **NGNI**
 
 Nesta abordagem, o NGNI (N-Grams Node Identifier) aprende padrões de linguagem a partir dos casos de treinamento rotulados e usa um modelo estatístico de n-gramas para localizar entidades no texto. Antes do treinamento, um léxico fixo de termos médicos identifica menções a doenças, sintomas, medicamentos, exames, anatomia, efeitos e resultados. Regras adicionais marcam menções ao paciente. Os termos encontrados são substituídos por tags, como `TAG-SYMPTOM`; em sobreposições, prioriza-se o trecho mais longo e, em caso de empate, a ordem de prioridade das categorias.
