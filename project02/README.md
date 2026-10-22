@@ -116,14 +116,6 @@ Depois, cada quantidade é associada a uma aresta positiva da mesma sentença. A
 
 Como a extração é baseada em padrões de texto e a associação usa compatibilidade de tipo e proximidade, podem ocorrer omissões ou associações incorretas, sobretudo quando uma sentença contém várias entidades e medidas, ou quando uma unidade não está coberta pelas regras. A etapa também não interpreta por si só o significado clínico do valor, como sua normalidade ou a qual evento temporal se refere. A cobertura das expressões regulares, os limites de distância e as associações resultantes devem, portanto, ser avaliados em exemplos anotados e ampliados conforme os erros observados.
 
-### Confronto com Trabalho Anterior
-
-> Apresente dentro desta subseção um texto confrontando esta versão com a anterior. O confronto pode ser qualitativo ou baseado em comparações experimentais.
-
-## Trabalhos Estudados
-
-> Se foram feitas pesquisas de outros trabalhos, debata brevemente as referências.
-
 ## Modelo Lógico
 
 > Modelo de grafo que a equipe criou. Para o modelo de grafos de propriedades, utilize este
@@ -157,7 +149,7 @@ No entanto, essa diferença deve ser interpretada com cautela: os modelos foram 
 
 As duas imagens representam um caso clínico organizado em torno de um nó central do paciente. Nos dois grafos aparecem entidades de diferentes categorias — doenças, sintomas, exames e estruturas anatômicas — ligadas por relações como `DIAGNOSED_WITH`, `PRESENTS_WITH`, `UNDERWENT_EXAM` e `LOCATED_IN`. Isso mostra a continuidade do objetivo do projeto: transformar informações clínicas do texto em entidades e relações explícitas.
 
-No grafo do projeto 1, o paciente é identificado principalmente pelo código do caso, e as entidades aparecem em grupos relativamente distintos ao seu redor. No grafo do projeto 2, o nó central explicita também o tipo `Patient`, e há exemplos mais específicos ou detalhados de entidades e exames, como `physical examination` e `esophagogastroduodenoscopy`. Também aparecem relações adicionais, como `PAPILLARY_HISTORY`, indicando uma tentativa de representar informações clínicas que não se limitam às relações mais frequentes. A disposição dos nós e das arestas torna mais visível a conexão entre o paciente, os diagnósticos, os sintomas, os exames e as localizações anatômicas.
+No grafo do projeto 1, o paciente é identificado principalmente pelo código do caso, e as entidades aparecem em grupos relativamente distintos ao seu redor. No grafo do projeto 2, o nó central explicita também o tipo `Patient`, e há exemplos mais específicos ou detalhados de entidades e exames, como `physical examination` e `esophagogastroduodenoscopy`. Também aparecem relações adicionais, como `FAMILIAR_HISTORY`, indicando uma tentativa de representar informações clínicas que não se limitam às relações mais frequentes. A disposição dos nós e das arestas torna mais visível a conexão entre o paciente, os diagnósticos, os sintomas, os exames e as localizações anatômicas.
 
 Assim, a evolução observável está sobretudo na apresentação mais explícita do tipo das entidades e na maior variedade de conceitos e relações representados no exemplo do projeto 2. A imagem também permite notar pontos a revisar: alguns rótulos parecem pouco informativos ou ambíguos isoladamente — por exemplo, `her` —, e certos nomes longos ficam truncados. Isso sugere que a extração e a visualização podem se beneficiar de validação dos rótulos e de ajustes de apresentação. Como são exemplos visuais, e não uma comparação quantitativa de todos os grafos, eles ilustram diferenças, mas não bastam para concluir que o projeto 2 é globalmente mais completo ou preciso.
 
@@ -169,10 +161,11 @@ Assim, a evolução observável está sobretudo na apresentação mais explícit
 
 > Panorama das ferramentas utilizadas incluindo discussão sobre o uso das mesmas.
 
-Diplograph: Ferramenta de visualização do grafo desenvolvida pelo modelo de linguagem Gemini.
+Diplograph View: Ferramenta de visualização do grafo desenvolvida com Google AI Studio.
 
 Cookiecutter: Ferramenta de organização e estruturação inicial do projeto recomendada pelo professor, que após entendermos seu funcionamento, decidimos por seguir a recomendação e utilizar a ferramenta.
 
+Python: nltk, scikit-learn, matplotlib.
 
 ## Resultados
 
