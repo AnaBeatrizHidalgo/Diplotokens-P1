@@ -61,23 +61,16 @@ Projeto 2 da equipe Diplotokens para a disciplina NLP da Unicamp (2026.2)
 
 ## Slides
 
-> Coloque aqui o link para o PDF da apresentação da parte 2.
 Link do canva: https://canva.link/0oid1yea0xke50l  
 
 ## Demonstração Executável
 
-> Coloque aqui um link para uma demonstração executável do seu código. Pode ser um Jupyter notebook (rodando no Binder ou no Colab) e/ou uma página Web que apresente visualmente seus resultados.
-
 Você pode executar o pipiline completo do nosso modelo rodando o seguinte notebook: [Abrir o notebook completo](notebooks/pipeline_completo.ipynb)
 
 ## Metodologia
-> Descreva aqui a metodologia que foi usada para a extração do grafo de conhecimento. Você pode apresentar um diagrama, com estágios e descrever cada um deles.
-
-> Nesta seção podem aparecer destaques de código como indicado a seguir. Note que foi usada uma técnica de highlight de código, que envolve colocar o nome da linguagem na abertura de um trecho com `~~~`, tal como `~~~python`.
->
-> Os destaques de código devem ser trechos pequenos de poucas linhas, que estejam diretamente ligados a alguma explicação. Não utilize trechos extensos de código. Se algum código funcionar online (tal como um Jupyter Notebook), aqui pode haver links. No caso do Jupyter, preferencialmente para o Binder abrindo diretamente o notebook em questão.
 
 ### Arquitetura do Projeto
+
 ![Arquitetura do modelo](docs/NLPproj2Arquitetura.png)
 
 0. **Pre-processamento**:
@@ -87,6 +80,7 @@ Nesta etapa, separamos os casos em conjuntos de treinamento e teste e aplicamos 
 Os arquivos responsáveis pela separação dos casos e pela tokenização estão em `models/pre_processamento`.
 
 1. **Caixa preta 1 - Classificação de nós**:
+
 - Abordagem 1: **NGNI**
 
 Nesta abordagem, o NGNI (N-Grams Node Identifier) aprende padrões de linguagem a partir dos casos de treinamento rotulados e usa um modelo estatístico de n-gramas para localizar entidades no texto. Antes do treinamento, um léxico fixo de termos médicos identifica menções a doenças, sintomas, medicamentos, exames, anatomia, efeitos e resultados. Regras adicionais marcam menções ao paciente. Os termos encontrados são substituídos por tags, como `TAG-SYMPTOM`; em sobreposições, prioriza-se o trecho mais longo e, em caso de empate, a ordem de prioridade das categorias.
@@ -118,12 +112,6 @@ Como a extração é baseada em padrões de texto e a associação usa proximida
 
 ## Modelo Lógico
 
-> Modelo de grafo que a equipe criou. Para o modelo de grafos de propriedades, utilize este
-> [modelo de base](https://docs.google.com/presentation/d/10RN7bDKUka_Ro2_41WyEE76Wxm4AioiJOrsh6BRY3Kk/edit?usp=sharing) para construir o seu.
-> Coloque a imagem do PNG do seu modelo lógico como ilustrado abaixo (a imagem estará na pasta `image`):
->
-> ![Modelo Lógico de Grafos](images/modelo-logico-grafos.png)
-
 O modelo do grado permaneceu o que foi usado no projeto 1, pois durante discusões não se notou necessidade de alterar o modelo lógico para conseguir realizar a arquitetura que propusemos
 
 ![Modelo Lógico de Grafos](docs/modelo_grafo.jpeg)
@@ -131,7 +119,6 @@ O modelo do grado permaneceu o que foi usado no projeto 1, pois durante discusõ
 
 ## Análises que podem ser realizadas
 
-> Apresente aqui uma análise  uma discussão de análises que podem ser realizadas com o seu grafo.
 Com as caixas pretas estruturadas conseguimos realizar as seguinte comparações
 
 1. Diferença entre soluções de classificação de nos
@@ -159,8 +146,6 @@ Assim, a evolução observável está sobretudo na apresentação mais explícit
 
 ## Ferramentas
 
-> Panorama das ferramentas utilizadas incluindo discussão sobre o uso das mesmas.
-
 Diplograph View: Ferramenta de visualização do grafo desenvolvida com Google AI Studio.
 
 Cookiecutter: Ferramenta de organização e estruturação inicial do projeto recomendada pelo professor, que após entendermos seu funcionamento, decidimos por seguir a recomendação e utilizar a ferramenta.
@@ -185,13 +170,9 @@ Como melhorias, recomendamos ampliar e revisar manualmente as anotações das re
 
 ## Como Modelos de Linguagem foram Usados
 
-> Descreva aqui em que tarefas os modelos de linguagem foram usados.
+O principal modelo de linguagem usado foi o Claude (Sonnet 5.5). Este foi usado IA como ajuda para códigos mais manuais e que não dizem respeito à disciplina de NLP
 
 ## Referências Bibliográficas
-
-> Lista de artigos, links e referências bibliográficas.
->
-> Fiquem à vontade para escolher o padrão de referenciamento preferido pelo grupo.
 
 Jurafsky, D. & Martin, J. H. (2026). Speech and Language Processing: An Introduction to Natural Language Processing, Computational Linguistics, and Speech Recognition with Language Models (3rd ed.).
 
